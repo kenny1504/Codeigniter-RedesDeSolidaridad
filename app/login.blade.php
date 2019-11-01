@@ -30,7 +30,7 @@
 
       
 </head>
-    <body class="hold-transition skin-blue sidebar-mini fixed">
+    <body class="hold-transition skin-blue  sidebar-mini">
 <!-- Site wrapper -->
        <div class="wrapper">
                     <!--inicio header-->
@@ -62,7 +62,9 @@
                     
                             <!--******** include de Generales ********-->   
                     <?= $this->include("Alertas/exito.blade.php") ?><!-- Modal mensaje "Exito" -->  
-                            
+                  
+
+              
 
                     </div>
             <!--inicio footer -->
