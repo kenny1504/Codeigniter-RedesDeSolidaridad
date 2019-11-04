@@ -1,6 +1,6 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="{{route('inicio')}}"  class="logo" style="  background-color: #075f75">
+    <a href="/inicio"  class="logo" style="  background-color: #075f75">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>R</b>D<b>S</b></span>
       <!-- logo for regular state and mobile devices -->
