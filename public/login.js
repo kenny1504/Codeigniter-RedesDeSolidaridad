@@ -24,5 +24,5 @@ function showThankYou(){
 }
 
 function inicio(){
-  document.login.submit()
+  window.location.href='/inicio';
 }
