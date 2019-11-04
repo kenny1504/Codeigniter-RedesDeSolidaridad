@@ -24,5 +24,5 @@ function showThankYou(){
 }
 
 function inicio(){
-  window.location.href='/inicio';
+  window.location.href='inicio';
 }
