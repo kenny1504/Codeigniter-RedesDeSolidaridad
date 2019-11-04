@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:8080/Redes_De_Solidaridad_Codeigniter/public/assets/';
+	public $baseURL = 'http://localhost:8080/Codeingniter-RedesDeSolidaridad/';
 
 	/*
 	|--------------------------------------------------------------------------
