@@ -14,7 +14,7 @@
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-      ><li class="header">Menu Navegacion</li>
+      <li class="header">Menu Navegacion</li>
         <li class="treeview"> <!--Usuarios inicio -->
           <a href="#">
             <i class="fa fa-user"></i> <span>Usuarios</span>
