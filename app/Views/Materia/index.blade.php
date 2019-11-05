@@ -32,9 +32,9 @@ Asignaturas
                                 </tr>
                         
 						              <?php endforeach; ?>
-                        </tbody>
-                        <?= $pager->links() ?>
+                        </tbody>                        
               </table>
+              <?= $pager->links() ?> <!--Paginacion-->
             </div>
             <div class="panel box box-primary"></div>
             <!-- /.box-body -->
