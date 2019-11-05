@@ -43,7 +43,7 @@
                         
                             <!--******** include de Materia ********-->   
 
-                            <?=  $this -> renderSection ('css') ?> 
+                            <?= $this->renderSection ('contenido') ?> 
                     <?= $this->include("Materia/crear.blade.php") ?><!-- Modal crear materia-->
                     <?= $this->include("Materia/eliminar.blade.php") ?><!-- Modal eliminar materia-->      
                     <?= $this->include("Materia/editar.blade.php") ?><!-- Modal editar materia-->  

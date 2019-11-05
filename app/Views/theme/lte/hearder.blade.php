@@ -1,6 +1,6 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="/inicio"  class="logo" style="  background-color: #075f75">
+    <a href="<?php base_url() ?>inicio"  class="logo" style="  background-color: #075f75">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>R</b>D<b>S</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -104,7 +104,7 @@
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="/" class="btn btn-default btn-flat">Cerrar Sesion</a>
+                  <a href="<?php base_url()?>." class="btn btn-default btn-flat">Cerrar Sesion</a>
                 </div>
               </li>
             </ul>

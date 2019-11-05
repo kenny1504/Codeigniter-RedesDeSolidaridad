@@ -15,8 +15,9 @@
   <div class="rec-prism">
     <div class="face face-front">
       <div class="content">
-        <h2>Inicio de Sesion</h2>
+        <h3>Inicio de Sesion</h3>
         <form onsubmit="">
+        <br>
           <div class="field-wrapper">
             <input type="text" name="username" placeholder="username">
             <label>Usuario</label>
@@ -28,22 +29,19 @@
           <div class="field-wrapper">
             <input  style="text-align: center;" id="exito" type="" value="Enviar" onclick="showThankYou()">
           </div>
-          <span class="psw" onclick="showForgotPassword()">olvido su contraseña?   </span>
+         <!-- <span class="psw" onclick="showForgotPassword()">olvido su contraseña?   </span> -->
         </form>
       </div>
     </div>
     
     <div class="face face-back">
       <div class="content">
-        <h2>Forgot your password?</h2>
-        <small>Enter your email so we can send you a reset link for your password</small>
+        <h1 style="color:red">Credenciales incorrectas</h1>
+       <h3  style="color:red">El usuario o contraseña que ha ingresado es incorrecto o esta caducado</h3> 
         <form onsubmit="event.preventDefault()">
+          <h1><i class="fa fa-fw fa-frown-o"></i></h1> 
           <div class="field-wrapper">
-            <input type="text" name="email" placeholder="email">
-            <label>e-mail</label>
-          </div>
-          <div class="field-wrapper">
-            <input type="submit" onclick="showThankYou()">
+          <input  style="text-align: center;" id="exito" type="" value="Intente nuevamente" onclick="showLogin()">
           </div>
         </form>
       </div>

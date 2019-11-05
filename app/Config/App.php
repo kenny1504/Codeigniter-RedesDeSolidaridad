@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:8080/Codeingniter-RedesDeSolidaridad/';
+	public $baseURL = 'http://localhost:8001/Redes_De_Solidaridad_Codeigniter/public/';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -33,7 +33,7 @@ class App extends BaseConfig
 	| variable so that it is blank.
 	|
 	*/
-	public $indexPage = 'index.php';
+	public $indexPage = '';
 
 	/*
 	|--------------------------------------------------------------------------

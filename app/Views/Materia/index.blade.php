@@ -1,11 +1,10 @@
-@extends("theme.$theme.layout")  <!--extiendo del layout "pagina inicio" -->
-
+<?= $this->extend("theme/lte/layout.blade.php") ?><!--extiendo del layout "pagina inicio" -->
 <!--agrega titulo a la pagina-->
-@section('titulo')  
-    Asignaturas
-@endsection
+<?=  $this -> section ( 'titulo' )  ?> 
+Asignaturas
+<?=  $this -> endSection () ?> 
 
-@section('contenido')  <!--agrega codigo a la seccion contenido del layout-->
+<?=  $this -> section ( 'contenido' )  ?>   <!--agrega codigo a la seccion contenido del layout-->
            
             <div class="box">
             <div class="box-header">
@@ -20,27 +19,27 @@
                          <th>Nombre Asignatura</th>
                          <th></th>
                        </tr>
-                    </thead>
-                        <tbody> <!--Cuerpo de la tabla -->
-                        {{ csrf_field() }}
-                         <?php  $no=1; ?> <!--Paginacion-->
-                            @foreach ($asignaturas as $asignatura)  <!--ciclo que recorre el arreglo retonrnado del controlador-->
-                                <tr id="{{$asignatura->id}}" >  <!--abre fila-->
-                                    <td>{{$asignatura->Nombre}}</td>  <!--agrega dato a la columna-->
+                    </thead> 
+                        <tbody> <!--Cuerpo de la tabla --> 
+                        <?php foreach ($asignaturas as $asignatura): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->
+						
+                                 <tr id="$asignatura['id'])" >  <!--abre fila-->
+                                    <td><?php echo $asignatura['Nombre'];?></td>  <!--agrega dato a la columna-->
                                 <td>
-                                <button class="btn btn-success " onclick="editar_Materia(this);" data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info" onclick='eliminar(this);' data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-success " onclick="editar_Materia(this);" data-id="$asignatura['id'])" data-Nombre="{{$asignatura->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
+                                <button class="btn btn-info" onclick='eliminar(this);' data-id="$asignatura['id'])" data-Nombre="{{$asignatura->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
-                             @endforeach
+                        
+						              <?php endforeach; ?>
                         </tbody>
+                        <?= $pager->links() ?>
               </table>
-            </div>                          
-            {{$asignaturas->links()}} <!--Paginacion-->
+            </div>
             <div class="panel box box-primary"></div>
             <!-- /.box-body -->
           </div>  
-@endsection
+<?=  $this -> endSection () ?> 
 
 
 
