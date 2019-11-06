@@ -46,7 +46,7 @@ function showThankYou(){
   });
 }
   function inicio(){ //llamado a la vista Inicio
-    window.location.href='/inicio';
+    window.location.href='inicio';
     
   }
   

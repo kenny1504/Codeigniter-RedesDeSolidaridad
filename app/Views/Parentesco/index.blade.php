@@ -1,12 +1,10 @@
-@extends("theme.$theme.layout")  <!--extiendo del layout "pagina inicio" -->
-
-<!--prueba-->
+<?= $this->extend("theme/lte/layout.blade.php") ?><!--extiendo del layout "pagina inicio" -->
 <!--agrega titulo a la pagina-->
-@section('titulo')  
-    Parentesco
-@endsection
+<?=  $this -> section ( 'titulo' )  ?> 
+parentescos
+<?=  $this -> endSection () ?> 
 
-@section('contenido')  <!--agrega codigo a la seccion contenido del layout-->
+<?=  $this -> section ( 'contenido' )  ?>   <!--agrega codigo a la seccion contenido del layout-->
            
             <div class="box">
             <div class="box-header">
@@ -19,25 +17,26 @@
                      <thead>  <!--Header de la tabla -->  
                        <tr > 
                          <th>Lista</th>
+                         <th></th>
                        </tr>
-                    </thead>
-                        <tbody> <!--Cuerpo de la tabla -->
-                        {{ csrf_field() }}
-                         <?php  $no=1; ?> <!--Paginacion-->
-                            @foreach ($parentescos as $parentesco)  <!--ciclo que recorre el arreglo retonrnado del controlador-->
-                                <tr id="{{$parentesco->id}}" >  <!--abre fila-->
-                                    <td>{{$parentesco->Parentesco}}</td>  <!--agrega dato a la columna-->
+                    </thead> 
+                        <tbody> <!--Cuerpo de la tabla --> 
+                        <?php foreach ($parentescos as $parentesco): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->
+						
+                                 <tr id="<?php echo $parentesco['id']; ?>" >  <!--abre fila-->
+                                    <td><?php echo $parentesco['parentesco'];?></td>  <!--agrega dato a la columna-->
                                 <td>
-                                <button class="btn btn-success editarparentesco" data-id="{{$parentesco->id}}" data-Nombre="{{$parentesco->Parentesco}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info eliminar-parentesco "data-id="{{$parentesco->id}}" data-Nombre="{{$parentesco->Parentesco}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-success " onclick="editar_parentesco(this);" data-id="<?php echo $parentesco['id']; ?>" data-Nombre="<?php echo $parentesco['parentesco'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
+                                <button class="btn btn-info" onclick='eliminar_parentesco(this);' data-id="<?php echo $parentesco['id']; ?>" data-Nombre="<?php echo $parentesco['parentesco'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
-                             @endforeach
-                        </tbody>
+                        
+						              <?php endforeach; ?>
+                        </tbody>                        
               </table>
-            </div>                          
-            {{$parentescos->links()}} <!--Paginacion-->
+              <?= $pager->links() ?> <!--Paginacion-->
+            </div>
             <div class="panel box box-primary"></div>
             <!-- /.box-body -->
           </div>  
-@endsection
+<?=  $this -> endSection () ?> 

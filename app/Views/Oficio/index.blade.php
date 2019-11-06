@@ -1,12 +1,10 @@
-@extends("theme.$theme.layout")  <!--extiendo del layout "pagina inicio" -->
-
-<!--prueba-->
+<?= $this->extend("theme/lte/layout.blade.php") ?><!--extiendo del layout "pagina inicio" -->
 <!--agrega titulo a la pagina-->
-@section('titulo')  
-    Oficio
-@endsection
+<?=  $this -> section ( 'titulo' )  ?> 
+Oficios
+<?=  $this -> endSection () ?> 
 
-@section('contenido')  <!--agrega codigo a la seccion contenido del layout-->
+<?=  $this -> section ( 'contenido' )  ?>   <!--agrega codigo a la seccion contenido del layout-->
            
             <div class="box">
             <div class="box-header">
@@ -18,26 +16,27 @@
               <table id="oficios" class="table table-bordered table-striped">
                      <thead>  <!--Header de la tabla -->  
                        <tr > 
-                         <th>Nombre</th>
+                         <th>Lista de Oficios</th>
+                         <th></th>
                        </tr>
-                    </thead>
-                        <tbody> <!--Cuerpo de la tabla -->
-                        {{ csrf_field() }}
-                         <?php  $no=1; ?> <!--Paginacion-->
-                            @foreach ($oficios as $oficio)  <!--ciclo que recorre el arreglo retonrnado del controlador-->
-                                <tr id="{{$oficio->id}}" >  <!--abre fila-->
-                                    <td>{{$oficio->Nombre}}</td>  <!--agrega dato a la columna-->
+                    </thead> 
+                        <tbody> <!--Cuerpo de la tabla --> 
+                        <?php foreach ($oficios as $oficio): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->
+						
+                                 <tr id="<?php echo $oficio['id']; ?>" >  <!--abre fila-->
+                                    <td><?php echo $oficio['Nombre'];?></td>  <!--agrega dato a la columna-->
                                 <td>
-                                <button class="btn btn-success editaroficio" data-id="{{$oficio->id}}" data-Nombre="{{$oficio->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info eliminar-oficio "data-id="{{$oficio->id}}" data-Nombre="{{$oficio->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-success " onclick="editar_Oficio(this);" data-id="<?php echo $oficio['id']; ?>" data-Nombre="<?php echo $oficio['Nombre'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
+                                <button class="btn btn-info" onclick='eliminar_oficio(this);' data-id="<?php echo $oficio['id']; ?>" data-Nombre="<?php echo $oficio['Nombre'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
-                             @endforeach
-                        </tbody>
+                        
+						              <?php endforeach; ?>
+                        </tbody>                        
               </table>
-            </div>                          
-            {{$oficios->links()}} <!--Paginacion-->
+              <?= $pager->links() ?> <!--Paginacion-->
+            </div>
             <div class="panel box box-primary"></div>
             <!-- /.box-body -->
           </div>  
-@endsection
+<?=  $this -> endSection () ?> 

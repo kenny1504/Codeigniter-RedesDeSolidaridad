@@ -152,8 +152,7 @@
                     <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                   </li>
                   <li class="treeview">
-                    <li><a href="{{route('Mostrar_oficio')}}"  method="GET">
-                    <i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
+                    <li><a href="<?php base_url() ?>oficios"  method="GET"><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
                   </li>
               </ul> <!--final del oficios --->           
               <a href="#"><i class="fa fa-circle-o text-aqua"></i> Parentescos<!--inicio del parentesco --->  
@@ -166,8 +165,8 @@
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
-                    <li><a href="{{route('Mostrar_parentesco')}}"  method="GET">
-                      <i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
+
+                      <li><a href="<?php base_url() ?>parentescos"  method="GET"><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
                 </li>
               </ul> <!--final del parentescos --->  
                   
