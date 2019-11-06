@@ -87,15 +87,15 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="assets/lte/dist/img/avatar04.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">Kenny saenz</span>
+              <span class="hidden-xs"><?=$this->renderSection('Nombre-hearder1')?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
                 <img src="assets/lte/dist/img/avatar04.png" class="img-circle" alt="User Image">
                 <p>
-                  kenny saenz - Web Developer
-                  <small>septiembre 05-2019</small>
+                <?=$this->renderSection('Nombre-hearder2')?> - <?=$this->renderSection('rol-hearder')?>
+                  <small><?=$this->renderSection('Vencimiento')?></small>
                 </p>
               </li>
               <!-- Menu Footer-->

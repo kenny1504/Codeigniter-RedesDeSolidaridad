@@ -34,6 +34,7 @@
 <!-- Site wrapper -->
        <div class="wrapper">
                     <!--inicio header-->
+                  <?= $this->include("theme/lte/usuario.blade.php") ?> <!-- vista contiene todos los datos del usuario SIEMPRE INCLUIR EN TODAS LAS VISTAS -->
                   <?= $this->include("theme/lte/hearder.blade.php")  ?><!-- Hearder de la pagina inicio-->
                     <!--fin header -->
                     <!--inicio aside -->

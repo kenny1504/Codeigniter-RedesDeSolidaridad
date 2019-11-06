@@ -1,5 +1,4 @@
 @extends("theme.$theme.layout")  <!--extiendo del layout "pagina inicio" -->
-
 <!--prueba-->
 <!--agrega titulo a la pagina-->
 @section('titulo')  

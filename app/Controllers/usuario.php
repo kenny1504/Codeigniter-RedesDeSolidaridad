@@ -7,17 +7,38 @@ class usuario extends BaseController
 
    public function autenticacion() //validacion de inicio de sesion
 	{       
-      $valor=0;
-      $usuari= $this->request->getPost('username'); //captura los datos en el input usuario
-      $clave= $this->request->getPost('password'); //captura los datos en el input contraseña
 
-            $usuario = new usuarios(); //instancia del modelo Usuarios
-            $result = $usuario->where('NombreDeUsuario',$usuari)->find(); //busca si el usuario existe
-            $result2 = $usuario->where('ClaveDeUsuario',$clave)->find();  //busca si la contraseña existe
-            if (count($result) > 0 && count($result2) > 0) // si los 2 existen entonces retorna 1 de o contrario 0
-            {
-               $valor=1;
-            }
+      $db = \Config\Database::connect(); // concexion con la basse de datos
+      $valor=0; //varible de contro (0=denegado 1=aceptado)
+      $nombre=$this->request->getPost('username');  //varible que recive los valores de input USERNAME
+      $clave=$this->request->getPost('password');   //varible que recive los valores de input PASSWORD
+
+
+
+      ////////////// CONSULTA A ENVIAR A MYSQL
+		$consulta= "SELECT Usuarios.ClaveDeUsuario, Usuarios.NombreDeUsuario, Usuarios.Nombre, Usuarios.Cedula, FuncionesDeAcceso.Descripcion, FuncionesAsignada.FechaDeVencimiento FROM FuncionesAsignada 
+		INNER JOIN FuncionesDeAcceso ON FuncionesAsignada.Id_FuncionAcceso = FuncionesDeAcceso.Id_FuncionAcceso 
+		INNER JOIN Usuarios ON FuncionesAsignada.Id_Usuarios = Usuarios.Id_Usuarios WHERE (Usuarios.ClaveDeUsuario ='".$clave."' && Usuarios.NombreDeUsuario = '".$nombre."')";
+         
+         $result = $db->query($consulta); //Envia la consulta a la base de datos
+        
+         $session = \Config\Services::session();    // uso de varibles de session
+         $session->start();// Inicio de varibles SESSION
+      
+         if(!empty($result->getResultArray())) // si el arreglo no esta vacio entra y retorna el valor 1 
+         {
+            foreach ($result->getResultArray() as $student) { // 
+               $newdata = array( // asigna los valores del arreglo a la varible de SESSION
+                  'Nombre'  => $student['Nombre'],
+                  'Cedula'     => $student['Cedula'],
+                  'Descripcion'     => $student['Descripcion'],
+                  'FechaDeVencimiento'     => $student['FechaDeVencimiento']
+                ); 
+                $session->set($newdata); //Guarda valores en la variable SESSION 
+             }
+             $valor=1; // rertona 1 si el usuario existe 
+        } 
+   
          return json_encode($valor);
 	}
 	//--------------------------------------------------------------------

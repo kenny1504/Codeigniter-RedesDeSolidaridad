@@ -35,8 +35,8 @@
     
     <div class="face face-right">
       <div class="content">
-        <h1 style="color:red">Credenciales incorrectas</h1>
-       <h3  style="color:red">El usuario o contraseña que ha ingresado es incorrecto o esta caducado</h3> 
+        <h1 style="color:#ff00008a">Credenciales incorrectas</h1>
+       <h3  style="color:#ff00008a">El usuario o contraseña que ha ingresado es incorrecto o esta caducado</h3> 
         <form onsubmit="event.preventDefault()">
           <h1><i class="fa fa-fw fa-frown-o"></i></h1> 
           <div class="field-wrapper">
