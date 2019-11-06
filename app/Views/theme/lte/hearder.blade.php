@@ -104,7 +104,7 @@
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="/" class="btn btn-default btn-flat">Cerrar Sesion</a>
+                  <a href='/Codeigniter-RedesDeSolidaridad/public/' class="btn btn-default btn-flat">Cerrar Sesion</a>
                 </div>
               </li>
             </ul>
