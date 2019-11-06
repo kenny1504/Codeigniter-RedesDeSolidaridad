@@ -109,7 +109,6 @@ class Routes extends BaseCommand
 			'get',
 			'head',
 			'post',
-			'patch',
 			'put',
 			'delete',
 			'options',

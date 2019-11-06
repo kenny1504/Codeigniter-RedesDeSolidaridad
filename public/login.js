@@ -19,10 +19,34 @@ function showContactUs(){
 }
 
 function showThankYou(){
-    prism.style.transform = "translateZ(-100px) rotateX( 90deg)";
-    window.setTimeout("inicio()",2500);
-}
+  url = "usuario/autenticacion"; //URL
 
-function inicio(){
-  window.location.href='inicio';
+  $.ajax({
+      url : url, // URL del controlador
+      type: "POST", //tipo de metodo 
+      data: $('#login').serialize(), // pasamos el id del formulario para poder usar campos en el controlador
+      success: function(data)
+      {
+        var usuario=data;
+          if(usuario==1){ // si la variable es 1 entonces el usuario existe
+
+            prism.style.transform = "translateZ(-100px) rotateX( 90deg)"; // muetsra el mensaje de BIENVENIDO
+              window.setTimeout("inicio()",2500);  //llama a la vista Inicio
+          }
+      else // si el usuario no existe entonces muestra el mensaje CREDENCIALES NO VALIDAS
+      {
+        showSignup();
+      }
+
+      },
+      error: function (jqXHR, textStatus, errorThrown) // si el ajax presenta errores entonces muestra en el alert
+      {
+          alert('Error adding / update data');
+      }
+  });
 }
+  function inicio(){ //llamado a la vista Inicio
+    window.location.href='/inicio';
+    
+  }
+  

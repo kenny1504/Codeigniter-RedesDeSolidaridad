@@ -38,7 +38,6 @@
 
 namespace CodeIgniter\Router;
 
-use CodeIgniter\HTTP\Request;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Router\Exceptions\RedirectException;
 use CodeIgniter\Router\Exceptions\RouterException;
@@ -136,16 +135,13 @@ class Router implements RouterInterface
 	 * Stores a reference to the RouteCollection object.
 	 *
 	 * @param RouteCollectionInterface $routes
-	 * @param Request                  $request
 	 */
-	public function __construct(RouteCollectionInterface $routes, Request $request = null)
+	public function __construct(RouteCollectionInterface $routes)
 	{
 		$this->collection = $routes;
 
 		$this->controller = $this->collection->getDefaultController();
 		$this->method     = $this->collection->getDefaultMethod();
-
-		$this->collection->setHTTPVerb($request->getMethod() ?? strtolower($_SERVER['REQUEST_METHOD']));
 	}
 
 	//--------------------------------------------------------------------
@@ -568,9 +564,7 @@ class Router implements RouterInterface
 	 */
 	protected function validateRequest(array $segments): array
 	{
-		$segments = array_filter($segments, function ($segment) {
-			return ! empty($segment) || ($segment !== '0' || $segment !== 0);
-		});
+		$segments = array_filter($segments);
 		$segments = array_values($segments);
 
 		$c                  = count($segments);

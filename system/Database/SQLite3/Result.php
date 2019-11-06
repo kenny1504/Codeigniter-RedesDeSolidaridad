@@ -40,7 +40,6 @@ namespace CodeIgniter\Database\SQLite3;
 use CodeIgniter\Database\BaseResult;
 use CodeIgniter\Database\Exceptions\DatabaseException;
 use CodeIgniter\Database\ResultInterface;
-use CodeIgniter\Entity;
 
 /**
  * Result for SQLite3
@@ -183,12 +182,6 @@ class Result extends BaseResult implements ResultInterface
 		}
 
 		$classObj = new $className();
-
-		if (is_subclass_of($className, Entity::class))
-		{
-			return $classObj->setAttributes($row);
-		}
-
 		$classSet = \Closure::bind(function ($key, $value) {
 			$this->$key = $value;
 		}, $classObj, $className

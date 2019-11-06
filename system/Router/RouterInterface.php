@@ -38,8 +38,6 @@
 
 namespace CodeIgniter\Router;
 
-use CodeIgniter\HTTP\Request;
-
 /**
  * Expected behavior of a Router.
  */
@@ -49,10 +47,9 @@ interface RouterInterface
 	/**
 	 * Stores a reference to the RouteCollection object.
 	 *
-	 * @param RouteCollectionInterface  $routes
-	 * @param \CodeIgniter\HTTP\Request $request
+	 * @param RouteCollectionInterface $routes
 	 */
-	public function __construct(RouteCollectionInterface $routes, Request $request = null);
+	public function __construct(RouteCollectionInterface $routes);
 
 	//--------------------------------------------------------------------
 

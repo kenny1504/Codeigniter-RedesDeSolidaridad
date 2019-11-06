@@ -416,16 +416,16 @@ class Forge
 	/**
 	 * Foreign Key Drop
 	 *
-	 * @param string $table       Table name
-	 * @param string $foreignName Foreign name
+	 * @param string $table        Table name
+	 * @param string $foreign_name Foreign name
 	 *
 	 * @return boolean|\CodeIgniter\Database\BaseResult|\CodeIgniter\Database\Query|false|mixed
 	 * @throws \CodeIgniter\Database\Exceptions\DatabaseException
 	 */
-	public function dropForeignKey(string $table, string $foreignName)
+	public function dropForeignKey(string $table, string $foreign_name)
 	{
 		$sql = sprintf($this->dropConstraintStr, $this->db->escapeIdentifiers($this->db->DBPrefix . $table),
-			$this->db->escapeIdentifiers($this->db->DBPrefix . $foreignName));
+			$this->db->escapeIdentifiers($this->db->DBPrefix . $foreign_name));
 
 		if ($sql === false)
 		{
@@ -484,10 +484,7 @@ class Forge
 
 		if (($result = $this->db->query($sql)) !== false)
 		{
-			if (! isset($this->db->dataCache['table_names'][$table]))
-			{
-				$this->db->dataCache['table_names'][] = $table;
-			}
+			empty($this->db->dataCache['table_names']) || ($this->db->dataCache['table_names'][] = $table);
 
 			// Most databases don't support creating indexes from within the CREATE TABLE statement
 			if (! empty($this->keys))
@@ -585,16 +582,16 @@ class Forge
 	/**
 	 * Drop Table
 	 *
-	 * @param string  $tableName Table name
-	 * @param boolean $ifExists  Whether to add an IF EXISTS condition
-	 * @param boolean $cascade   Whether to add an CASCADE condition
+	 * @param string  $table_name Table name
+	 * @param boolean $if_exists  Whether to add an IF EXISTS condition
+	 * @param boolean $cascade    Whether to add an CASCADE condition
 	 *
 	 * @return mixed
 	 * @throws \CodeIgniter\Database\Exceptions\DatabaseException
 	 */
-	public function dropTable(string $tableName, bool $ifExists = false, bool $cascade = false)
+	public function dropTable(string $table_name, bool $if_exists = false, bool $cascade = false)
 	{
-		if ($tableName === '')
+		if ($table_name === '')
 		{
 			if ($this->db->DBDebug)
 			{
@@ -605,26 +602,22 @@ class Forge
 		}
 
 		// If the prefix is already starting the table name, remove it...
-		if (! empty($this->db->DBPrefix) && strpos($tableName, $this->db->DBPrefix) === 0)
+		if (! empty($this->db->DBPrefix) && strpos($table_name, $this->db->DBPrefix) === 0)
 		{
-			$tableName = substr($tableName, strlen($this->db->DBPrefix));
+			$table_name = substr($table_name, strlen($this->db->DBPrefix));
 		}
 
-		if (($query = $this->_dropTable($this->db->DBPrefix . $tableName, $ifExists, $cascade)) === true)
+		if (($query = $this->_dropTable($this->db->DBPrefix . $table_name, $if_exists, $cascade)) === true)
 		{
 			return true;
 		}
 
-		$this->db->disableForeignKeyChecks();
-
 		$query = $this->db->query($query);
-
-		$this->db->enableForeignKeyChecks();
 
 		// Update table list cache
 		if ($query && ! empty($this->db->dataCache['table_names']))
 		{
-			$key = array_search(strtolower($this->db->DBPrefix . $tableName),
+			$key = array_search(strtolower($this->db->DBPrefix . $table_name),
 				array_map('strtolower', $this->db->dataCache['table_names']), true);
 			if ($key !== false)
 			{

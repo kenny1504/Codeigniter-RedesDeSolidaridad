@@ -814,8 +814,6 @@ if (! function_exists('force_https'))
 		// Set an HSTS header
 		$response->setHeader('Strict-Transport-Security', 'max-age=' . $duration);
 		$response->redirect($uri);
-		$response->sendHeaders();
-		
 		exit();
 	}
 }

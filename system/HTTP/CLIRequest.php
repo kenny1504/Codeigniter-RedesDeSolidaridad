@@ -71,13 +71,6 @@ class CLIRequest extends Request
 	 */
 	protected $options = [];
 
-	/**
-	 * Set the expected HTTP verb
-	 *
-	 * @var string
-	 */
-	protected $method = 'cli';
-
 	//--------------------------------------------------------------------
 
 	/**
