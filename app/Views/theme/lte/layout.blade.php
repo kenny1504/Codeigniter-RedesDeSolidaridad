@@ -43,7 +43,7 @@
                         
                             <!--******** include de Materia ********-->   
 
-                            <?=  $this -> renderSection ('css') ?> 
+                    <?= $this->renderSection ('contenido') ?> 
                     <?= $this->include("Materia/crear.blade.php") ?><!-- Modal crear materia-->
                     <?= $this->include("Materia/eliminar.blade.php") ?><!-- Modal eliminar materia-->      
                     <?= $this->include("Materia/editar.blade.php") ?><!-- Modal editar materia-->  
@@ -78,7 +78,32 @@
         <script type="text/javascript" src="assets/lte/dist/js/adminlte.min.js"> </script>
         <script type="text/javascript" src="assets/lte/bower_components/fastclick/lib/fastclick.js"> </script>
         <script type="text/javascript" src="assets/lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"> </script>
-  
+
+
+        <script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/jquery/localization/messages_es.min.js"></script>
+        <script type="text/javascript" src="js/funciones.js"></script>
+
+        <!--********************* script  "Materia" *************************-->
+
+        <script type="text/javascript" src="js/js-redes/Materia/agregar.js"></script> <!-- escript para validar datos requeridos-->
+        <script type="text/javascript" src="js/js-redes/Materia/crear.js"></script> <!-- escript para ingresar datos por ajax-->
+        <script type="text/javascript" src="js/js-redes/Materia/eliminar.js"></script> <!-- script eliminar materia-->
+        <script type="text/javascript" src="js/js-redes/Materia/editar.js"></script> <!-- script editar materia-->
+
+        <!--********************* script  "oficio" *************************-->
+        <script type="text/javascript" src="js/js-redes/Oficio/agregar.js"></script> <!-- escript para validar datos requeridos-->
+        <script type="text/javascript" src="js/js-redes/Oficio/crear.js"></script> <!-- escript para ingresar datos por ajax-->
+        <script type="text/javascript" src="js/js-redes/Oficio/eliminar.js"></script> <!-- script eliminar oficio-->
+        <script type="text/javascript" src="js/js-redes/Oficio/editar.js"></script> <!-- script editar oficio-->
+
+        <!--********************* script  "parentesco" *************************-->
+        <script type="text/javascript" src="js/js-redes/Parentesco/agregar.js"></script> <!-- escript para validar datos requeridos-->
+        <script type="text/javascript" src="js/js-redes/Parentesco/crear.js"></script> <!-- escript para ingresar datos por ajax-->
+        <script type="text/javascript" src="js/js-redes/Parentesco/eliminar.js"></script> <!-- script eliminar parentesco-->
+        <script type="text/javascript" src="js/js-redes//Parentesco/editar.js"></script> <!-- script editar parentesco-->
+
+
       </body>
 </html>
 

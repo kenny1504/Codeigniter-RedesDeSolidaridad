@@ -7,6 +7,7 @@ class Home extends BaseController
 {
 	public function index()
 	{
+		$request = \Config\Services::request();
 		return view('login.blade.php');
 	}
 	public function inicio()

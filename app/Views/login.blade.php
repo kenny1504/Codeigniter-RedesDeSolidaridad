@@ -10,25 +10,38 @@
         <link rel="stylesheet" href="login.css" type="text/css">
 </head>
 <body >
-<form name="login" action="inicio">
+<form name="login"  id="login" action="inicio">
 <div class="wrapper">
   <div class="rec-prism">
     <div class="face face-front">
       <div class="content">
-        <h2>Inicio de Sesion</h2>
+        <h3>Inicio de Sesion</h3>
         <form onsubmit="">
+        <br>
           <div class="field-wrapper">
             <input type="text" name="username" placeholder="username">
             <label>Usuario</label>
           </div>
           <div class="field-wrapper">
-            <input type="password" name="password" placeholder="password" autocomplete="new-password">
+            <input type="text" name="password" placeholder="password" autocomplete="new-password">
             <label>Contraseña</label>
           </div>
           <div class="field-wrapper">
             <input  style="text-align: center;" id="exito" type="" value="Enviar" onclick="showThankYou()">
           </div>
-          <span class="psw" onclick="showForgotPassword()">olvido su contraseña?   </span>
+        </form>
+      </div>
+    </div>
+    
+    <div class="face face-right">
+      <div class="content">
+        <h1 style="color:red">Credenciales incorrectas</h1>
+       <h3  style="color:red">El usuario o contraseña que ha ingresado es incorrecto o esta caducado</h3> 
+        <form onsubmit="event.preventDefault()">
+          <h1><i class="fa fa-fw fa-frown-o"></i></h1> 
+          <div class="field-wrapper">
+          <input  style="text-align: center;" id="exito" type="" value="Intente nuevamente" onclick="showLogin()">
+          </div>
         </form>
       </div>
     </div>
@@ -43,5 +56,9 @@
 </div>
 </form>
 <script type="text/javascript" src="login.js"> </script>
+
+<script type="text/javascript" src="assets/lte/bower_components/jquery/dist/jquery.min.js"> </script>
 </body>
 </html>
+
+

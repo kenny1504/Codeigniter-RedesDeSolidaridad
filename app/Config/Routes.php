@@ -74,6 +74,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Home::inicio');
+$routes->get('/asignaturas', 'asignatura::index');
+$routes->post('/elimina/eliminar', 'asignatura::eliminar');
+$routes->post('/usuario', 'usuario::autenticacion');
 
 /**
  * --------------------------------------------------------------------
