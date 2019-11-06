@@ -14,18 +14,22 @@ class asignatura extends BaseController
 			'Nombre'  => 'kenny',
 			'email'     => 'johndoe@some-site.com',
 			'logged_in' => TRUE
-	);
+	); 
 	
 	$session->set($newdata);
 
 		$usuario= $_SESSION['Nombre'];
 		var_dump($usuario); */
+		// echo "la fecha actual es " . date("d") . " del " . date("m") . " de " . date("Y");
 		$asignaturas = new asignaturas();
 		$data = [
             'asignaturas' => $asignaturas->paginate(10), //retorna los datos de la tabla asignaturas con su paginacion
             'pager' => $asignaturas->pager
         ];
-		return view('/Materia/index.blade.php',$data);// retorna vista y se envian datos
+		return view('/Materia/index.blade.php',$data);// retorna vista y se envian datos 
+
+
+		
 	}
 	public function eliminar()
 	{

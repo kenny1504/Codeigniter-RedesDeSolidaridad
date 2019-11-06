@@ -8,7 +8,7 @@
         <img src="assets/lte/dist/img/avatar04.png" class="img-circle" alt="User Image">
         </div> 
         <div class="pull-left info">
-          <p>Kenny Saenz</p>
+          <p><?=$this->renderSection('Nombre-aslide')?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>

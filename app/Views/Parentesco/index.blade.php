@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <?= $this->extend("theme/lte/layout.blade.php") ?><!--extiendo del layout "pagina inicio" -->
+=======
+@extends("theme.$theme.layout")  <!--extiendo del layout "pagina inicio" -->
+<!--prueba-->
+>>>>>>> d721cc07f3f41152e20b01d963187a036b329799
 <!--agrega titulo a la pagina-->
 <?=  $this -> section ( 'titulo' )  ?> 
 parentescos
