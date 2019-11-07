@@ -81,8 +81,13 @@ $routes->get('/asignaturas', 'asignatura::index');
 $routes->post('/elimina/eliminar', 'asignatura::eliminar');
 $routes->post('/usuario', 'usuario::autenticacion');
 
+//Mostrar
 $routes->get('/oficios', 'oficio::index');
 $routes->get('/parentescos', 'parentesco::index');
+$routes->get('/turnos', 'turno::index');
+$routes->get('/secciones', 'seccion::index');
+$routes->get('/grupos', 'grupo::index');
+$routes->get('/grado', 'grado::index');
 
 /**
  * --------------------------------------------------------------------

@@ -112,7 +112,7 @@
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
-                    <li><a href="#" ><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
+                  <li><a href="<?php base_url() ?>grado"  method="GET"><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
                 </li>
               </ul> <!--final del grados ---> 
               <a href="#"><i class="fa fa-circle-o text-aqua"></i> Grupos<!--inicio del grupos --->  
@@ -125,7 +125,7 @@
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
-                    <li><a href="#" ><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
+                  <li><a href="<?php base_url() ?>grupos"  method="GET"><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
                 </li>
               </ul> <!--final del grados --->   
               <a href="#"><i class="fa fa-circle-o text-aqua"></i> Ofertas<!--inicio del ofertas --->  
@@ -180,7 +180,7 @@
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
-                    <li><a href="#" ><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
+                  <li><a href="<?php base_url() ?>secciones"  method="GET"><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
                 </li>
               </ul> <!--final del secciones --->  
               <a href="#"><i class="fa fa-circle-o text-aqua"></i> Turnos<!--inicio del turnos --->  
@@ -193,7 +193,7 @@
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
-                    <li><a href="#" ><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
+                  <li><a href="<?php base_url() ?>turnos"  method="GET"><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
                 </li>
               </ul> <!--final del turnos --->       
             </li>
