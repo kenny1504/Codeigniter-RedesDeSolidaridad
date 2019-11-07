@@ -21,15 +21,22 @@ class asignatura extends BaseController
 		$usuario= $_SESSION['Nombre'];
 		var_dump($usuario); */
 		// echo "la fecha actual es " . date("d") . " del " . date("m") . " de " . date("Y");
-		$asignaturas = new asignaturas();
-		$data = [
-            'asignaturas' => $asignaturas->paginate(10), //retorna los datos de la tabla asignaturas con su paginacion
-            'pager' => $asignaturas->pager
-        ];
-		return view('/Materia/index.blade.php',$data);// retorna vista y se envian datos 
-
-
-		
+		$session = \Config\Services::session();    // instancia de la libreria SESSION
+        $session->start(); // Inicio de varibles SESSION
+      
+		if(isset($_SESSION['Nombre']) && !empty($_SESSION['Nombre'])) //si no existe una sesion No ingresa
+		{			
+			$asignaturas = new asignaturas();
+			$data = [
+				'asignaturas' => $asignaturas->paginate(10), //retorna los datos de la tabla asignaturas con su paginacion
+				'pager' => $asignaturas->pager
+			];
+			return view('/Materia/index.blade.php',$data);// retorna vista y se envian datos 
+		}
+		else
+		{
+			return view('login.blade.php');
+		}
 	}
 	public function eliminar()
 	{
