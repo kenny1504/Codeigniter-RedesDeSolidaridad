@@ -13,7 +13,7 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
     {
     $.ajax({
       type: 'POST',
-      url: '/Parentesco/crear', //llamada a la ruta ingresar Oficio
+      url: '/js-redes/Parentesco/crear', //llamada a la ruta ingresar Oficio
       data: {
         _token: $('input[name=_token]').val(),
         Nombre: $('input[name=Nombre_parentesco]').val()

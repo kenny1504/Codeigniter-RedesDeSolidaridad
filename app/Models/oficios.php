@@ -10,3 +10,4 @@ class oficios extends Model
         protected $allowedFields = ['Nombre'];
         protected $useTimestamps = false;
 }
+

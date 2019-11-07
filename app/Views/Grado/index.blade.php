@@ -22,7 +22,7 @@ Grados
                        </tr>
                     </thead> 
                         <tbody> <!--Cuerpo de la tabla --> 
-                        <?php foreach ($gradoacademico as $grado): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->
+                        <?php foreach ($grados as $grado): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->
 						
                                  <tr id="<?php echo $grado['id']; ?>" >  <!--abre fila-->
                                     <td><?php echo $grado['Grado'];?></td>  <!--agrega dato a la columna-->

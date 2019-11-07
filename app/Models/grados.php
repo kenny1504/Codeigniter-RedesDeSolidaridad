@@ -2,9 +2,9 @@
 
 use CodeIgniter\Model;
 
-class gradoacademico extends Model
+class grados extends Model
 {
-        protected $table      = 'gradoacademico';
+        protected $table      = 'grados';
         protected $primaryKey = 'id';
         protected $returnType = 'array';
         protected $allowedFields = ['Grado'];

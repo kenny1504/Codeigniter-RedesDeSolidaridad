@@ -1,7 +1,7 @@
 <?php namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\Models\gradoacademico;
+use App\Models\grados;
 
 class grado extends BaseController
 {
@@ -13,10 +13,10 @@ class grado extends BaseController
 		if(isset($_SESSION['Nombre']) && !empty($_SESSION['Nombre'])) //si no existe una sesion No ingresa
 		{
 			
-			$gradoacademico = new gradoacademico();
+			$grados = new grados();
 			$data = [
-				'gradoacademico' => $gradoacademico->paginate(10), //retorna los datos de la tabla gradoacademico() con su paginacion
-				'pager' => $gradoacademico->pager
+				'grados' => $grados->paginate(10), //retorna los datos de la tabla grados() con su paginacion
+				'pager' => $grados->pager
 			];
 			return view('/Grado/index.blade.php',$data);// retorna vista y se envian datos
 		}

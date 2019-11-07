@@ -35,7 +35,14 @@ class oficio extends BaseController
         ];
 		return view('/Materia/index.blade.php',$data);// retorna vista y se envian datos */
 	}
-
+	public function Guardar()
+    {
+        $Nombre=$this->input->post("Nombre_oficio");
+        $data = array(
+            'Nombre'=>$Nombre
+		);
+	$userModel -> insert ( $datos );
+    }
 
 
 	//--------------------------------------------------------------------
