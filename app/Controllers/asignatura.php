@@ -21,10 +21,10 @@ class asignatura extends BaseController
 		$usuario= $_SESSION['Nombre'];
 		var_dump($usuario); */
 		// echo "la fecha actual es " . date("d") . " del " . date("m") . " de " . date("Y");
-		$session = \Config\Services::session();    // instancia de la libreria SESSION
-        $session->start(); // Inicio de varibles SESSION
-      
-		if(isset($_SESSION['Nombre']) && !empty($_SESSION['Nombre'])) //si no existe una sesion No ingresa
+		$session = \Config\Services::session();    // uso de varibles de session
+        $session->start();
+	
+		if($_SESSION['login_in']==true) //si no existe una sesion No ingresa
 		{			
 			$asignaturas = new asignaturas();
 			$data = [
