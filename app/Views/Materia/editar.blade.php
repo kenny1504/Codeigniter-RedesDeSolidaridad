@@ -1,5 +1,5 @@
 <!--form para poder activar la ruta y poder guardar el registro--><!-- -->
-<form id="ingresar_materia" >
+<form id="editar-materia" >
     <div class="modal  modal-info fade" id="editar_Materia" >
               <div class="modal-dialog" >
                 <div class="modal-content" >

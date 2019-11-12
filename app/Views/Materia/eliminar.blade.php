@@ -1,6 +1,6 @@
 <!-- Modal para eliminar Materia-->
-
-<div id="eliminar_Materia"class=" modal modal-danger fade" role="dialog">
+<form  id="delete_materia" >
+<div id="eliminar_Materia" class=" modal modal-danger fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -9,7 +9,7 @@
       </div>
      
       <div class="modal-footer">
-        <input type="text" class="hidden" id="valor" name="valor" > <!-- captura el valor del id de la materia -->
+        <input type="text" class="hidden" id="id_materia" name="id_materia" > <!-- captura el id_materia del id de la materia -->
         <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmar">
           <span  class="icon fa fa-check " ></span>
         </button>
@@ -20,3 +20,4 @@
     </div>
   </div>
 </div>
+</form>

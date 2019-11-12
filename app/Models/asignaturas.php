@@ -9,4 +9,5 @@ class asignaturas extends Model
         protected $returnType = 'array';
         protected $allowedFields = ['Nombre'];
         protected $useTimestamps = false;
+
 }

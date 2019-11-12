@@ -25,19 +25,16 @@ function Ingresar(e) { // Metodo para guardar(editar) datos los datos al presion
         $.ajax({
                 
                     type: 'POST',
-                    url: '/Materia/editar', // ruta editar materia
-                    data: {
-                                _token: $('input[name=_token]').val(),
-                                id:$('input[name=idmateria]').val(),
-                        Nombre:$('input[name=Nombre-Materia]').val()
-                    },
+                    url: '/actualizar/asignatura', // ruta editar materia
+                    data: $('#editar-materia').serialize(), // manda el form donde se encuentra la modal materia
+                    dataType: "JSON",
                     success: function(data){
                         if ((data.errors)) { // si el ajax contiene errores agrega un label indicando el error 
                                 $('.error').removeClass('hidden');
                                 $('.error').text("Error: El "+ data.errors.Nombre); 
                           } else {
-
-                                var datos=  "<tr class=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
+                            
+                                var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
                                 + "<td>"+"<button class='btn btn-success'  onclick='editar_Materia(this);' data-id="+ data.id +" data-Nombre="+data.Nombre+"><i class=' fa fa-fw fa-pencil'></i></button>"
                                 + "<button class='btn btn-info ' onclick='eliminar(this);' data-id="+ data.id +"><i class='fa fa-fw fa-trash '></i></button>"                                   
                                 +"</td>"+"</tr>";// variable guarda los nuevos valores
