@@ -48,16 +48,24 @@ class asignatura extends BaseController
 		$data = array (
 			'Nombre' => $nombre		
 		);
-		$result = $asignaturas->update($id,$data);
-		if($result==true)
+
+		$result = $asignaturas->update($id,$data);// pedicion para validar el dato
+		if($result==true) // si actualiza los datos
 		{
 			$datos = array (
 				'id'=>$id,
-				'Nombre' => $nombre		
+				'Nombre' => $nombre,
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
 			);
+			return json_encode($datos); //retorna el arreglo con los nuevos valores
+		}
+		else
+		{
+			$errors = $asignaturas->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
 		}
 
-		return json_encode($datos);
+		
 	}
 
 
