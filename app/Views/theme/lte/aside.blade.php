@@ -65,9 +65,9 @@
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
         </li> <!--Docentes fin -->
-        <li class="treeview"> <!--Materias inicio -->
+        <li class="treeview"> <!--Asignaturas inicio -->
           <a href="#">
-            <i class="fa fa-book"></i> <span>Materias</span>
+            <i class="fa fa-book"></i> <span>Asignaturas</span>
             <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
               <small class="label pull-right bg-green">Asigna</small>
@@ -79,7 +79,7 @@
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Asignar</a></li>
             <li><a href="<?php base_url() ?>asignaturas"  method="GET"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
-        </li> <!--Materias fin -->
+        </li> <!--Asignaturas fin -->
         <li class="treeview"> <!--Reportes inicio -->
           <a href="#">
             <i class="fa   fa-bar-chart"></i> <span> Reportes</span>

@@ -36,7 +36,7 @@ class asignatura extends BaseController
 		{
 			$valor=1;
 		}
-		return  json_decode($valor);
+		return  json_encode($valor);
 	}
 
 	public function actualizar()
@@ -66,6 +66,32 @@ class asignatura extends BaseController
 		}
 
 		
+	}
+	public function agregar()
+	{
+		$asignaturas = new asignaturas();
+		$nombre=$this->request->getPost('Nombre');   //varible que recive los valores de input NOMBRE
+		
+		$data = array (
+			'Nombre' => $nombre		
+		);
+		$result = $asignaturas->insert($data);// pedicion para insertar nueva asignatura
+		
+		if($result==true) // si actualiza los datos
+		{
+			$materia = array (
+				'Nombre' => $nombre,
+				'id' => $result, //cuando se hace una insercion la consulta debuelve el id del dato ingresado
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($materia); //retorna el arreglo con los valores ingresados
+		}
+		else
+		{
+			$errors = $asignaturas->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}
+	
 	}
 
 

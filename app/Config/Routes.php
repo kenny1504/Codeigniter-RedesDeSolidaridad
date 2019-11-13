@@ -75,20 +75,38 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//Rutas Inicio
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Home::inicio');
-$routes->get('/asignaturas', 'asignatura::index');
-$routes->post('/elimina/asignatura', 'asignatura::eliminar');
-$routes->post('/actualizar/asignatura', 'asignatura::actualizar');
+
+//Rutas Usuario
 $routes->post('/usuario', 'usuario::autenticacion');
 
+
+//Rutas Asignaturas
+$routes->get('/asignaturas', 'asignatura::index');
+$routes->post('/agregar/asignatura', 'asignatura::agregar');
+$routes->post('/elimina/asignatura', 'asignatura::eliminar');
+$routes->post('/actualizar/asignatura', 'asignatura::actualizar');
+
+//Rutas Parentescos
 $routes->post('/parentescos', 'parentesco::guardar');
-//Mostrar
-$routes->get('/oficios', 'oficio::index');
 $routes->get('/parentescos', 'parentesco::index');
+
+//Rutas Oficios
+$routes->get('/oficios', 'oficio::index');
+
+//Rutas Turnos
 $routes->get('/turnos', 'turno::index');
+
+//Rutas Secciones
 $routes->get('/secciones', 'seccion::index');
+
+//Rutas Grupos
 $routes->get('/grupos', 'grupo::index');
+
+//Rutas Grados
 $routes->get('/grado', 'grado::index');
 
 /**
