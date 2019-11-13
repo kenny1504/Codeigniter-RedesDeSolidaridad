@@ -32,7 +32,8 @@ class usuario extends BaseController
                   'Nombre'  => $student['Nombre'],
                   'Cedula'     => $student['Cedula'],
                   'Descripcion'     => $student['Descripcion'],
-                  'FechaDeVencimiento'     => $student['FechaDeVencimiento']
+                  'FechaDeVencimiento'     => $student['FechaDeVencimiento'],
+                  'login_in' =>  TRUE
                 ); 
                 $session->set($newdata); //Guarda valores en la variable SESSION 
              }
