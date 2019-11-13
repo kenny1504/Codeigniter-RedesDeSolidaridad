@@ -81,6 +81,7 @@ $routes->get('/asignaturas', 'asignatura::index');
 $routes->post('/elimina/eliminar', 'asignatura::eliminar');
 $routes->post('/usuario', 'usuario::autenticacion');
 
+$routes->post('/parentescos', 'parentesco::guardar');
 //Mostrar
 $routes->get('/oficios', 'oficio::index');
 $routes->get('/parentescos', 'parentesco::index');
