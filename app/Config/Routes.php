@@ -78,8 +78,13 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Home::inicio');
 $routes->get('/asignaturas', 'asignatura::index');
-$routes->post('/elimina/asignatura', 'asignatura::eliminar');
-$routes->post('/actualizar/asignatura', 'asignatura::actualizar');
+//$routes->post('/elimina/asignatura', 'asignatura::eliminar');//kenny
+$routes->post('/asignatura/eliminar', 'asignatura::eliminar');//jose
+//$routes->post('/actualizar/asignatura', 'asignatura::actualizar');//Kenny
+$routes->post('/asignatura/actualizar', 'asignatura::actualizar');
+$routes->post('/oficio/eliminar', 'oficio::eliminar');
+$routes->post('/oficio/actualizar', 'oficio::actualizar');
+
 $routes->post('/usuario', 'usuario::autenticacion');
 
 $routes->post('/parentescos', 'parentesco::guardar');
@@ -90,6 +95,8 @@ $routes->get('/turnos', 'turno::index');
 $routes->get('/secciones', 'seccion::index');
 $routes->get('/grupos', 'grupo::index');
 $routes->get('/grado', 'grado::index');
+
+
 
 /**
  * --------------------------------------------------------------------

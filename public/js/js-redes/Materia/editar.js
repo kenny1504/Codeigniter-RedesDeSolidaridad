@@ -20,12 +20,13 @@ function Ingresar(e) { // Metodo para guardar(editar) datos los datos al presion
         $("#editar_confirmar").click(); // llama al evento click "editar_confirmar"
     }
   }
-
+  //url = "/actualizar/asignatura"; //URL Kenny
+  url1 ="asignatura/actualizar";//url jose
     $("#editar_confirmar").click(function() {
         $.ajax({
                 
                     type: 'POST',
-                    url: '/actualizar/asignatura', // ruta editar materia
+                    url: url1, // ruta editar materia
                     data: $('#editar-materia').serialize(), // manda el form donde se encuentra la modal materia
                     dataType: "JSON", // tipo de respuesta del controlador
                     success: function(data){

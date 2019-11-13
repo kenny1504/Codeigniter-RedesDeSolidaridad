@@ -25,7 +25,8 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
           $('.error').text("Error: El "+ data.errors.Nombre); 
         } else {
         var datos=  "<tr class='oficio" + data.id + "'>"+"<td>"+data.Nombre+"</td>"
-        + "<td>"+"<button class='btn btn-success' data-toggle='modal' data-target='#' onclick=''><i class=' fa fa-fw fa-pencil'></i></button>"
+         + "<td>"+"<button class='btn btn-success' data-id="+ data.id +"  onclick='editar_Oficio(this);' ><i class=' fa fa-fw fa-pencil'></i></button>"
+        
         + "<button class='btn btn-info eliminar-oficio' data-id="+ data.id +"><i class='fa fa-fw fa-trash '></i></button>"                                   
         +"</td>"+"</tr>"; // variable guarda el valor 
        $('#oficios').append(datos); // agrega nuevo registro a tabla
