@@ -13,21 +13,22 @@
                         <br>
                         <label for="Nombre" class="col-sm-2 control-label requerido">Asignatura </label>                
                         <div class="col-sm-10">                      
-                       <select style="color: blue; width: 80%; padding-top: 1.5%;"  name="Asignaturas" id="Asignaturas" >
-                      </select>
+                       <select  style="color: blue; width: 80%; padding-top: 1.5%;"  name="Asignaturas" id="Asignaturas" >
+                      </select> </div>
+                      <div class="form-group">
                        <br> <br>
                        </div> 
-                       <div class="col-sm-10"> 
-                       <label for="Nombre"  style="padding-right:14%;" class="col-sm-2 control-label requerido">Grado</label>                   
-                       <select style="color: blue; width: 80%; padding-top: 1.5%;" name="Grados" id="Grados" >
+                       <label for="Nombre"  style="padding-right:14%;" class="col-sm-2 control-label requerido">Grado</label>   
+                       <div class="col-sm-10">                 
+                       <select  style="color: blue; width: 80%; padding-top: 1.5%;" name="Grados" id="Grados" >
                        </select>                   
                         </div>
-                        <br><br><br><br>
-                    </div>
+                        </div>
+                        <br><br><br>
                   </div>
                   <div class="modal-footer">
                     <button type="reset" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-outline" id="asignar_Materia"  >Guardar</button>          
+                    <button type="button" class="btn btn-outline"  data-toggle="modal" data-target="#asignar_materia_confirmar" >Guardar</button>          
                   </div>
                 </div>
                 <!-- /.modal-content -->

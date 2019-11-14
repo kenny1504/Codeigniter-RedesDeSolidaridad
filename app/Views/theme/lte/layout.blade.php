@@ -48,7 +48,8 @@
                     <?= $this->include("Materia/crear.blade.php") ?><!-- Modal crear materia-->
                     <?= $this->include("Materia/eliminar.blade.php") ?><!-- Modal eliminar materia-->      
                     <?= $this->include("Materia/editar.blade.php") ?><!-- Modal editar materia-->
-                    <?= $this->include("Materia/asignar.blade.php") ?><!-- Modal editar materia-->   
+                    <?= $this->include("Materia/asignar.blade.php") ?><!-- Modal editar materia-->
+                    <?= $this->include("Materia/confirmar.blade.php") ?><!-- Modal confirmar editar materia-->      
 
                             <!--******** include de Oficios ********-->   
 

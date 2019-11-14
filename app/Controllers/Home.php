@@ -12,11 +12,11 @@ class Home extends BaseController
 
 	    $session = \Config\Services::session();    // instancia de la libreria SESSION
 		$session->start(); // Inicio de varibles SESSION
-	   /*  $data = array( // asigna los valores del arreglo a la varible de SESSION
+	   /* $data = array( // asigna los valores del arreglo a la varible de SESSION
 			'login_in' => false
 		  ); 
 		  
-		  $session->set($data); */ 
+		  $session->set($data);  
 	/* 	$session->destroy(); //Elimina una SESSION */ 
 	
 		 return view('login.blade.php');
@@ -42,6 +42,13 @@ class Home extends BaseController
 
 	public function session()
 	{
+		$session = \Config\Services::session();    // instancia de la libreria SESSION
+		$session->start(); // Inicio de varibles SESSION
+	    $data = array( // asigna los valores del arreglo a la varible de SESSION
+			'login_in' => false
+		  ); 
+		  
+		  $session->set($data); 
 		return view('login-2.blade.php');
 	}
 	//--------------------------------------------------------------------

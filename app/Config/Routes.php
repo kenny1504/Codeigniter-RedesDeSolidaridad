@@ -114,6 +114,11 @@ $routes->get('/grupos', 'grupo::index');
 $routes->get('/grado', 'grado::index');
 $routes->post('/cargargrados/asignatura', 'grado::cargargrados');
 
+//Rutas detalleAsignatura
+$routes->get('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
+
+
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing

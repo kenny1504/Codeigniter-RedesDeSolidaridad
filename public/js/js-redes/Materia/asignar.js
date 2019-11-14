@@ -5,6 +5,7 @@ $("#asignar-ma").click(function() { //ajax para cargar combobox Asignaturas y Gr
       url: '/cargarmaterias/asignatura', // llamada a ruta para cargar combobox con datos de tabla materia
       dataType: "JSON", // tipo de respuesta del controlador
       success: function(data){ 
+        $('#Asignaturas').empty();
       //ciclo para recorrer el arreglo de asignaturas
         data.forEach(element => {
             //variable para asignarle los valores al combobox
@@ -23,6 +24,7 @@ $("#asignar-ma").click(function() { //ajax para cargar combobox Asignaturas y Gr
     dataType: "JSON", // tipo de respuesta del controlador
     success: function(data){ 
     
+      $('#Grados').empty();
  //ciclo para recorrer el arreglo de grados
       data.forEach(element => {
           //variable para asignarle los valores al combobox
@@ -34,5 +36,29 @@ $("#asignar-ma").click(function() { //ajax para cargar combobox Asignaturas y Gr
   }
   
 });//Fin ajax combobox Asignaturas
+
+});
+
+
+
+$("#asignar_Mate").click(function() {
+
+    $.ajax({
+      type: 'POST',
+      url: '/detalleAsignatura/guardar', // llamada a ruta para cargar combobox con datos de tabla materia
+      data: $('#asignar_materia').serialize(), // manda el form donde se encuentra la modal dataType: "JSON", // tipo de respuesta del controlador
+      dataType: "JSON", // tipo de respuesta del controlador
+      success: function(data){ 
+
+        $("#asignar_materia_confirmar").modal("hide"); // cierra modal
+        $("#asignar_asignatura").modal("hide"); // cierra modal
+        $("#exito").modal("show"); //abre modal de exito
+        $("#exito").fadeTo(2000,500).slideUp(450,function(){   // cierra la modal despues del tiempo determinado  
+                 $("#exito").modal("hide"); // cierra modal
+                 } );
+    } 
+    
+  });//Fin ajax guardar materia asignada
+
 
 });

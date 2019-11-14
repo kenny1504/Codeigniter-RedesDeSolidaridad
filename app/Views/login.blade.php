@@ -4,7 +4,7 @@
 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="icon" href="assets/lte/dist/img/logo.png">
-        <title>Redes De Solidaridad</title> <!-- Titulo de la pagina-->
+        <title>login | Redes De Solidaridad</title> <!-- Titulo de la pagina-->
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="stylesheet" href="login.css" type="text/css">
@@ -23,7 +23,7 @@
             <label>Usuario</label>
           </div>
           <div class="field-wrapper">
-            <input type="text" name="password" placeholder="password" autocomplete="new-password">
+            <input type="password" name="password" placeholder="password" autocomplete="new-password">
             <label>Contraseña</label>
           </div>
           <div class="field-wrapper">
