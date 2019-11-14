@@ -41,13 +41,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="assets/lte/dist/img/avatar04.png" class="user-image" alt="User Image">
+              <img src="assets/lte/dist/img/user1-128x128.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs"><?=$this->renderSection('Nombre-hearder1')?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="assets/lte/dist/img/avatar04.png" class="img-circle" alt="User Image">
+                <img src="assets/lte/dist/img/user1-128x128.jpg" class="img-circle" alt="User Image">
                 <p>
                 <?=$this->renderSection('Nombre-hearder2')?> - <?=$this->renderSection('rol-hearder')?>
                 </p>
@@ -58,7 +58,7 @@
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?php base_url()?>." class="btn btn-default btn-flat">Cerrar Sesion</a>
+                  <a href="<?php base_url()?>/session" class="btn btn-default btn-flat">Cerrar Sesion</a>
                 </div>
               </li>
             </ul>

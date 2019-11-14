@@ -79,9 +79,11 @@ $routes->setAutoRoute(true);
 //Rutas Inicio
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Home::inicio');
+$routes->get('/session', 'Home::session');
 
 //Rutas Usuario
 $routes->post('/usuario', 'usuario::autenticacion');
+$routes->post('/autenticacion2/usuario', 'usuario::autenticacion2');
 
 
 //Rutas Asignaturas
@@ -89,6 +91,8 @@ $routes->get('/asignaturas', 'asignatura::index');
 $routes->post('/agregar/asignatura', 'asignatura::agregar');
 $routes->post('/elimina/asignatura', 'asignatura::eliminar');
 $routes->post('/actualizar/asignatura', 'asignatura::actualizar');
+$routes->post('/cargarmaterias/asignatura', 'asignatura::cargarmaterias');
+
 
 //Rutas Parentescos
 $routes->post('/parentescos', 'parentesco::guardar');
@@ -108,6 +112,7 @@ $routes->get('/grupos', 'grupo::index');
 
 //Rutas Grados
 $routes->get('/grado', 'grado::index');
+$routes->post('/cargargrados/asignatura', 'grado::cargargrados');
 
 /**
  * --------------------------------------------------------------------

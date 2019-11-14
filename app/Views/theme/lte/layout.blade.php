@@ -47,7 +47,8 @@
                     <?= $this->renderSection ('contenido') ?> 
                     <?= $this->include("Materia/crear.blade.php") ?><!-- Modal crear materia-->
                     <?= $this->include("Materia/eliminar.blade.php") ?><!-- Modal eliminar materia-->      
-                    <?= $this->include("Materia/editar.blade.php") ?><!-- Modal editar materia-->  
+                    <?= $this->include("Materia/editar.blade.php") ?><!-- Modal editar materia-->
+                    <?= $this->include("Materia/asignar.blade.php") ?><!-- Modal editar materia-->   
 
                             <!--******** include de Oficios ********-->   
 
@@ -72,6 +73,7 @@
             </div>        
             <!--fin footer -->
 
+
         <!-- jQuery 3 -->
        </div>
         <script type="text/javascript" src="assets/lte/bower_components/jquery/dist/jquery.min.js"> </script>
@@ -91,6 +93,7 @@
         <script type="text/javascript" src="js/js-redes/Materia/crear.js"></script> <!-- escript para ingresar datos por ajax-->
         <script type="text/javascript" src="js/js-redes/Materia/eliminar.js"></script> <!-- script eliminar materia-->
         <script type="text/javascript" src="js/js-redes/Materia/editar.js"></script> <!-- script editar materia-->
+        <script type="text/javascript" src="js/js-redes/Materia/asignar.js"></script> <!-- script asignar materia-->
 
         <!--********************* script  "oficio" *************************-->
         <script type="text/javascript" src="js/js-redes/Oficio/agregar.js"></script> <!-- escript para validar datos requeridos-->

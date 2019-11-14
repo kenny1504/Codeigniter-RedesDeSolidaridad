@@ -25,5 +25,13 @@ class grado extends BaseController
 			return view('login.blade.php');
 		}
 		
-    }
+	}
+	
+	public function cargargrados()
+	{
+
+		$grados = new grados();
+       $result= $grados->findAll();
+	   return json_encode($result);
+	}
 }

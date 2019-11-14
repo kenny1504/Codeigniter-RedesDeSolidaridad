@@ -94,6 +94,14 @@ class asignatura extends BaseController
 	
 	}
 
+	public function cargarmaterias()
+	{
+
+		$asignaturas = new asignaturas();
+       $result= $asignaturas->findAll();
+	   return json_encode($result);
+	}
+
 
 	//--------------------------------------------------------------------
 
