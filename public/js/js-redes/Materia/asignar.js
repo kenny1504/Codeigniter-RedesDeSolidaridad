@@ -41,20 +41,20 @@ $("#asignar-ma").click(function() { //ajax para cargar combobox Asignaturas y Gr
 
 
 
-$("#asignar_Mate").click(function() {
+$("#asignar_Mate").click(function() { // ajax para guardar en la tabla detalleAsignatura
 
     $.ajax({
-      type: 'POST',
+      type: 'POST', 
       url: '/detalleAsignatura/guardar', // llamada a ruta para cargar combobox con datos de tabla materia
       data: $('#asignar_materia').serialize(), // manda el form donde se encuentra la modal dataType: "JSON", // tipo de respuesta del controlador
       dataType: "JSON", // tipo de respuesta del controlador
       success: function(data){ 
 
-        $("#asignar_materia_confirmar").modal("hide"); // cierra modal
-        $("#asignar_asignatura").modal("hide"); // cierra modal
+        $("#asignar_materia_confirmar").modal("hide"); // cierra modal confirmar
+        $("#asignar_asignatura").modal("hide"); // cierra modal de asignacion de materias
         $("#exito").modal("show"); //abre modal de exito
         $("#exito").fadeTo(2000,500).slideUp(450,function(){   // cierra la modal despues del tiempo determinado  
-                 $("#exito").modal("hide"); // cierra modal
+                 $("#exito").modal("hide"); // cierra modal exito
                  } );
     } 
     

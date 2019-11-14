@@ -9,7 +9,6 @@
       </div>
      
       <div class="modal-footer">
-        <input type="text" class="hidden" id="id_materia" name="id_materia" > <!-- captura el id_materia del id de la materia -->
         <button type="button" class="btn btn-warning" data-dismiss="modal" id="asignar_Mate">
           <span  class="icon fa fa-check " ></span>
         </button>

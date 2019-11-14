@@ -118,7 +118,6 @@ $routes->post('/cargargrados/asignatura', 'grado::cargargrados');
 $routes->get('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
 
 
-
 /**
  * --------------------------------------------------------------------
  * Additional Routing
