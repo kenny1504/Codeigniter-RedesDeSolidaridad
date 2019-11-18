@@ -28,7 +28,7 @@ Grados
                                     <td><?php echo $grado['Grado'];?></td>  <!--agrega dato a la columna-->
                                 <td>
                                 <button class="btn btn-success " onclick="editar_Grado(this);" data-id="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info" onclick='eliminacion_grado(this);' data-id="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-info" onclick='eliminacion_grado(this);' data-id1="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                         

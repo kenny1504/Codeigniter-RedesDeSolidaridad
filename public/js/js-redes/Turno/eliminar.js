@@ -15,13 +15,12 @@ function eliminacion_turno(button)
     $('#valor_id_turno').val(ide);   //manda id_materia "id" a ventana modal
 
 }
-//url="/elimina/asignatura"; //kenny
-url11="turno/eliminar";//sandino
+
     $("#confirmar_eliminar_turno").click(function() {
         
          $.ajax({
                     type: 'POST',
-                    url: url11, // ruta eliminar materia
+                    url: 'eliminar/turno', // ruta eliminar materia
                     data: $('#delete_turno').serialize(), // manda el form donde se encuentra la modal materia
                     success: function(data){ 
                     dat.remove(); //remueve la fila eliminado 

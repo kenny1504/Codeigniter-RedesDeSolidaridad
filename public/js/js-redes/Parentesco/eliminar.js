@@ -16,13 +16,11 @@ function eliminacion_parentesco(button)
     $('#valor_id_parentesco').val(ide);   //manda id_materia "id" a ventana modal
 
 }
-//url="/elimina/asignatura"; //kenny
-url11="parentesco/eliminar";//sandino
     $("#confirmar_eliminar_parentesco").click(function() {
         
          $.ajax({
                     type: 'POST',
-                    url: url11, // ruta eliminar materia
+                    url: 'parentesco/eliminar', // ruta eliminar materia
                     data: $('#delete_parentesco').serialize(), // manda el form donde se encuentra la modal materia
                     success: function(data){ 
                     dat.remove(); //remueve la fila eliminado 

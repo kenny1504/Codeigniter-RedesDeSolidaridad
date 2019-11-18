@@ -15,13 +15,12 @@ function eliminacion_oficio(button)
     $('#valor_id_oficio').val(ide);   //manda id_materia "id" a ventana modal
 
 }
-//url="/elimina/asignatura"; //kenny
-url11="oficio/eliminar";//sandino
+
     $("#confirmar_eliminar_oficio").click(function() {
         
          $.ajax({
                     type: 'POST',
-                    url: url11, // ruta eliminar materia
+                    url: 'oficio/eliminar', // ruta eliminar materia
                     data: $('#delete_oficio').serialize(), // manda el form donde se encuentra la modal materia
                     success: function(data){ 
                     dat.remove(); //remueve la fila eliminado 
