@@ -14,7 +14,7 @@ Asignaturas
             </div>
             <!-- /.box-header -->
             <div class="box-body panel box box-primary">
-              <table id="asignaturas" class="table table-bordered table-striped">
+              <table id="asignaturas" class="table table-bordered table-hover">
                      <thead>  <!--Header de la tabla -->  
                        <tr > 
                          <th>Nombre Asignatura</th>

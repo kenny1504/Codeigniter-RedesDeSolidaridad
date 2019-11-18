@@ -41,9 +41,9 @@ $("#m,#m2").click(function(){
     $('#Nombre').val(''); // limpiar el input Nombre
     }
     else { // si el input esta vacio
-      $("#Nombre-error").removeClass('hidden'); //muestra el campo Validacion (validacion-cliente)
-      $('.error').addClass('hidden'); // oculta error del servidor(validacion-servidor)
-    }
+            $("#Nombre-error").removeClass('hidden'); //muestra el campo Validacion (validacion-cliente)
+            $('.error').addClass('hidden'); // oculta error del servidor(validacion-servidor)
+         }
 
   }); //fin del ajax
 

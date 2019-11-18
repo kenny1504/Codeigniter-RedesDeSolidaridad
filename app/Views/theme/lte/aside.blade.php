@@ -5,7 +5,7 @@
       <!-- Sidebar user panel --> 
       <div class="user-panel">
         <div class="pull-left image">
-        <img src="assets/lte/dist/img/avatar04.png" class="img-circle" alt="User Image">
+        <img src="assets/lte/dist/img/user1-128x128.jpg" class="img-circle" alt="User Image">
         </div> 
         <div class="pull-left info">
           <p><?=$this->renderSection('Nombre-aslide')?></p>
@@ -76,7 +76,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#" data-toggle="modal" data-target="#modal_Materia" id="m"><i class="fa fa-circle-o text-aqua" ></i> Agregar </a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Asignar</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#asignar_asignatura" id="asignar-ma"><i class="fa fa-circle-o text-aqua"></i> Asignar</a></li>
             <li><a href="<?php base_url() ?>asignaturas"  method="GET"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
         </li> <!--Asignaturas fin -->

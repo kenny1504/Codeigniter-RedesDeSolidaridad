@@ -26,6 +26,7 @@ class grado extends BaseController
 		}
 		
 	}
+<<<<<<< HEAD
 	public function eliminar()
 	{
 		$id=$this->request->getPost('valor_id_grado');   //varible que recive los valores de input valor_id_oficio
@@ -37,5 +38,14 @@ class grado extends BaseController
 			$valor=1;
 		}
 		return  json_decode($valor);
+=======
+	
+	public function cargargrados()
+	{
+
+		$grados = new grados();
+       $result= $grados->findAll();
+	   return json_encode($result);
+>>>>>>> 1c51967767b3d8f6e060e4666a10fb6a00aca23c
 	}
 }

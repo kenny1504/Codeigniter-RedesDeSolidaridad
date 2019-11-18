@@ -14,10 +14,6 @@ class asignaturas extends Model
                 'Nombre'        => 'required|is_unique[asignaturas.Nombre]'
         ];
 
-        protected $validationMessages = [ // mensages personalizados de validacion
-                'Nombre'        => [
-                        'is_unique' => 'La Materia existe.'
-                ]
-        ];
+      
 
 }

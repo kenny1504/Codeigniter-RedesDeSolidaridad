@@ -79,16 +79,24 @@ $routes->setAutoRoute(true);
 //Rutas Inicio
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Home::inicio');
+$routes->get('/session', 'Home::session');
 
 //Rutas Usuario
 $routes->post('/usuario', 'usuario::autenticacion');
+$routes->post('/autenticacion2/usuario', 'usuario::autenticacion2');
 
 
 //Rutas Asignaturas
 $routes->get('/asignaturas', 'asignatura::index');
 $routes->post('/agregar/asignatura', 'asignatura::agregar');
 $routes->post('/elimina/asignatura', 'asignatura::eliminar');
+<<<<<<< HEAD
 $routes->post('/actualizar/asignatura', 'asignatura::actualizar');//Kenny
+=======
+$routes->post('/actualizar/asignatura', 'asignatura::actualizar');
+$routes->post('/cargarmaterias/asignatura', 'asignatura::cargarmaterias');
+
+>>>>>>> 1c51967767b3d8f6e060e4666a10fb6a00aca23c
 
 //Rutas Parentescos
 $routes->get('/parentescos', 'parentesco::index');
@@ -116,7 +124,14 @@ $routes->post('/eliminar/grupo', 'grupo::eliminar');
 
 //Rutas Grados
 $routes->get('/grado', 'grado::index');
+<<<<<<< HEAD
 $routes->post('/eliminar/grado', 'grado::eliminar');
+=======
+$routes->post('/cargargrados/asignatura', 'grado::cargargrados');
+
+//Rutas detalleAsignatura
+$routes->get('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
+>>>>>>> 1c51967767b3d8f6e060e4666a10fb6a00aca23c
 
 
 /**
