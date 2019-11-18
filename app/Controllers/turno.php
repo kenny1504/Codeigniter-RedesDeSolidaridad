@@ -26,4 +26,16 @@ class turno extends BaseController
 		}
 		
     }
+    public function eliminar()
+	{
+		$id=$this->request->getPost('valor_id_turno');   //varible que recive los valores de input valor_id_oficio
+		$valor=0;  
+		$turnos = new turnos();
+		$result = $turnos->where('id',$id)->delete();
+		if(!empty($result))
+		{
+			$valor=1;
+		}
+		return  json_decode($valor);
+	}
 }

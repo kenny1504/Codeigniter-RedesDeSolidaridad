@@ -5,25 +5,22 @@ $("#m,#m2").click(function(){
     $("#Nombre-error").addClass('hidden');
 
   });
-
+  
   $("#Materia").click(function() { //ajax para ingresar materias
-
+    
     if($('input[name=Nombre]').val()!="") // si el input contiene valores entra 
     {
 
     $.ajax({
       type: 'POST',
-      url: '/Materia/crear', //llamada a la ruta ingresar materia
-      data: {
-        _token: $('input[name=_token]').val(),
-        Nombre: $('input[name=Nombre]').val()
-      },
+      url: 'agregar/asignatura', //llamada a la ruta ingresar materia
+      data: $('#ingresar_materia').serialize(), // manda el form donde se encuentra la modal materia
+      dataType: "JSON", // tipo de respuesta del controlador
       success: function(data){ //agregar el nuevo ingreso a la tabla
-       
-        if ((data.errors)) { // si el ajax contiene errores agrega un label indicando el error 
+        if ((data.msg!=true)) { // si el ajax contiene errores agrega un label indicando el error 
           $('.error').removeClass('hidden');
           $("#Nombre-error").addClass('hidden');
-          $('.error').text("Error: El "+ data.errors.Nombre); 
+          $('.error').text("Error: "+ data.Nombre); 
         } else { // si no contiene errores agrega el dato a la tabla asignaturas
           $('.error').addClass('hidden'); //elimina el mensaje de error
         var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Nombre+"</td>"

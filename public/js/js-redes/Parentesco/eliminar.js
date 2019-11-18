@@ -4,28 +4,33 @@ $(".eliminar-parentesco").click(function() { // ajax para eliminar un Parentesco
 dat = $(this).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
 var iden=$(this).attr("data-id"); // captura el valor "id" del Parentesco
 $('#eliminar_Parentesco').modal('show'); // abre ventana modal
-$('#valor').val(iden);   //manda valor "id" a ventana modal
+$('#valor_id_parentesco').val(iden);   //manda valor "id" a ventana modal
 
 }); 
 
+function eliminacion_parentesco(button)
+{
+    dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
+    var ide=$(button).attr("data-id"); // captura el id_materia "id" de la materia
+    $('#eliminar_Parentesco').modal('show'); // abre ventana modal
+    $('#valor_id_parentesco').val(ide);   //manda id_materia "id" a ventana modal
 
-    $("#confirmar_Parentesco").click(function() {
+}
+//url="/elimina/asignatura"; //kenny
+url11="parentesco/eliminar";//sandino
+    $("#confirmar_eliminar_parentesco").click(function() {
         
-        $.ajax({
+         $.ajax({
                     type: 'POST',
-                    url: '/Parentesco/eliminar', // ruta eliminar oficio
-                    data: {
-                        _token: $('input[name=_token]').val(),
-                            id:$('input[name=valor]').val()
-                    },
-                    success: function(data){
+                    url: url11, // ruta eliminar materia
+                    data: $('#delete_parentesco').serialize(), // manda el form donde se encuentra la modal materia
+                    success: function(data){ 
                     dat.remove(); //remueve la fila eliminado 
-                    
                     $("#exito").modal("show"); //abre modal de exito
                     $("#exito").fadeTo(2000,500).slideUp(450,function(){   // cierra la modal despues del tiempo determinado  
                                 $("#exito").modal("hide"); // cierra modal
                                 } );
                     }
-             });//
+             });// 
 
     });

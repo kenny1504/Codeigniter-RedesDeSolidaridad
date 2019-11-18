@@ -12,7 +12,7 @@ class Home extends BaseController
 
 	    $session = \Config\Services::session();    // instancia de la libreria SESSION
 		$session->start(); // Inicio de varibles SESSION
-	 /*	$data = array( // asigna los valores del arreglo a la varible de SESSION
+	    /* $data = array( // asigna los valores del arreglo a la varible de SESSION
 			'login_in' => false
 		  ); 
 		  

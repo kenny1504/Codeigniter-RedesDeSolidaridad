@@ -66,5 +66,30 @@ class oficio extends BaseController
 			return json_encode( $errors); // retorna los errores
 		}		
 	}
+	public function agregar()
+	{
+		$oficios = new oficios();
+		$nombre=$this->request->getPost('Nombre_oficio');   //varible que recive los valores de input Nombre_oficio
+		
+		$data = array (
+			'Nombre' => $nombre		
+		);
+		$result = $oficios->insert($data);// pedicion para insertar nueva asignatura
+		
+		if($result==true) // si actualiza los datos
+		{
+			$oficio = array (
+				'Nombre' => $nombre,
+				'id' => $result, //cuando se hace una insercion la consulta debuelve el id del dato ingresado
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($oficio); //retorna el arreglo con los valores ingresados
+		}
+		else
+		{
+			$errors = $oficios->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}
 	
+	}
 }

@@ -60,7 +60,19 @@
                     <?= $this->include("Parentesco/eliminar.blade.php") ?><!-- Modal eliminar Parentesco-->    
                     <?= $this->include("Parentesco/editar.blade.php")?> <!-- Modal editar Parentesco-->  
 
-                    
+                    <!--******** include de Grado ********-->  
+                    <?= $this->include("Grado/eliminar.blade.php") ?><!-- Modal eliminar Grado-->
+
+                    <!--******** include de Grupo ********--> 
+                    <?= $this->include("Grupo/eliminar.blade.php") ?> <!--Modal eliminar Grupo-->
+
+                    <!--******** include de Seccion ********-->  
+                    <?= $this->include("Seccion/eliminar.blade.php") ?><!-- Modal eliminar Seccion-->
+
+                    <!--******** include de Turno ********-->  
+                    <?= $this->include("Turno/eliminar.blade.php") ?><!-- Modal eliminar Turno-->
+
+
                             <!--******** include de Generales ********-->   
                     <?= $this->include("Alertas/exito.blade.php") ?><!-- Modal mensaje "Exito" -->  
                             
@@ -104,6 +116,18 @@
         <script type="text/javascript" src="js/js-redes/Parentesco/eliminar.js"></script> <!-- script eliminar parentesco-->
         <script type="text/javascript" src="js/js-redes//Parentesco/editar.js"></script> <!-- script editar parentesco-->
 
+        <!--********************* script  "grado" *************************-->
+        <script type="text/javascript" src="js/js-redes/Grado/eliminar.js"></script> <!-- script eliminar Grado-->
+        
+        <!--********************* script  "grupo" *************************-->
+        <script type="text/javascript" src="js/js-redes/Grupo/eliminar.js"></script> <!-- script eliminar Grupo-->
+        
+        <!--********************* script  "seccion" *************************-->
+        <script type="text/javascript" src="js/js-redes/Seccion/eliminar.js"></script> <!-- script eliminar Seccion-->
+        
+        <!--********************* script  "turno" *************************-->
+        <script type="text/javascript" src="js/js-redes/Turno/eliminar.js"></script> <!-- script eliminar Turno-->
+        
 
       </body>
 </html>

@@ -75,27 +75,48 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//Rutas Inicio
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Home::inicio');
-$routes->get('/asignaturas', 'asignatura::index');
-//$routes->post('/elimina/asignatura', 'asignatura::eliminar');//kenny
-$routes->post('/asignatura/eliminar', 'asignatura::eliminar');//jose
-//$routes->post('/actualizar/asignatura', 'asignatura::actualizar');//Kenny
-$routes->post('/asignatura/actualizar', 'asignatura::actualizar');
-$routes->post('/oficio/eliminar', 'oficio::eliminar');
-$routes->post('/oficio/actualizar', 'oficio::actualizar');
 
+//Rutas Usuario
 $routes->post('/usuario', 'usuario::autenticacion');
 
-$routes->post('/parentescos', 'parentesco::guardar');
-//Mostrar
-$routes->get('/oficios', 'oficio::index');
-$routes->get('/parentescos', 'parentesco::index');
-$routes->get('/turnos', 'turno::index');
-$routes->get('/secciones', 'seccion::index');
-$routes->get('/grupos', 'grupo::index');
-$routes->get('/grado', 'grado::index');
 
+//Rutas Asignaturas
+$routes->get('/asignaturas', 'asignatura::index');
+$routes->post('/agregar/asignatura', 'asignatura::agregar');
+$routes->post('/elimina/asignatura', 'asignatura::eliminar');
+$routes->post('/actualizar/asignatura', 'asignatura::actualizar');//Kenny
+
+//Rutas Parentescos
+$routes->get('/parentescos', 'parentesco::index');
+$routes->post('/parentesco/eliminar', 'parentesco::eliminar');
+$routes->post('/parentesco/actualizar', 'parentesco::actualizar');
+$routes->post('/parentesco/agregar', 'parentesco::agregar');
+
+//Rutas Oficios
+$routes->get('/oficios', 'oficio::index');
+$routes->post('/oficio/eliminar', 'oficio::eliminar');
+$routes->post('/oficio/actualizar', 'oficio::actualizar');
+$routes->post('/oficio/agregar', 'oficio::agregar');
+
+//Rutas Turnos
+$routes->get('/turnos', 'turno::index');
+$routes->post('/turno/eliminar', 'turno::eliminar');
+
+//Rutas Secciones
+$routes->get('/secciones', 'seccion::index');
+$routes->post('/seccion/eliminar', 'seccion::eliminar');
+
+//Rutas Grupos
+$routes->get('/grupos', 'grupo::index');
+$routes->post('/grupo/eliminar', 'grupo::eliminar');
+
+//Rutas Grados
+$routes->get('/grado', 'grado::index');
+$routes->post('/grado/eliminar', 'grado::eliminar');
 
 
 /**

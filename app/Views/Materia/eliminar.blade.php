@@ -1,5 +1,5 @@
 <!-- Modal para eliminar Materia-->
-<form  id="delete_materia" >
+<form  id="delete_materia">
 <div id="eliminar_Materia" class=" modal modal-danger fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">

@@ -25,5 +25,17 @@ class grupo extends BaseController
 			return view('login.blade.php');
 		}
 		
-    }
+	}
+	public function eliminar()
+	{
+		$id=$this->request->getPost('valor_id_grupo');   //varible que recive los valores de input valor_id_oficio
+		$valor=0;  
+		$grupos = new grupos();
+		$result = $grupos->where('id',$id)->delete();
+		if(!empty($result))
+		{
+			$valor=1;
+		}
+		return  json_decode($valor);
+	}
 }

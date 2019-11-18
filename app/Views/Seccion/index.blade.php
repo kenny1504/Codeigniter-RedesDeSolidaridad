@@ -28,7 +28,7 @@ Secciones
                                     <td><?php echo $seccion['Codigo'];?></td>  <!--agrega dato a la columna-->
                                 <td>
                                 <button class="btn btn-success " onclick="editar_seccion(this);" data-id="<?php echo $seccion['id']; ?>" data-Nombre="<?php echo $seccion['Codigo'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info" onclick='eliminar_seccion(this);' data-id="<?php echo $seccion['id']; ?>" data-Nombre="<?php echo $seccion['Codigo'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-info" onclick='eliminacion_seccion(this);' data-id="<?php echo $seccion['id']; ?>" data-Nombre="<?php echo $seccion['Codigo'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                         

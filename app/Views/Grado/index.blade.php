@@ -14,7 +14,7 @@ Grados
             </div>
             <!-- /.box-header -->
             <div class="box-body panel box box-primary">
-              <table id="grado" class="table table-bordered table-striped">
+              <table id="grados" class="table table-bordered table-striped">
                      <thead>  <!--Header de la tabla -->  
                        <tr > 
                          <th>Grados Academicos</th>
@@ -27,8 +27,8 @@ Grados
                                  <tr id="<?php echo $grado['id']; ?>" >  <!--abre fila-->
                                     <td><?php echo $grado['Grado'];?></td>  <!--agrega dato a la columna-->
                                 <td>
-                                <button class="btn btn-success " onclick="editar_grado(this);" data-id="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info" onclick='eliminar_grado(this);' data-id="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-success " onclick="editar_Grado(this);" data-id="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
+                                <button class="btn btn-info" onclick='eliminacion_grado(this);' data-id="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                         

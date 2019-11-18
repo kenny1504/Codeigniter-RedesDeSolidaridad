@@ -25,5 +25,17 @@ class seccion extends BaseController
 			return view('login.blade.php');
 		}
 		
-    }
+	}
+	public function eliminar()
+	{
+		$id=$this->request->getPost('valor_id_seccion');   //varible que recive los valores de input valor_id_oficio
+		$valor=0;  
+		$secciones = new secciones();
+		$result = $secciones->where('id',$id)->delete();
+		if(!empty($result))
+		{
+			$valor=1;
+		}
+		return  json_decode($valor);
+	}
 }
