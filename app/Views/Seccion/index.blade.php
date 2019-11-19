@@ -10,14 +10,14 @@ Secciones
             <div class="box">
             <div class="box-header">
               <h2 class="box-title text-light-blue">Secciones</h2>
-              <a href="#" data-toggle="modal" data-target="#modal_Seccion" class="btn btn-warning btn-sm pull-right" id="m2">Agregar seccion</a>
+              <a href="#" data-toggle="modal" data-target="#modal_Seccion" class="btn btn-warning btn-sm pull-right" id="m2">Agregar Secciones</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body panel box box-primary">
               <table id="secciones" class="table table-bordered table-striped">
                      <thead>  <!--Header de la tabla -->  
                        <tr > 
-                         <th>Codigo de Secciones</th>
+                         <th>Lista de Secciones</th>
                          <th></th>
                        </tr>
                     </thead> 
@@ -28,7 +28,7 @@ Secciones
                                     <td><?php echo $seccion['Codigo'];?></td>  <!--agrega dato a la columna-->
                                 <td>
                                 <button class="btn btn-success " onclick="editar_seccion(this);" data-id="<?php echo $seccion['id']; ?>" data-Nombre="<?php echo $seccion['Codigo'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info" onclick='eliminar_seccion(this);' data-id="<?php echo $seccion['id']; ?>" data-Nombre="<?php echo $seccion['Codigo'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-info" onclick='eliminacion_seccion(this);' data-id="<?php echo $seccion['id']; ?>" data-Nombre="<?php echo $seccion['Codigo'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                         

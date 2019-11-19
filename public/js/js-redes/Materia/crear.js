@@ -5,15 +5,15 @@ $("#m,#m2").click(function(){
     $("#Nombre-error").addClass('hidden');
 
   });
-
+  
   $("#Materia").click(function() { //ajax para ingresar materias
-
+    
     if($('input[name=Nombre]').val()!="") // si el input contiene valores entra 
     {
 
     $.ajax({
       type: 'POST',
-      url: '/agregar/asignatura', //llamada a la ruta ingresar materia
+      url: 'agregar/asignatura', //llamada a la ruta ingresar materia
       data: $('#ingresar_materia').serialize(), // manda el form donde se encuentra la modal materia
       dataType: "JSON", // tipo de respuesta del controlador
       success: function(data){ //agregar el nuevo ingreso a la tabla

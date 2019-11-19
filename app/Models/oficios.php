@@ -9,5 +9,15 @@ class oficios extends Model
         protected $returnType = 'array';
         protected $allowedFields = ['Nombre'];
         protected $useTimestamps = false;
+
+        protected $validationRules = [
+                'Nombre'        => 'required|is_unique[oficios.Nombre]'
+        ];
+
+        protected $validationMessages = [ // mensages personalizados de validacion
+                'Nombre'        => [
+                        'is_unique' => 'Priks ya existe el Tutor.'
+                ]
+        ];
 }
 

@@ -27,8 +27,8 @@ parentescos
                                  <tr id="<?php echo $parentesco['id']; ?>" >  <!--abre fila-->
                                     <td><?php echo $parentesco['parentesco'];?></td>  <!--agrega dato a la columna-->
                                 <td>
-                                <button class="btn btn-success " onclick="editar_parentesco(this);" data-id="<?php echo $parentesco['id']; ?>" data-Nombre="<?php echo $parentesco['parentesco'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info" onclick='eliminar_parentesco(this);' data-id="<?php echo $parentesco['id']; ?>" data-Nombre="<?php echo $parentesco['parentesco'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-success " onclick="editar_Parentesco(this);" data-id="<?php echo $parentesco['id']; ?>" data-Nombre="<?php echo $parentesco['parentesco'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
+                                <button class="btn btn-info" onclick='eliminacion_parentesco(this);' data-id="<?php echo $parentesco['id']; ?>" data-Nombre="<?php echo $parentesco['parentesco'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                         

@@ -26,33 +26,70 @@ class parentesco extends BaseController
 		}
 		
     }
-    
-    public function guardar(Request $request){
-        $rules = array( //reglas de validaciones
-            'Nombre' => 'required|max:50|unique:parentescos,Parentesco,', // regla de validacion del campo Nombre "Tabla Parentesco"
-          );
-        $validator = Validator::make ( Input::all(), $rules);
-        if ($validator->fails()) // si la regla de validacion no es cumplida retorna los errores
-        return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
-        else {
-            $parentesco = new parentescos();
-            $parentesco->Parentesco = $request->Nombre;
-            $parentesco->save();
-            return response()->json($parentesco); // si el dato es guardado, retorna el dato guardado
-        }
-    }
-	public function eliminar()
+    public function eliminar()
 	{
-	/*	$parentescos = new parentescos();
-		$data = [
-            'parentescos' => $parentescos->paginate(10), //retorna los datos de la tabla parentescos con su paginacion
-            'pager' => $parentescos->pager
-        ];
-		return view('/Materia/index.blade.php',$data);// retorna vista y se envian datos */
+		$id=$this->request->getPost('valor_id_parentesco');   //varible que recive los valores de input valor_id_oficio
+		$valor=0;  
+		$parentescos = new parentescos();
+		$result = $parentescos->where('id',$id)->delete();
+		if(!empty($result))
+		{
+			$valor=1;
+		}
+		return  json_decode($valor);
 	}
 
+	public function actualizar()
+	{
+		$parentescos = new parentescos();
+		$id=$this->request->getPost('idparentesco');   //varible que recive los valores de input PASSWORD
+		$nombre=$this->request->getPost('Nombre-Parentesco');   //varible que recive los valores de input PASSWORD	
+		
+		$data = array (
+			'parentesco' => $nombre		
+		);
 
-
-	//--------------------------------------------------------------------
-
+		$result = $parentescos->update($id,$data);// pedicion para validar el dato
+		if($result==true) // si actualiza los datos
+		{
+			$datos = array (
+				'id'=>$id,
+				'parentesco' => $nombre,
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($datos); //retorna el arreglo con los nuevos valores
+		}
+		else
+		{
+			$errors = $parentescos->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}		
+    }
+    
+	public function agregar()
+	{
+		$parentescos = new parentescos();
+		$nombre=$this->request->getPost('Nombre_parentesco');   //varible que recive los valores de input Nombre_oficio
+		
+		$data = array (
+			'parentesco' => $nombre		
+		);
+		$result = $parentescos->insert($data);// pedicion para insertar nueva asignatura
+		
+		if($result==true) // si actualiza los datos
+		{
+			$oficio = array (
+				'parentesco' => $nombre,
+				'id' => $result, //cuando se hace una insercion la consulta debuelve el id del dato ingresado
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($oficio); //retorna el arreglo con los valores ingresados
+		}
+		else
+		{
+			$errors = $parentescos->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}
+	
+	}
 }
