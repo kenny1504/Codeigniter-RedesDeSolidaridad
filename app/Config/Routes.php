@@ -93,8 +93,9 @@ $routes->post('/elimina/asignatura', 'asignatura::eliminar');
 $routes->post('/actualizar/asignatura', 'asignatura::actualizar');
 $routes->post('/cargarmaterias/asignatura', 'asignatura::cargarmaterias');
 
-//Rutas detalleAsignatura
-$routes->get('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
+//Rutas detalleAsignatura 
+$routes->post('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
+$routes->post('/detalleAsignatura/eliminar', 'detalleAsignatura::eliminar');
 
 
 //Rutas Parentescos

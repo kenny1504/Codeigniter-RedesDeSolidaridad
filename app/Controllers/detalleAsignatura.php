@@ -2,6 +2,7 @@
 
 use CodeIgniter\Controller;
 use App\Models\gradoaasignaturas;
+use CodeIgniter\HTTP\Request;
 
 class detalleAsignatura extends BaseController
 {
@@ -30,6 +31,20 @@ class detalleAsignatura extends BaseController
        {
                return   json_encode(1);
        }
+               
+      }
+      
+      public function eliminar($id) //funcion para guardar en la tabla detalleAsignatura
+	{
+             $valor=0;
+            $detalleasig = new gradoaasignaturas();
+		$result = $detalleasig->where('id',$id)->delete();
+		if(!empty($result))
+		{
+			$valor=1;
+		}
+		return  json_encode($valor);
+
                
 	}
 }

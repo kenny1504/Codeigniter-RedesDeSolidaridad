@@ -108,7 +108,7 @@ class asignatura extends BaseController
 		$id=$this->request->getPost('id-Grado');  //varible que recive los valores de 
   
 		////////////// CONSULTA A ENVIAR A MYSQL
-		  $consulta= "SELECT asignaturas.Id,asignaturas.Nombre FROM asignaturas INNER JOIN gradoaasignaturas ON asignaturas.Id = gradoaasignaturas.Asignaturaid
+		  $consulta= "SELECT gradoaasignaturas.Id,asignaturas.Nombre FROM asignaturas INNER JOIN gradoaasignaturas ON asignaturas.Id = gradoaasignaturas.Asignaturaid
 		  WHERE(gradoaasignaturas.Gradoid =".$id.")";
 		   
 		   $result=$db->query($consulta); //Envia la consulta a la base de datos

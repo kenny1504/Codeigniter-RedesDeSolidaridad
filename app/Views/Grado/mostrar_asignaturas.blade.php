@@ -9,12 +9,9 @@
                     <h4 class="modal-title" id="grado"></h4>
                   </div>
                   <div class="modal-body "> <!--tabla de materias -->
+                         <th colspan="2">Asignaturas</th> 
                   <table id="asignaturas_grado" class="table table-bordered table-hover text-black">
-                     <thead>  <!--Header de la tabla -->  
-                       <tr > 
-                         <th colspan="2">Asignaturas</th>
-                       </tr>
-                    </thead>                       
+                         
                 </table>
                   </div>
                   <div class="modal-footer">
