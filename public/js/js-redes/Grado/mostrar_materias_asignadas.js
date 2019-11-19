@@ -1,39 +1,40 @@
-var dat; //variable global que guarda el dato "tr" (Fila a editar)
-
 
 function mostrar_Materias_grados(button)
 {
-dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Editar)
-var name =$(button).parents("tr").find("td").text(); //obtiene nombre de la materia (nuevo)
-var ide=$(button).attr("data-id");//obtiene el id de la materia
-//var name=$(button).attr("data-Nombre"); //anterior capturar nombre
-$('#mostrar_Materia-grados').modal('show'); // abre ventana modal
-$('#idmateria').val(ide);   //manda valor "id" a ventana modal Nombre
-$('#Nombre-Materia').val(name);
+    var ide=$(button).attr("data-id");//obtiene el id del grado
+    var name="Grado = " +$(button).attr("data-Nombre"); //captura el grado (Nombre)
+    $('#mostrar_Materia-grados').modal('show'); // abre ventana modal
+    $('#grado').text(name);   //manda el grado a la modal
+    $('#id-Grado').val(ide);   //manda el idgrado a la modal
+
+    $('#asignaturas_grado').empty(); //limpia la tabla
+    $.ajax({
+        type: 'POST',
+        url: '/cargarmaterias_grado/grupo', // llamada a ruta para cargar asignaturas en las tablas
+        data: $('#mostrar_Materia-grado').serialize(), // manda el form donde se encuentra la modal 
+        dataType: "JSON", // tipo de respuesta del controlador
+        success: function(data){ 
+              if(data!=false)
+              {
+                data.forEach(element => {
+                    var datos=  "<tr id=" + element.id + ">"+"<td>"+element.Nombre+"</td>"
+                        + "<td>"+ "<button class='btn btn-success' data-id="+ element.id +" onclick='eliminar(this);'><i class='fa fa-fw fa-trash '></i></button>"                                   
+                        +"</td>"+"</tr>"; // variable guarda el valor del registro de materias
+                    $('#asignaturas_grado').append(datos); // agrega nuevo registro a tabla
+                });
+
+              }
+              else
+              {
+                $("#asignaturas_grado").removeClass('text-black'); //remueve clase que asigna el color negro al texto
+                $("#asignaturas_grado").addClass('text-red');//agrega clase que asigna el color rojo al texto
+                var dato= "<th colspan='2'>No Se Encontraron Asignaturas En Este Grado</th>";
+                $('#asignaturas_grado').append(dato); // agrega nuevo registro a tabla
+              }      
+      } 
+      
+    });//Fin ajax cargar materias en tabla
 }
 
 
-$("#asignar-ma").click(function() { //ajax para cargar combobox Asignaturas y Grados
-
-    $.ajax({
-        type: 'POST',
-        url: '/cargarmaterias/asignatura', // llamada a ruta para cargar combobox con datos de tabla materia
-        dataType: "JSON", // tipo de respuesta del controlador
-        success: function(data){ 
-          $('#Asignaturas').empty();
-        //ciclo para recorrer el arreglo de asignaturas
-          data.forEach(element => {
-              //variable para asignarle los valores al combobox
-             var datos='<option style="color: blue;" value="'+element.id+'">'+element.Nombre+'</option>'; 
-  
-              $('#Asignaturas').append(datos); //ingresa valores al combobox
-          });
-          
-      } 
-      
-    });//Fin ajax combobox Asignaturas
-  
-  
-  });
-  
   

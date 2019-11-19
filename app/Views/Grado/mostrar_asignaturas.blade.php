@@ -1,19 +1,25 @@
 <!--form para poder activar la ruta y poder guardar el registro--><!-- -->
-<form>
+<form id="mostrar_Materia-grado">
     <div class="modal  modal-info fade" id="mostrar_Materia-grados" >
               <div class="modal-dialog" >
                 <div class="modal-content" >
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Asignaturas </h4>
+                    <h4 class="modal-title" id="grado"></h4>
                   </div>
-                  <div class="modal-body ">
-                    
+                  <div class="modal-body "> <!--tabla de materias -->
+                  <table id="asignaturas_grado" class="table table-bordered table-hover text-black">
+                     <thead>  <!--Header de la tabla -->  
+                       <tr > 
+                         <th colspan="2">Asignaturas</th>
+                       </tr>
+                    </thead>                       
+                </table>
                   </div>
                   <div class="modal-footer">
-                    <button type="reset" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
-                    <button type="button"  class="btn btn-outline" id=""  >Guardar</button>          
+                  <input type="text" class="form-control hidden" name="id-Grado" id="id-Grado"> <!--Input para guardar id de grado-->
+                    <button type="reset" class="btn btn-outline" data-dismiss="modal">cerrar</button>         
                   </div>
                 </div>
                 <!-- /.modal-content -->

@@ -120,6 +120,7 @@ $routes->post('/eliminar/seccion', 'seccion::eliminar');
 //Rutas Grupos
 $routes->get('/grupos', 'grupo::index');
 $routes->post('/eliminar/grupo', 'grupo::eliminar');
+$routes->post('/cargarmaterias_grado/grupo', 'asignatura::cargarmaterias_grado');
 
 //Rutas Grados
 $routes->get('/grado', 'grado::index');

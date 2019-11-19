@@ -35,6 +35,7 @@
 
         <!--********************* script  "grado" *************************-->
         <script type="text/javascript" src="js/js-redes/Grado/eliminar.js"></script> <!-- script eliminar Grado-->
+        <script type="text/javascript" src="js/js-redes/Grado/mostrar_materias_asignadas.js"></script> <!-- script mostrar materias de grado-->
         
         <!--********************* script  "grupo" *************************-->
         <script type="text/javascript" src="js/js-redes/Grupo/eliminar.js"></script> <!-- script eliminar Grupo-->

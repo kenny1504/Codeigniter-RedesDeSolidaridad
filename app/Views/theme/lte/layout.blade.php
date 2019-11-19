@@ -56,6 +56,7 @@
 
                     <!--******** include de Grado ********-->  
                     <?= $this->include("Grado/eliminar.blade.php") ?><!-- Modal eliminar Grado-->
+                    <?= $this->include("Grado/mostrar_asignaturas.blade.php") ?><!-- Modal mostrar asignaturas de grados-->
 
                     <!--******** include de Grupo ********--> 
                     <?= $this->include("Grupo/eliminar.blade.php") ?> <!--Modal eliminar Grupo-->
