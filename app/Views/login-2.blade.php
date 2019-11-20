@@ -43,7 +43,7 @@
     <!-- lockscreen credentials (contains the form) -->
     <form id="login2" class="lockscreen-credentials">
       <div class="input-group">
-        <input  name="user" class="form-control hidden" value="<?php echo $_SESSION['NombreDeUsuario'];?>">
+        <input  name="username" class="form-control hidden" value="<?php echo $_SESSION['NombreDeUsuario'];?>">
         <input type="password" name="password" class="form-control" placeholder="Contraseña">
         <div class="input-group-btn">
         <button onclick="login2()" type="button" class="btn"><i class="fa fa-arrow-right text-muted"></i></button>

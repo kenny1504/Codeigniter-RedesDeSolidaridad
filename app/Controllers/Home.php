@@ -12,14 +12,16 @@ class Home extends BaseController
 
 	    $session = \Config\Services::session();    // instancia de la libreria SESSION
 		$session->start(); // Inicio de varibles SESSION
-	  /*   $data = array( // asigna los valores del arreglo a la varible de SESSION
-			'login_in' => false
-		  ); 
-		  
-		  $session->set($data);  
-		$session->destroy(); //Elimina una SESSION */ 
 	
-		 return view('login.blade.php');
+		if($_SESSION['login_in']==true) //si no existe una sesion No ingresa
+		{
+			
+		   return view('inicio.blade.php');
+		}
+		else
+		{
+			return view('login.blade.php');
+		}
 		/* return view('login-2.blade.php'); */
 	}
 	public function inicio()

@@ -1,10 +1,10 @@
 
+
 function mostrar_Materias_grados(button)
 {
     $("#asignaturas_grado").removeClass('text-red'); //remueve clase que asigna el color rojo al texto
     $("#asignaturas_grado").addClass('text-black');//agrega clase que asigna el color negro al texto
     var ide=$(button).attr("data-id");//obtiene el id del grado
-    var name=$(button).attr("data-Nombre")+" Grado"; //captura el grado (Nombre)
     $('#mostrar_Materia-grados').modal('show'); // abre ventana modal
     $('#grado').text(name);   //manda el grado a la modal
     $('#id-Grado').val(ide);   //manda el idgrado a la modal
@@ -14,7 +14,7 @@ function mostrar_Materias_grados(button)
     $('#asignaturas_grado').empty(); //limpia la tabla
     $.ajax({
         type: 'POST',
-        url: '/cargarmaterias_grado/grupo', // llamada a ruta para cargar asignaturas en las tablas
+        url: '/cargarmaterias_grado/grado', // llamada a ruta para cargar asignaturas en las tablas
         data: $('#mostrar_Materia-grado').serialize(), // manda el form donde se encuentra la modal 
         dataType: "JSON", // tipo de respuesta del controlador
         success: function(data){ 

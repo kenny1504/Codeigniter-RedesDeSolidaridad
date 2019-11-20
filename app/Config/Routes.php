@@ -83,7 +83,7 @@ $routes->get('/session', 'Home::session');
 
 //Rutas Usuario
 $routes->post('/usuario', 'usuario::autenticacion');
-$routes->post('/autenticacion2/usuario', 'usuario::autenticacion2');
+$routes->get('/usuario', 'usuario::index');
 
 
 //Rutas Asignaturas
@@ -121,11 +121,11 @@ $routes->post('/eliminar/seccion', 'seccion::eliminar');
 //Rutas Grupos
 $routes->get('/grupos', 'grupo::index');
 $routes->post('/eliminar/grupo', 'grupo::eliminar');
-$routes->post('/cargarmaterias_grado/grupo', 'asignatura::cargarmaterias_grado');
 
 //Rutas Grados
 $routes->get('/grado', 'grado::index');
 $routes->post('/cargargrados/asignatura', 'grado::cargargrados');
+$routes->post('/cargarmaterias_grado/grado', 'asignatura::cargarmaterias_grado');
 
 
 

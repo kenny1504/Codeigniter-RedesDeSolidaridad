@@ -24,7 +24,7 @@
 </head>
     <body class="hold-transition skin-blue sidebar-mini fixed">
 <!-- Site wrapper -->
-       <div class="wrapper">
+       <div class="wrapper">     
                     <!--inicio header-->
                   <?= $this->include("theme/lte/usuario.blade.php") ?> <!-- vista contiene todos los datos del usuario SIEMPRE INCLUIR EN TODAS LAS VISTAS -->
                   <?= $this->include("theme/lte/hearder.blade.php")  ?><!-- Hearder de la pagina inicio-->
@@ -32,11 +32,13 @@
                     <!--inicio aside -->
                     <?= $this->include("theme/lte/aside.blade.php") ?><!-- aside o menu lateral de la pagina inicio-->
                     <!--fin aside -->
-                    <div class="content-wrapper">  
-                        
-                            <!--******** include de Materia ********-->   
+      <div class="content-wrapper">  
+                <section class="content-header">
+                   <?= $this->renderSection ('contenido') ?>  <!-- Contenido dinamico-->
+                </section> 
 
-                    <?= $this->renderSection ('contenido') ?> 
+                            <!--******** include de Materia ********-->  
+                             
                     <?= $this->include("Materia/crear.blade.php") ?><!-- Modal crear materia-->
                     <?= $this->include("Materia/eliminar.blade.php") ?><!-- Modal eliminar materia-->      
                     <?= $this->include("Materia/editar.blade.php") ?><!-- Modal editar materia-->
@@ -69,7 +71,8 @@
 
 
                             <!--******** include de Generales ********-->   
-                    <?= $this->include("Alertas/exito.blade.php") ?><!-- Modal mensaje "Exito" -->  
+                    <?= $this->include("Alertas/exito.blade.php") ?><!-- Modal mensaje "Exito" -->
+                    <?= $this->include("Alertas/error.blade.php") ?><!-- Modal mensaje "errores" --> 
                             
 
                     </div>

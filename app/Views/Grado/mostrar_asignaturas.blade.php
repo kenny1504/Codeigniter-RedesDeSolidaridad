@@ -6,10 +6,9 @@
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="grado"></h4>
+                      <th colspan="2">Asignaturas</th> 
                   </div>
-                  <div class="modal-body "> <!--tabla de materias -->
-                         <th colspan="2">Asignaturas</th> 
+                  <div class="modal-body "> <!--tabla de materias -->           
                   <table id="asignaturas_grado" class="table table-bordered table-hover text-black">
                          
                 </table>

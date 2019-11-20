@@ -31,7 +31,7 @@
         <script type="text/javascript" src="js/js-redes/Parentesco/agregar.js"></script> <!-- escript para validar datos requeridos-->
         <script type="text/javascript" src="js/js-redes/Parentesco/crear.js"></script> <!-- escript para ingresar datos por ajax-->
         <script type="text/javascript" src="js/js-redes/Parentesco/eliminar.js"></script> <!-- script eliminar parentesco-->
-        <script type="text/javascript" src="js/js-redes//Parentesco/editar.js"></script> <!-- script editar parentesco-->
+        <script type="text/javascript" src="js/js-redes/Parentesco/editar.js"></script> <!-- script editar parentesco-->
 
         <!--********************* script  "grado" *************************-->
         <script type="text/javascript" src="js/js-redes/Grado/eliminar.js"></script> <!-- script eliminar Grado-->
