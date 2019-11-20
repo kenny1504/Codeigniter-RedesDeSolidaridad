@@ -13,13 +13,13 @@ class Home extends BaseController
 	    $session = \Config\Services::session();    // instancia de la libreria SESSION
 		$session->start(); // Inicio de varibles SESSION
 	
-		if($_SESSION['login_in']==true) //si no existe una sesion No ingresa
+		if(!empty ($_SESSION)) //si no existe una sesion No ingresa
 		{
 			
 		   return view('inicio.blade.php');
 		}
 		else
-		{
+		{ 
 			return view('login.blade.php');
 		}
 		/* return view('login-2.blade.php'); */

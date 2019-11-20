@@ -46,21 +46,8 @@ class usuario extends BaseController
    
    public function index() //
 	{       
-     /* $encrypter=  \Config\Services::encrypter();
-      $encrypt=$encrypter->initialize(); */
+   
       $usuario= new usuarios();
-    /*  $contraseña="124";
-      $usuarioencryp= $encrypter->encrypt($usuario);
-      $contraseñaencryp= $encrypter->encrypt($contraseña);
-
-      $data = array (
-         'NombreDeUsuario' => $usuarioencryp,
-         'ClaveDeUsuario' => $contraseñaencryp,
-         'Nombre' => "kenny saenz",
-         'Cedula' => "453-040498-0000F",
-         		
-		);
-      $result = $usuario->insert($data);// pedicion para insertar nueva asignatura*/
       
 
 		$data = [
