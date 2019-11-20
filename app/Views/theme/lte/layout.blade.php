@@ -69,8 +69,10 @@
                     <!--******** include de Turno ********-->  
                     <?= $this->include("Turno/eliminar.blade.php") ?><!-- Modal eliminar Turno-->
 
+                    <!--******** include de Generales ********-->   
+                    <?= $this->include("Usuario/crear.blade.php") ?><!-- Modal crear usuario-->
 
-                            <!--******** include de Generales ********-->   
+                    <!--******** include de Generales ********-->   
                     <?= $this->include("Alertas/exito.blade.php") ?><!-- Modal mensaje "Exito" -->
                     <?= $this->include("Alertas/error.blade.php") ?><!-- Modal mensaje "errores" --> 
                             

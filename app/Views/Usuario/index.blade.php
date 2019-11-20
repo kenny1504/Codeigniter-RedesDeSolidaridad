@@ -10,7 +10,7 @@ Grados
             <div class="box">
             <div class="box-header">
               <h2 class="box-title text-light-blue">Usuarios</h2>
-              <a href="#" data-toggle="modal" data-target="#" class="btn btn-warning btn-sm pull-right" >Agregar Uusario</a>
+              <a href="#" data-toggle="modal" data-target="#crear_usuario"class="btn btn-warning btn-sm pull-right" >Agregar Usario</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body panel box box-primary">

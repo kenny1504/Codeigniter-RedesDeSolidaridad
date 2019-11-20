@@ -57,6 +57,36 @@ class usuario extends BaseController
       return view('/Usuario/index.blade.php',$data);// retorna vista y se envian datos 
 
 
+   }
+   
+   public function agregar() //
+	{       
+   
+      $usuario= new usuarios();
+      
+      $nombre=$this->request->getPost('Nombre');   //varible que recive los valores de input NOMBRE
+		
+		$data = array (
+			'Nombre' => $nombre		
+		);
+		$result = $usuario->insert($data);// pedicion para insertar nueva asignatura
+		
+		if($result==true) // si actualiza los datos
+		{
+			$materia = array (
+				'Nombre' => $nombre,
+				'id' => $result, //cuando se hace una insercion la consulta debuelve el id del dato ingresado
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($materia); //retorna el arreglo con los valores ingresados
+		}
+		else
+		{
+			$errors = $usuario->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}
+
+
 	}
 
 }
