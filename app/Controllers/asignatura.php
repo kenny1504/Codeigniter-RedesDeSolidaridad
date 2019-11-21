@@ -28,7 +28,7 @@ class asignatura extends BaseController
 	}
 	public function eliminar()
 	{
-		$id=$this->request->getPost('id_materia');   //varible que recive los valores de input ID_MATERIA
+		$id=$this->request->getPost('id_Asignatura');   //varible que recive los valores de input ID_MATERIA
 		$valor=0;  
 		$asignaturas = new asignaturas();
 		$result = $asignaturas->where('id',$id)->delete();
@@ -36,7 +36,7 @@ class asignatura extends BaseController
 		{
 			$valor=1;
 		}
-		return  json_encode($valor);
+		return  json_decode($valor);
 	}
 
 	public function actualizar()

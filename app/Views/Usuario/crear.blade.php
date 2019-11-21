@@ -13,15 +13,15 @@
 
                         <div class="register-box-body" style="background-color:#eee;" >
                             <div class="form-group has-feedback">
-                                <input type="text" class="form-control" placeholder="Full name">
+                                <input type="text" id="Nombre-completo" class="form-control" placeholder="Nombre Completo">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
                             <div class="form-group has-feedback">
-                                <input type="email" class="form-control" placeholder="Nombre de usuario">
+                                <input type="email"  id="Nombre-de-usuario" class="form-control" placeholder="Nombre de usuario">
                                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                             <div class="form-group has-feedback">
-                                <input type="password" class="form-control" placeholder="Contraseña">
+                                <input type="password" id="contraseña" class="form-control" placeholder="Contraseña">
                                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                             </div>
                             <form>
@@ -29,7 +29,13 @@
                                 <input type="text" id="cedula" class="form-control" placeholder="Cedula">
                                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                             </div>
-                            </div>    
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input placeholder="Fecha vencimiento" type="text" class="form-control pull-right" id="datepicker">
+                            </div>
+                        </div>    
 
                 <div class="modal-footer">
                     <button type="reset"  class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>

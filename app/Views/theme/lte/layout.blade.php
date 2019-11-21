@@ -20,6 +20,8 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
             folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" type="text/css" href="assets/lte/dist/css/skins/_all-skins.min.css" >
+        <link rel="stylesheet" type="text/css" href="assets/lte/bower_components/bootstrap-daterangepicker/daterangepicker.css" >
+        <link rel="stylesheet" type="text/css" href="assets/lte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" >
        
 </head>
     <body class="hold-transition skin-blue sidebar-mini fixed">
@@ -83,7 +85,6 @@
             <?= $this->include("theme/lte/footer.blade.php") ?><!-- footer de la pagina inicio-->
             </div>        
             <!--fin footer -->
-
 
         <!-- jQuery 3 -->
        </div>   

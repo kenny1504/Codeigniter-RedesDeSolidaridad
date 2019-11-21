@@ -6,6 +6,8 @@
         <script type="text/javascript" src="assets/lte/dist/js/adminlte.min.js"> </script>
         <script type="text/javascript" src="assets/lte/bower_components/fastclick/lib/fastclick.js"> </script>
         <script type="text/javascript" src="assets/lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"> </script>
+        <script type="text/javascript" src="assets/lte/bower_components/bootstrap-daterangepicker/daterangepicker.js"> </script>
+        <script type="text/javascript" src="assets/lte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"> </script>
 
 
         <script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
