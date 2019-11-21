@@ -97,11 +97,32 @@ class asignatura extends BaseController
 	public function cargarmaterias()
 	{
 
-		$asignaturas = new asignaturas();
+	   $asignaturas = new asignaturas();
        $result= $asignaturas->findAll();
 	   return json_encode($result);
 	}
 
+	public function cargarmaterias_grado()
+	{
+		$db = \Config\Database::connect(); // concexion con la basse de datos
+		$id=$this->request->getPost('id-Grado');  //varible que recive los valores de 
+  
+		////////////// CONSULTA A ENVIAR A MYSQL
+		  $consulta= "SELECT gradoaasignaturas.Id,asignaturas.Nombre FROM asignaturas INNER JOIN gradoaasignaturas ON asignaturas.Id = gradoaasignaturas.Asignaturaid
+		  WHERE(gradoaasignaturas.Gradoid =".$id.")";
+		   
+		   $result=$db->query($consulta); //Envia la consulta a la base de datos
+      if($result==true){
+		
+		return json_encode($result->getResultArray());
+
+	  }
+		else{
+     
+			return json_encode(false);
+	 }
+		   
+	}
 
 	//--------------------------------------------------------------------
 

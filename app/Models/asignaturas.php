@@ -13,7 +13,14 @@ class asignaturas extends Model
         protected $validationRules = [
                 'Nombre'        => 'required|is_unique[asignaturas.Nombre]'
         ];
+    
+        protected $validationMessages =[
 
+                'Nombre' =>[
+                        'is_unique'=> 'La asignatura ya existe'
+                 ]
+        ];
+               
       
 
 }

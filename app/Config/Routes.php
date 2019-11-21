@@ -83,7 +83,7 @@ $routes->get('/session', 'Home::session');
 
 //Rutas Usuario
 $routes->post('/usuario', 'usuario::autenticacion');
-$routes->post('/autenticacion2/usuario', 'usuario::autenticacion2');
+$routes->get('/usuario', 'usuario::index');
 
 
 //Rutas Asignaturas
@@ -92,6 +92,10 @@ $routes->post('/agregar/asignatura', 'asignatura::agregar');
 $routes->post('/elimina/asignatura', 'asignatura::eliminar');
 $routes->post('/actualizar/asignatura', 'asignatura::actualizar');
 $routes->post('/cargarmaterias/asignatura', 'asignatura::cargarmaterias');
+
+//Rutas detalleAsignatura 
+$routes->post('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
+$routes->post('/detalleAsignatura/eliminar', 'detalleAsignatura::eliminar');
 
 
 //Rutas Parentescos
@@ -123,6 +127,7 @@ $routes->get('/grado', 'grado::index');
 $routes->post('/agregar/grado', 'grado::agregar');
 $routes->post('/eliminar/grado', 'grado::eliminar');
 $routes->post('/cargargrados/asignatura', 'grado::cargargrados');
+$routes->post('/cargarmaterias_grado/grado', 'asignatura::cargarmaterias_grado');
 
 //Rutas detalleAsignatura
 $routes->get('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');

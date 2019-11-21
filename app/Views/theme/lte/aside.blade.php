@@ -17,14 +17,14 @@
       <li class="header">Menu Navegacion</li>
         <li class="treeview"> <!--Usuarios inicio -->
           <a href="#">
-            <i class="fa fa-user"></i> <span>Usuarios</span>
+            <i class="fa fa-user"></i> <span>Usuarios</span> 
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Agregar</a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
+            <li><a href="<?php base_url() ?>usuario" method="GET"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
         </li> <!--Usuarios fin -->   
         <li class="treeview"> <!--Notas inicio -->

@@ -20,19 +20,11 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
             folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" type="text/css" href="assets/lte/dist/css/skins/_all-skins.min.css" >
-      
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-      
+       
 </head>
     <body class="hold-transition skin-blue sidebar-mini fixed">
 <!-- Site wrapper -->
-       <div class="wrapper">
+       <div class="wrapper">     
                     <!--inicio header-->
                   <?= $this->include("theme/lte/usuario.blade.php") ?> <!-- vista contiene todos los datos del usuario SIEMPRE INCLUIR EN TODAS LAS VISTAS -->
                   <?= $this->include("theme/lte/hearder.blade.php")  ?><!-- Hearder de la pagina inicio-->
@@ -40,11 +32,13 @@
                     <!--inicio aside -->
                     <?= $this->include("theme/lte/aside.blade.php") ?><!-- aside o menu lateral de la pagina inicio-->
                     <!--fin aside -->
-                    <div class="content-wrapper">  
-                        
-                            <!--******** include de Materia ********-->   
+      <div class="content-wrapper">  
+                <section class="content-header">
+                   <?= $this->renderSection ('contenido') ?>  <!-- Contenido dinamico-->
+                </section> 
 
-                    <?= $this->renderSection ('contenido') ?> 
+                            <!--******** include de Materia ********-->  
+                             
                     <?= $this->include("Materia/crear.blade.php") ?><!-- Modal crear materia-->
                     <?= $this->include("Materia/eliminar.blade.php") ?><!-- Modal eliminar materia-->      
                     <?= $this->include("Materia/editar.blade.php") ?><!-- Modal editar materia-->
@@ -65,6 +59,7 @@
                     <!--******** include de Grado ********-->  
                     <?= $this->include("Grado/crear.blade.php") ?><!-- Modal agregar Grado-->
                     <?= $this->include("Grado/eliminar.blade.php") ?><!-- Modal eliminar Grado-->
+                    <?= $this->include("Grado/mostrar_asignaturas.blade.php") ?><!-- Modal mostrar asignaturas de grados-->
 
                     <!--******** include de Grupo ********--> 
                     <?= $this->include("Grupo/eliminar.blade.php") ?> <!--Modal eliminar Grupo-->
@@ -75,9 +70,12 @@
                     <!--******** include de Turno ********-->  
                     <?= $this->include("Turno/eliminar.blade.php") ?><!-- Modal eliminar Turno-->
 
+                    <!--******** include de Generales ********-->   
+                    <?= $this->include("Usuario/crear.blade.php") ?><!-- Modal crear usuario-->
 
-                            <!--******** include de Generales ********-->   
-                    <?= $this->include("Alertas/exito.blade.php") ?><!-- Modal mensaje "Exito" -->  
+                    <!--******** include de Generales ********-->   
+                    <?= $this->include("Alertas/exito.blade.php") ?><!-- Modal mensaje "Exito" -->
+                    <?= $this->include("Alertas/error.blade.php") ?><!-- Modal mensaje "errores" --> 
                             
 
                     </div>
@@ -89,6 +87,7 @@
 
 
         <!-- jQuery 3 -->
+<<<<<<< HEAD
        </div>
         <script type="text/javascript" src="assets/lte/bower_components/jquery/dist/jquery.min.js"> </script>
         <script type="text/javascript" src="assets/lte/bower_components/bootstrap/dist/js/bootstrap.min.js"> </script>
@@ -133,7 +132,11 @@
         
         <!--********************* script  "turno" *************************-->
         <script type="text/javascript" src="js/js-redes/Turno/eliminar.js"></script> <!-- script eliminar Turno-->
+=======
+       </div>   
+>>>>>>> f6ae5df783d0977f5a3088120696f2dc8993d810
         
+       <?= $this->include("theme/lte/Scripts.blade.php") ?><!-- scripts de la pagina inicio y demas-->
 
       </body>
 </html>

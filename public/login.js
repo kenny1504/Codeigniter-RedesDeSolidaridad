@@ -47,7 +47,7 @@ function showThankYou(){
 
 
 function login2(){ // Si quiere ingresar con el mismo usuario
-  url = "/autenticacion2/usuario"; //URL
+  url = "usuario/autenticacion"; //URL
 
   $.ajax({
       url : url, // URL del controlador

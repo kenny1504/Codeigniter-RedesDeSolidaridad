@@ -29,7 +29,8 @@ class Database extends \CodeIgniter\Database\Config
 	 *
 	 * @var array
 	 */
-	public $default = [
+
+	 public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
 		'username' => 'root',
@@ -37,7 +38,29 @@ class Database extends \CodeIgniter\Database\Config
 		'database' => 'redesdesolidaridad',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
-		'pConnect' => false,
+		'pConnect' => true,
+		'DBDebug'  => true,
+		'cacheOn'  => false,
+		'cacheDir' => '',
+		'charset'  => 'utf8',
+		'DBCollat' => 'utf8_general_ci',
+		'swapPre'  => '',
+		'encrypt'  => false,
+		'compress' => false,
+		'strictOn' => false,
+		'failover' => array(),
+	]; 
+
+	/*
+	public $default = [
+		'DSN'      => '',
+		'hostname' => 'remotemysql.com',
+		'username' => 'LTRWsJqZcS',
+		'password' => '8dN0eAiqpB',
+		'database' => 'LTRWsJqZcS',
+		'DBDriver' => 'MySQLi',
+		'DBPrefix' => '',
+		'pConnect' => true,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
 		'cacheOn'  => false,
 		'cacheDir' => '',
@@ -50,6 +73,8 @@ class Database extends \CodeIgniter\Database\Config
 		'failover' => [],
 		'port'     => 3306,
 	];
+*/
+
 
 	/**
 	 * This database connection is used when

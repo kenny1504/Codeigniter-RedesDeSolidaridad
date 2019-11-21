@@ -38,6 +38,7 @@ class grado extends BaseController
 		}
 		return  json_decode($valor);
 	}
+	
 	public function cargargrados()
 	{
 
