@@ -4,9 +4,8 @@ var dat; //variable global que guarda el dato "tr" (Fila a editar)
 function editar_Parentesco(button)
 {
 dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Editar)
-var name =$(button).parents("tr").find("td").text(); //obtiene nombre del oficio (nuevo)
-var ide=$(button).attr("data-id");//obtiene el id del oficio
-//var name=$(button).attr("data-Nombre"); //anterior capturar nombre
+var name =$(button).parents("tr").find("td").text(); //obtiene nombre del parentesco (nuevo)
+var ide=$(button).attr("data-id");//obtiene el id del parentesco
 $('#editar_Parentesco').modal('show'); // abre ventana modal
 $('.error').addClass('hidden'); // oculta error del servidor(validacion-servidor)
 $('#idparentesco').val(ide);   //manda valor "id" a ventana modal Nombre
@@ -21,21 +20,20 @@ function Ingresar_parent(e) { // Metodo para guardar(editar) datos los datos al 
     }
   }
   //url = "/actualizar/oficio"; //URL Kenny
-  url2 ="parentesco/actualizar";//url jose
     $("#editar_confirmar_Parentesco").click(function() {
         $.ajax({
                 
                     type: 'POST',
-                    url: url2, // ruta editar oficio
-                    data: $('#editar-parentesco').serialize(), // manda el form donde se encuentra la modal materia
+                    url: 'parentesco/actualizar', // ruta editar parentesco
+                    data: $('#editar-parentesco').serialize(), // manda el form donde se encuentra la modal parentesco
                     dataType: "JSON", // tipo de respuesta del controlador
                     success: function(data){
                         if ((data.msg!=true)) { // si el ajax contiene errores agrega un label indicando el error 
                                 $('.error').removeClass('hidden');
-                                $('.error').text("Error: "+ data.Nombre); 
+                                $('.error').text("Error: "+ data.Parentesco); 
                           } else {
-                                var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
-                                + "<td>"+"<button class='btn btn-success'  onclick='editar_Parentesco(this);' data-id="+ data.id +" data-Nombre="+data.Nombre+"><i class=' fa fa-fw fa-pencil'></i></button>"
+                                var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Parentesco+"</td>"
+                                + "<td>"+"<button class='btn btn-success'  onclick='editar_Parentesco(this);' data-id="+ data.id +" data-Nombre="+data.Parentesco+"><i class=' fa fa-fw fa-pencil'></i></button>"
                                 + "<button class='btn btn-info ' onclick='eliminar_parentesco(this);' data-id="+ data.id +"><i class='fa fa-fw fa-trash '></i></button>"                                   
                                 +"</td>"+"</tr>";// variable guarda los nuevos valores
 

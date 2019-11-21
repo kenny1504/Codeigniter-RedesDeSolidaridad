@@ -12,7 +12,7 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
     {
     $.ajax({
       type: 'POST',
-      url: 'oficio/agregar', //llamada a la ruta ingresar Oficio
+      url: 'agregar/oficio', //llamada a la ruta ingresar Oficio
       data: $('#ingresar_oficio').serialize(), // manda el form donde se encuentra la modal oficio
       dataType: "JSON", // tipo de respuesta del controlador
       success: function(data){ //agregar el nuevo ingreso a la tabla
@@ -23,7 +23,7 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
         } else {
         var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
         + "<td>"+"<button class='btn btn-success' data-id="+ data.id +"  onclick='editar_Oficio(this);' ><i class=' fa fa-fw fa-pencil'></i></button>"
-        + "<button class='btn btn-info' data-id="+ data.id +" onclick='eliminar-oficio(this);'><i class='fa fa-fw fa-trash '></i></button>"                                   
+        + "<button class='btn btn-info' data-id="+ data.id +" onclick='eliminar_oficio(this);'><i class='fa fa-fw fa-trash '></i></button>"                                   
         +"</td>"+"</tr>"; // variable guarda el valor 
        $('#oficios').append(datos); // agrega nuevo registro a tabla
         

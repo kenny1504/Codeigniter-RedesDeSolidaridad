@@ -26,10 +26,9 @@ class grado extends BaseController
 		}
 		
 	}
-<<<<<<< HEAD
 	public function eliminar()
 	{
-		$id=$this->request->getPost('valor_id_grado');   //varible que recive los valores de input valor_id_oficio
+		$id=$this->request->getPost('valor_id_grado');   //varible que recive los valores de input valor_id_grado
 		$valor=0;  
 		$grados = new grados();
 		$result = $grados->where('id',$id)->delete();
@@ -38,14 +37,39 @@ class grado extends BaseController
 			$valor=1;
 		}
 		return  json_decode($valor);
-=======
-	
+	}
 	public function cargargrados()
 	{
 
 		$grados = new grados();
        $result= $grados->findAll();
 	   return json_encode($result);
->>>>>>> 1c51967767b3d8f6e060e4666a10fb6a00aca23c
 	}
+	public function agregar()
+	{
+		$grados = new grados();
+		$nombre=$this->request->getPost('Nombre_grado');   //varible que recive los valores de input NOMBRE
+		
+		$data = array (
+			'Grado' => $nombre		
+		);
+		$result = $grados->insert($data);// pedicion para insertar nuevo grado
+		
+		if($result==true) // si actualiza los datos
+		{
+			$grado = array (
+				'Grado' => $nombre,
+				'id' => $result, //cuando se hace una insercion la consulta debuelve el id del dato ingresado
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($grado); //retorna el arreglo con los valores ingresados
+		}
+		else
+		{
+			$errors = $grados->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}
+	
+	}
+
 }

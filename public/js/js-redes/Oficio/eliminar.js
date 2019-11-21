@@ -1,18 +1,18 @@
 var dat; //variable global que guarda el dato "tr" (Fila a eliminar)
 
-$(".eliminar-oficio").click(function() { // ajax para eliminar una materia
+$(".eliminar-oficio").click(function() { // ajax para eliminar un oficio
 dat = $(this).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
-var iden=$(this).attr("data-id"); // captura el id_materia "id" de la materia
+var iden=$(this).attr("data-id"); // captura el valor_id_oficio "id" del oficio
 $('#eliminar_Oficio').modal('show'); // abre ventana modal
-$('#valor_id_oficio').val(iden);   //manda id_materia "id" a ventana modal
+$('#valor_id_oficio').val(iden);   //manda valor_id_oficio "id" a ventana modal
 }); 
 
-function eliminacion_oficio(button)
+function eliminar_oficio(button)
 {
     dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
-    var ide=$(button).attr("data-id"); // captura el id_materia "id" de la materia
+    var ide=$(button).attr("data-id"); // captura el valor_id_oficio "id" de la oficio
     $('#eliminar_Oficio').modal('show'); // abre ventana modal
-    $('#valor_id_oficio').val(ide);   //manda id_materia "id" a ventana modal
+    $('#valor_id_oficio').val(ide);   //manda valor_id_oficio "id" a ventana modal
 
 }
 
@@ -20,8 +20,8 @@ function eliminacion_oficio(button)
         
          $.ajax({
                     type: 'POST',
-                    url: 'oficio/eliminar', // ruta eliminar materia
-                    data: $('#delete_oficio').serialize(), // manda el form donde se encuentra la modal materia
+                    url: 'eliminar/oficio', // ruta eliminar oficio
+                    data: $('#delete_oficio').serialize(), // manda el form donde se encuentra la modal oficio
                     success: function(data){ 
                     dat.remove(); //remueve la fila eliminado 
                     $("#exito").modal("show"); //abre modal de exito

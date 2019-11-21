@@ -28,7 +28,7 @@ class turno extends BaseController
     }
     public function eliminar()
 	{
-		$id=$this->request->getPost('valor_id_turno');   //varible que recive los valores de input valor_id_oficio
+		$id=$this->request->getPost('valor_id_turno');   //varible que recive los valores de input valor_id_turno
 		$valor=0;  
 		$turnos = new turnos();
 		$result = $turnos->where('id',$id)->delete();

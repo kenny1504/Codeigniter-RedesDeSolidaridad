@@ -9,7 +9,7 @@
           </div>
          
           <div class="modal-footer">
-            <input type="text" class="hidden" id="valor_id_parentesco" name="valor_id_parentesco" > <!-- captura el valor del id del oficio -->
+            <input type="text" class="hidden" id="valor_id_parentesco" name="valor_id_parentesco" > <!-- captura el valor del id del parentesco -->
             <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmar_eliminar_parentesco">
               <span  class="icon fa fa-check " ></span>
             </button>

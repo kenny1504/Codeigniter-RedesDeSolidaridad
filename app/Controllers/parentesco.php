@@ -28,7 +28,7 @@ class parentesco extends BaseController
     }
     public function eliminar()
 	{
-		$id=$this->request->getPost('valor_id_parentesco');   //varible que recive los valores de input valor_id_oficio
+		$id=$this->request->getPost('valor_id_parentesco');   //varible que recive los valores de input valor_id_parentesco
 		$valor=0;  
 		$parentescos = new parentescos();
 		$result = $parentescos->where('id',$id)->delete();
@@ -46,7 +46,7 @@ class parentesco extends BaseController
 		$nombre=$this->request->getPost('Nombre-Parentesco');   //varible que recive los valores de input PASSWORD	
 		
 		$data = array (
-			'parentesco' => $nombre		
+			'Parentesco' => $nombre		
 		);
 
 		$result = $parentescos->update($id,$data);// pedicion para validar el dato
@@ -54,7 +54,7 @@ class parentesco extends BaseController
 		{
 			$datos = array (
 				'id'=>$id,
-				'parentesco' => $nombre,
+				'Parentesco' => $nombre,
 				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
 			);
 			return json_encode($datos); //retorna el arreglo con los nuevos valores
@@ -69,21 +69,21 @@ class parentesco extends BaseController
 	public function agregar()
 	{
 		$parentescos = new parentescos();
-		$nombre=$this->request->getPost('Nombre_parentesco');   //varible que recive los valores de input Nombre_oficio
+		$nombre=$this->request->getPost('Nombre_parentesco');   //varible que recive los valores de input Nombre_parentesco
 		
 		$data = array (
-			'parentesco' => $nombre		
+			'Parentesco' => $nombre		
 		);
-		$result = $parentescos->insert($data);// pedicion para insertar nueva asignatura
+		$result = $parentescos->insert($data);// pedicion para insertar nuevo parentesco
 		
 		if($result==true) // si actualiza los datos
 		{
-			$oficio = array (
-				'parentesco' => $nombre,
+			$parentesco = array (
+				'Parentesco' => $nombre,
 				'id' => $result, //cuando se hace una insercion la consulta debuelve el id del dato ingresado
 				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
 			);
-			return json_encode($oficio); //retorna el arreglo con los valores ingresados
+			return json_encode($parentesco); //retorna el arreglo con los valores ingresados
 		}
 		else
 		{

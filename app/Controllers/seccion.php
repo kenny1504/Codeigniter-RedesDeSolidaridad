@@ -28,7 +28,7 @@ class seccion extends BaseController
 	}
 	public function eliminar()
 	{
-		$id=$this->request->getPost('valor_id_seccion');   //varible que recive los valores de input valor_id_oficio
+		$id=$this->request->getPost('valor_id_seccion');   //varible que recive los valores de input valor_id_seccion
 		$valor=0;  
 		$secciones = new secciones();
 		$result = $secciones->where('id',$id)->delete();

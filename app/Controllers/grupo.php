@@ -28,7 +28,7 @@ class grupo extends BaseController
 	}
 	public function eliminar()
 	{
-		$id=$this->request->getPost('valor_id_grupo');   //varible que recive los valores de input valor_id_oficio
+		$id=$this->request->getPost('valor_id_grupo');   //varible que recive los valores de input valor_id_grupo
 		$valor=0;  
 		$grupos = new grupos();
 		$result = $grupos->where('id',$id)->delete();

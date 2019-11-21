@@ -63,6 +63,7 @@
                     <?= $this->include("Parentesco/editar.blade.php")?> <!-- Modal editar Parentesco-->  
 
                     <!--******** include de Grado ********-->  
+                    <?= $this->include("Grado/crear.blade.php") ?><!-- Modal agregar Grado-->
                     <?= $this->include("Grado/eliminar.blade.php") ?><!-- Modal eliminar Grado-->
 
                     <!--******** include de Grupo ********--> 
@@ -121,6 +122,7 @@
         <script type="text/javascript" src="js/js-redes//Parentesco/editar.js"></script> <!-- script editar parentesco-->
 
         <!--********************* script  "grado" *************************-->
+        <script type="text/javascript" src="js/js-redes/Grado/agregar.js"></script> <!-- script agregar Grado-->
         <script type="text/javascript" src="js/js-redes/Grado/eliminar.js"></script> <!-- script eliminar Grado-->
         
         <!--********************* script  "grupo" *************************-->

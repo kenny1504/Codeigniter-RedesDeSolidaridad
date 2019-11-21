@@ -1,28 +1,26 @@
 var dat; //variable global que guarda el dato "tr" (Fila a eliminar)
 
-$(".eliminar-grupo").click(function() { // ajax para eliminar una materia
+$(".eliminar-grupo").click(function() { // ajax para eliminar un grupo
 dat = $(this).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
-var iden=$(this).attr("data-id2"); // captura el id_materia "id" de la materia
+var iden=$(this).attr("data-id2"); // captura el valor_id_grupo "id" del grupo
 $('#eliminar_Grupo').modal('show'); // abre ventana modal
-$('#valor_id_grupo').val(iden);   //manda id_materia "id" a ventana modal
+$('#valor_id_grupo').val(iden);   //manda valor_id_grupo "id" a ventana modal
 }); 
 
 function eliminacion_grupo(button)
 {
     dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
-    var ide=$(button).attr("data-id2"); // captura el id_materia "id" de la materia
+    var ide=$(button).attr("data-id2"); // captura el valor_id_grupo "id" del grupo
     $('#eliminar_Grupo').modal('show'); // abre ventana modal
-    $('#valor_id_grupo').val(ide);   //manda id_materia "id" a ventana modal
+    $('#valor_id_grupo').val(ide);   //manda valor_id_grupo "id" a ventana modal
 
 }
-//url="/elimina/asignatura"; //kenny
-url11="grupo/eliminar";//sandino
     $("#confirmar_eliminar_grupo").click(function() {
         
          $.ajax({
                     type: 'POST',
-                    url: 'eliminar/grupo', // ruta eliminar materia
-                    data: $('#delete_grupo').serialize(), // manda el form donde se encuentra la modal materia
+                    url: 'eliminar/grupo', // ruta eliminar grupo
+                    data: $('#delete_grupo').serialize(), // manda el form donde se encuentra la modal grupo
                     success: function(data){ 
                     dat.remove(); //remueve la fila eliminado 
                     $("#exito").modal("show"); //abre modal de exito

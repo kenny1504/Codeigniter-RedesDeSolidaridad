@@ -90,25 +90,21 @@ $routes->post('/autenticacion2/usuario', 'usuario::autenticacion2');
 $routes->get('/asignaturas', 'asignatura::index');
 $routes->post('/agregar/asignatura', 'asignatura::agregar');
 $routes->post('/elimina/asignatura', 'asignatura::eliminar');
-<<<<<<< HEAD
-$routes->post('/actualizar/asignatura', 'asignatura::actualizar');//Kenny
-=======
 $routes->post('/actualizar/asignatura', 'asignatura::actualizar');
 $routes->post('/cargarmaterias/asignatura', 'asignatura::cargarmaterias');
 
->>>>>>> 1c51967767b3d8f6e060e4666a10fb6a00aca23c
 
 //Rutas Parentescos
 $routes->get('/parentescos', 'parentesco::index');
-$routes->post('/parentesco/eliminar', 'parentesco::eliminar');
-$routes->post('/parentesco/actualizar', 'parentesco::actualizar');
-$routes->post('/parentesco/agregar', 'parentesco::agregar');
+$routes->post('/eliminar/parentesco', 'parentesco::eliminar');
+$routes->post('/actualizar/prentesco', 'parentesco::actualizar');
+$routes->post('/agregar/parentesco', 'parentesco::agregar');
 
 //Rutas Oficios
 $routes->get('/oficios', 'oficio::index');
-$routes->post('/oficio/eliminar', 'oficio::eliminar');
-$routes->post('/oficio/actualizar', 'oficio::actualizar');
-$routes->post('/oficio/agregar', 'oficio::agregar');
+$routes->post('/eliminar/oficio', 'oficio::eliminar');
+$routes->post('/actualizar/oficio', 'oficio::actualizar');
+$routes->post('/agregar/oficio', 'oficio::agregar');
 
 //Rutas Turnos
 $routes->get('/turnos', 'turno::index');
@@ -124,14 +120,12 @@ $routes->post('/eliminar/grupo', 'grupo::eliminar');
 
 //Rutas Grados
 $routes->get('/grado', 'grado::index');
-<<<<<<< HEAD
+$routes->post('/agregar/grado', 'grado::agregar');
 $routes->post('/eliminar/grado', 'grado::eliminar');
-=======
 $routes->post('/cargargrados/asignatura', 'grado::cargargrados');
 
 //Rutas detalleAsignatura
 $routes->get('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
->>>>>>> 1c51967767b3d8f6e060e4666a10fb6a00aca23c
 
 
 /**
