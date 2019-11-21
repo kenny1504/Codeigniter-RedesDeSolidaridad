@@ -13,7 +13,7 @@
                       <br>
                       <label for="Nombre_parentesco" class="col-sm-2 control-label requerido">Nombre</label>                
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" name="Nombre_parentesco" id="Nombre_parentesco" placeholder="Oficio"  required autocomplete="off">
+                        <input type="text" class="form-control" name="Nombre_parentesco" id="Nombre_parentesco" placeholder="Parentesco"  required autocomplete="off">
                         <p class="error text-red hidden">error: </p>
                       </div>
                       <br><br>

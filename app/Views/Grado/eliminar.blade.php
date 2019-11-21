@@ -1,4 +1,4 @@
-<!-- Modal para eliminar Materia-->
+<!-- Modal para eliminar Grado-->
 <form  id="delete_grado" >
     <div id="eliminar_Grado" class=" modal modal-danger fade" role="dialog">
         <div class="modal-dialog">
@@ -9,7 +9,7 @@
             </div>
            
             <div class="modal-footer">
-              <input type="text" class="hidden" id="valor_id_grado" name="valor_id_grado" > <!-- captura el valor del id del oficio -->
+              <input type="text" class="hidden" id="valor_id_grado" name="valor_id_grado" > <!-- captura el valor del id del Grado academico -->
               <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmar_eliminar_grado">
                 <span  class="icon fa fa-check " ></span>
               </button>

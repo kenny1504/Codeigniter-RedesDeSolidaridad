@@ -6,28 +6,26 @@ function editar_Oficio(button)
 dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Editar)
 var name =$(button).parents("tr").find("td").text(); //obtiene nombre del oficio (nuevo)
 var ide=$(button).attr("data-id");//obtiene el id del oficio
-//var name=$(button).attr("data-Nombre"); //anterior capturar nombre
 $('#editar_Oficio').modal('show'); // abre ventana modal
 $('.error').addClass('hidden'); // oculta error del servidor(validacion-servidor)
 $('#idoficio').val(ide);   //manda valor "id" a ventana modal Nombre
 $('#Nombre-Oficio').val(name);
 }
 
-function Ingresar_ofic(e) { // Metodo para guardar(editar) datos los datos al presionar ENTER 
+function Ingresar_ofi(e) { // Metodo para guardar(editar) datos los datos al presionar ENTER 
     var tecla = (document.all) ? e.keyCode : e.which;
     if (tecla==13) // si es 13 entonces presiono ENTER
     {
         $("#editar_confirmar_Oficio").click(); // llama al evento click "editar_confirmar_Oficio"
     }
   }
-  //url = "/actualizar/oficio"; //URL Kenny
-  url2 ="oficio/actualizar";//url jose
+
     $("#editar_confirmar_Oficio").click(function() {
         $.ajax({
                 
                     type: 'POST',
-                    url: url2, // ruta editar oficio
-                    data: $('#editar-oficio').serialize(), // manda el form donde se encuentra la modal materia
+                    url: 'actualizar/oficio', // ruta editar oficio
+                    data: $('#editar-oficio').serialize(), // manda el form donde se encuentra la modal oficio
                     dataType: "JSON", // tipo de respuesta del controlador
                     success: function(data){
                         if ((data.msg!=true)) { // si el ajax contiene errores agrega un label indicando el error 

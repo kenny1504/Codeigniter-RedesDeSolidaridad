@@ -1,4 +1,4 @@
-<!-- Modal para eliminar Materia-->
+<!-- Modal para eliminar Seccion-->
 <form  id="delete_seccion" >
   <div id="eliminar_Seccion" class=" modal modal-danger fade" role="dialog">
       <div class="modal-dialog">

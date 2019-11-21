@@ -1,27 +1,26 @@
 var dat; //variable global que guarda el dato "tr" (Fila a eliminar)
 
-$(".eliminar-seccion").click(function() { // ajax para eliminar una materia
+$(".eliminar-seccion").click(function() { // ajax para eliminar una seccion
 dat = $(this).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
-var iden=$(this).attr("data-id"); // captura el id_materia "id" de la materia
+var iden=$(this).attr("data-id"); // captura el valor_id_seccion "id" de la seccion
 $('#eliminar_Seccion').modal('show'); // abre ventana modal
-$('#valor_id_seccion').val(iden);   //manda id_materia "id" a ventana modal
+$('#valor_id_seccion').val(iden);   //manda valor_id_seccion "id" a ventana modal
 }); 
 
 function eliminacion_seccion(button)
 {
     dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
-    var ide=$(button).attr("data-id"); // captura el id_materia "id" de la materia
+    var ide=$(button).attr("data-id"); // captura el valor_id_seccion "id" de la seccion
     $('#eliminar_Seccion').modal('show'); // abre ventana modal
-    $('#valor_id_seccion').val(ide);   //manda id_materia "id" a ventana modal
+    $('#valor_id_seccion').val(ide);   //manda valor_id_seccion "id" a ventana modal
 
 }
-url30000="eliminar/seccion";
     $("#confirmar_eliminar_seccion").click(function() {
         
          $.ajax({
                     type: 'POST',
-                    url: url30000, // ruta eliminar materia
-                    data: $('#delete_seccion').serialize(), // manda el form donde se encuentra la modal materia
+                    url: 'eliminar/seccion', // ruta eliminar seccion
+                    data: $('#delete_seccion').serialize(), // manda el form donde se encuentra la modal seccion
                     success: function(data){ 
                     dat.remove(); //remueve la fila eliminado 
                     $("#exito").modal("show"); //abre modal de exito

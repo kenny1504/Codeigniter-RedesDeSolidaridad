@@ -1,4 +1,4 @@
-<!-- Modal para eliminar Materia-->
+<!-- Modal para eliminar Oficio-->
 <form  id="delete_oficio" >
 <div id="eliminar_Oficio" class=" modal modal-danger fade" role="dialog">
     <div class="modal-dialog">
