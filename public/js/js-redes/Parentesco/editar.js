@@ -19,7 +19,6 @@ function Ingresar_parent(e) { // Metodo para guardar(editar) datos los datos al 
         $("#editar_confirmar_Parentesco").click(); // llama al evento click "editar_confirmar_Oficio"
     }
   }
-  //url = "/actualizar/oficio"; //URL Kenny
     $("#editar_confirmar_Parentesco").click(function() {
         $.ajax({
                 

@@ -1,9 +1,8 @@
 $("#asignar-ma").click(function() { //ajax para cargar combobox Asignaturas y Grados
-cargamateria="/cargarmaterias/asignatura";//kenny
-cargamateria1="cargarmaterias/asignatura";//Sandino
+
   $.ajax({
       type: 'POST',
-      url: cargamateria1, // llamada a ruta para cargar combobox con datos de tabla materia
+      url: 'cargarmaterias/asignatura', // llamada a ruta para cargar combobox con datos de tabla materia
       dataType: "JSON", // tipo de respuesta del controlador
       success: function(data){ 
         $('#Asignaturas').empty();
@@ -18,11 +17,10 @@ cargamateria1="cargarmaterias/asignatura";//Sandino
     } 
     
   });//Fin ajax combobox Asignaturas
-cargagrado="/cargargrados/asignatura";//kenny
-cargagrado1="cargargrados/asignatura";//sandino
+  
   $.ajax({
     type: 'POST',
-    url: cargagrado1, // llamada a ruta para cargar combobox con datos de tabla grados
+    url: 'cargargrados/asignatura', // llamada a ruta para cargar combobox con datos de tabla grados
     dataType: "JSON", // tipo de respuesta del controlador
     success: function(data){ 
     

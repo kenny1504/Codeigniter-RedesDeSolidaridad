@@ -2,6 +2,7 @@
 
 use CodeIgniter\Controller;
 use App\Models\asignaturas;
+use App\Models\gradoaasignaturas;
 use Tests\Support\Models\ValidErrorsModel;
 
 class asignatura extends BaseController
@@ -12,7 +13,7 @@ class asignatura extends BaseController
 		$session = \Config\Services::session();    // uso de varibles de session
         $session->start();
 	
-		if($_SESSION['login_in']==true) //si no existe una sesion No ingresa
+		if(isset($_SESSION['login_in']) && !empty($_SESSION['login_in']) && $_SESSION['login_in']==true)  //si no existe una sesion No ingresa
 		{			
 			$asignaturas = new asignaturas();
 			$data = [
@@ -26,18 +27,35 @@ class asignatura extends BaseController
 			return view('login.blade.php');
 		}
 	}
-	public function eliminar()
+	
+	
+	public function eliminar1()
 	{
-		$id=$this->request->getPost('id_Asignatura');   //varible que recive los valores de input ID_MATERIA
-		$valor=0;  
+        $valor=0; 
 		$asignaturas = new asignaturas();
-		$result = $asignaturas->where('id',$id)->delete();
-		if(!empty($result))
-		{
-			$valor=1;
-		}
-		return  json_decode($valor);
+        $gradoasignatura= new gradoaasignaturas(); // instancia de la tabla detalle 
+
+		$id=$this->request->getPost('id_Asignatura');   //varible que recive los valores de input ID_MATERIA
+		$busqueda= $gradoasignatura->where('Asignaturaid',$id)->find();
+			
+		//validacion para verificar si la materia aun no ha sido asignada a ningun grado
+		   if($busqueda!=false)
+			{
+				$valor=-1;
+				//return  ($valor);
+			}
+			else
+			{
+				$result = $asignaturas->where('id',$id)->delete();
+				if(!empty($result))
+				{
+					$valor=1;
+				}
+				//eturn  ($valor);
+			}
+			return  json_encode($valor);
 	}
+
 
 	public function actualizar()
 	{

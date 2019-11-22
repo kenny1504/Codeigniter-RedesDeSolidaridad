@@ -58,7 +58,7 @@
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?php base_url()?>/Redes_De_Solidaridad_Codeigniter/public/session" class="btn btn-default btn-flat">Cerrar Sesion</a>
+                  <a href="<?php base_url()?>session" class="btn btn-default btn-flat">Cerrar Sesion</a>
                 </div>
               </li>
             </ul>

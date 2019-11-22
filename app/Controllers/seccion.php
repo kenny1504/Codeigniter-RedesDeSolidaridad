@@ -10,7 +10,7 @@ class seccion extends BaseController
 		$session = \Config\Services::session();    // instancia de la libreria SESSION
         $session->start(); // Inicio de varibles SESSION
       
-		if($_SESSION['login_in']==true) //si no existe una sesion No ingresa
+		if($_SESSION['login_in']==true)if(isset($_SESSION['login_in']) && !empty($_SESSION['login_in']) && $_SESSION['login_in']==true)  //si no existe una sesion No ingresa
 		{
 			
 			$secciones = new secciones();

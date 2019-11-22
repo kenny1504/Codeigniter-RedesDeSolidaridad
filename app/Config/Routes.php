@@ -89,7 +89,7 @@ $routes->get('/usuario', 'usuario::index');
 //Rutas Asignaturas
 $routes->get('/asignaturas', 'asignatura::index');
 $routes->post('/agregar/asignatura', 'asignatura::agregar');
-$routes->post('/elimina/asignatura', 'asignatura::eliminar');
+$routes->post('/eliminar/asignatura', 'asignatura::eliminar1');
 $routes->post('/actualizar/asignatura', 'asignatura::actualizar');
 $routes->post('/cargarmaterias/asignatura', 'asignatura::cargarmaterias');
 

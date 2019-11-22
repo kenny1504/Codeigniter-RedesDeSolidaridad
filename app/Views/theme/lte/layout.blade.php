@@ -74,8 +74,9 @@
                     <?= $this->include("Turno/editar.blade.php") ?><!-- Modal editar Turno-->
                     <?= $this->include("Turno/crear.blade.php") ?><!-- Modal eliminar Turno-->
 
-                    <!--******** include de Generales ********-->   
+                    <!--******** include de usuario ********-->   
                     <?= $this->include("Usuario/crear.blade.php") ?><!-- Modal crear usuario-->
+                    <?= $this->include("Usuario/perfil.blade.php") ?><!-- Modal crear usuario-->
 
                     <!--******** include de Generales ********-->   
                     <?= $this->include("Alertas/exito.blade.php") ?><!-- Modal mensaje "Exito" -->
@@ -88,59 +89,6 @@
             <?= $this->include("theme/lte/footer.blade.php") ?><!-- footer de la pagina inicio-->
             </div>        
             <!--fin footer -->
-
-<<<<<<< HEAD
-=======
-        <!-- jQuery 3 -->
-<<<<<<< HEAD
-       </div>
-        <script type="text/javascript" src="assets/lte/bower_components/jquery/dist/jquery.min.js"> </script>
-        <script type="text/javascript" src="assets/lte/bower_components/bootstrap/dist/js/bootstrap.min.js"> </script>
-        <script type="text/javascript" src="assets/lte/dist/js/adminlte.min.js"> </script>
-        <script type="text/javascript" src="assets/lte/bower_components/fastclick/lib/fastclick.js"> </script>
-        <script type="text/javascript" src="assets/lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"> </script>
-
-
-        <script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="js/jquery/localization/messages_es.min.js"></script>
-        <script type="text/javascript" src="js/funciones.js"></script>
-
-        <!--********************* script  "Materia" *************************-->
-
-        <script type="text/javascript" src="js/js-redes/Materia/agregar.js"></script> <!-- escript para validar datos requeridos-->
-        <script type="text/javascript" src="js/js-redes/Materia/crear.js"></script> <!-- escript para ingresar datos por ajax-->
-        <script type="text/javascript" src="js/js-redes/Materia/eliminar.js"></script> <!-- script eliminar materia-->
-        <script type="text/javascript" src="js/js-redes/Materia/editar.js"></script> <!-- script editar materia-->
-        <script type="text/javascript" src="js/js-redes/Materia/asignar.js"></script> <!-- script asignar materia-->
-
-        <!--********************* script  "oficio" *************************-->
-        <script type="text/javascript" src="js/js-redes/Oficio/agregar.js"></script> <!-- escript para validar datos requeridos-->
-        <script type="text/javascript" src="js/js-redes/Oficio/crear.js"></script> <!-- escript para ingresar datos por ajax-->
-        <script type="text/javascript" src="js/js-redes/Oficio/eliminar.js"></script> <!-- script eliminar oficio-->
-        <script type="text/javascript" src="js/js-redes/Oficio/editar.js"></script> <!-- script editar oficio-->
-
-        <!--********************* script  "parentesco" *************************-->
-        <script type="text/javascript" src="js/js-redes/Parentesco/agregar.js"></script> <!-- escript para validar datos requeridos-->
-        <script type="text/javascript" src="js/js-redes/Parentesco/crear.js"></script> <!-- escript para ingresar datos por ajax-->
-        <script type="text/javascript" src="js/js-redes/Parentesco/eliminar.js"></script> <!-- script eliminar parentesco-->
-        <script type="text/javascript" src="js/js-redes//Parentesco/editar.js"></script> <!-- script editar parentesco-->
-
-        <!--********************* script  "grado" *************************-->
-        <script type="text/javascript" src="js/js-redes/Grado/agregar.js"></script> <!-- script agregar Grado-->
-        <script type="text/javascript" src="js/js-redes/Grado/eliminar.js"></script> <!-- script eliminar Grado-->
-        
-        <!--********************* script  "grupo" *************************-->
-        <script type="text/javascript" src="js/js-redes/Grupo/eliminar.js"></script> <!-- script eliminar Grupo-->
-        
-        <!--********************* script  "seccion" *************************-->
-        <script type="text/javascript" src="js/js-redes/Seccion/eliminar.js"></script> <!-- script eliminar Seccion-->
-        
-        <!--********************* script  "turno" *************************-->
-        <script type="text/javascript" src="js/js-redes/Turno/eliminar.js"></script> <!-- script eliminar Turno-->
-=======
-       </div>   
->>>>>>> f6ae5df783d0977f5a3088120696f2dc8993d810
->>>>>>> de5f9b1fe286582d9a3010265cfd8723720f7b48
         
        <?= $this->include("theme/lte/Scripts.blade.php") ?><!-- scripts de la pagina inicio y demas-->
 
