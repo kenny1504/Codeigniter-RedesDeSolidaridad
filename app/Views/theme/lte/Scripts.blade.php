@@ -45,6 +45,8 @@
         
         <!--********************* script  "turno" *************************-->
         <script type="text/javascript" src="js/js-redes/Turno/eliminar.js"></script> <!-- script eliminar Turno-->
+        <!-- script eliminar Turno-->
+        <script type="text/javascript" src="js/js-redes/Turno/agregar.js"></script> <!-- script eliminar Turno-->
  
         <!--********************* script  "Usuario" *************************-->
         <script type="text/javascript" src="js/js-redes/ValidarCedula.js"></script> <!-- script ingresar usuario-->

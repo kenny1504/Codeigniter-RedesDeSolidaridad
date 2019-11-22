@@ -7,7 +7,7 @@ $('#eliminar_Turno').modal('show'); // abre ventana modal
 $('#valor_id_turno').val(iden);   //manda valor_id_turno "id" a ventana modal
 }); 
 
-function eliminacion_turno(button)
+function eliminar_turno(button)
 {
     dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
     var ide=$(button).attr("data-id"); // captura el valor_id_turno "id" del turno

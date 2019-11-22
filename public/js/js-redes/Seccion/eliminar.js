@@ -7,7 +7,7 @@ $('#eliminar_Seccion').modal('show'); // abre ventana modal
 $('#valor_id_seccion').val(iden);   //manda valor_id_seccion "id" a ventana modal
 }); 
 
-function eliminacion_seccion(button)
+function eliminar_seccion(button)
 {
     dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
     var ide=$(button).attr("data-id"); // captura el valor_id_seccion "id" de la seccion

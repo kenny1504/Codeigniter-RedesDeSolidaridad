@@ -28,7 +28,7 @@ Turnos
                                     <td><?php echo $turno['Nombre'];?></td>  <!--agrega dato a la columna-->
                                 <td>
                                 <button class="btn btn-success " onclick="editar_turno(this);" data-id="<?php echo $turno['id']; ?>" data-Nombre="<?php echo $turno['Nombre'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info" onclick='eliminacion_turno(this);' data-id="<?php echo $turno['id']; ?>" data-Nombre="<?php echo $turno['Nombre'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-info" onclick='eliminar_turno(this);' data-id="<?php echo $turno['id']; ?>" data-Nombre="<?php echo $turno['Nombre'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                         

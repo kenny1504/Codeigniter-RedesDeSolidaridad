@@ -112,6 +112,8 @@ $routes->post('/agregar/oficio', 'oficio::agregar');
 
 //Rutas Turnos
 $routes->get('/turnos', 'turno::index');
+$routes->post('/agregar/turno', 'turno::agregar');
+$routes->post('/actualizar/turno', 'turno::actualizar');
 $routes->post('/eliminar/turno', 'turno::eliminar');
 
 //Rutas Secciones
@@ -126,11 +128,13 @@ $routes->post('/eliminar/grupo', 'grupo::eliminar');
 $routes->get('/grado', 'grado::index');
 $routes->post('/agregar/grado', 'grado::agregar');
 $routes->post('/eliminar/grado', 'grado::eliminar');
+
+
 $routes->post('/cargargrados/asignatura', 'grado::cargargrados');
 $routes->post('/cargarmaterias_grado/grado', 'asignatura::cargarmaterias_grado');
 
 //Rutas detalleAsignatura
-$routes->get('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
+//$routes->get('/detalleAsignatura/guardar', 'detalleAsignatura::guardar');
 
 
 /**

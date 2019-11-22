@@ -7,7 +7,7 @@ $('#eliminar_Grupo').modal('show'); // abre ventana modal
 $('#valor_id_grupo').val(iden);   //manda valor_id_grupo "id" a ventana modal
 }); 
 
-function eliminacion_grupo(button)
+function eliminar_grupo(button)
 {
     dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
     var ide=$(button).attr("data-id2"); // captura el valor_id_grupo "id" del grupo

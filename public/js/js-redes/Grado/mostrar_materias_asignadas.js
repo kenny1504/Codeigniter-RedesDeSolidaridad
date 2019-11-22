@@ -14,7 +14,7 @@ function mostrar_Materias_grados(button)
     $('#asignaturas_grado').empty(); //limpia la tabla
     $.ajax({
         type: 'POST',
-        url: '/cargarmaterias_grado/grado', // llamada a ruta para cargar asignaturas en las tablas
+        url: 'cargarmaterias_grado/grado', // llamada a ruta para cargar asignaturas en las tablas
         data: $('#mostrar_Materia-grado').serialize(), // manda el form donde se encuentra la modal 
         dataType: "JSON", // tipo de respuesta del controlador
         success: function(data){ 
@@ -46,7 +46,7 @@ function eliminar_Materia_Grado(button)
 
     $.ajax({
         type: 'POST',
-        url: '/detalleAsignatura/eliminar/'+id, // llamada a ruta para cargar asignaturas en las tablas
+        url: 'detalleAsignatura/eliminar/'+id, // llamada a ruta para cargar asignaturas en las tablas
         dataType: "JSON", // tipo de respuesta del controlador
         success: function(data){ 
            if(data==1)

@@ -8,7 +8,7 @@ $('#valor_id_parentesco').val(iden);   //manda valor "id" a ventana modal
 
 }); 
 
-function eliminacion_parentesco(button)
+function eliminar_parentesco(button)
 {
     dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
     var ide=$(button).attr("data-id"); // captura el valor_id_parentesco "id" del parentesco

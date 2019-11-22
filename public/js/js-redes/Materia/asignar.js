@@ -47,7 +47,7 @@ $("#asignar_Mate").click(function() { // ajax para guardar en la tabla detalleAs
 
     $.ajax({
       type: 'POST', 
-      url: '/detalleAsignatura/guardar', // llamada a ruta para cargar combobox con datos de tabla materia
+      url: 'detalleAsignatura/guardar', // llamada a ruta para cargar combobox con datos de tabla materia
       data: $('#asignar_materia').serialize(), // manda el form donde se encuentra la modal dataType: "JSON", // tipo de respuesta del controlador
       dataType: "JSON", // tipo de respuesta del controlador
       success: function(data){ 

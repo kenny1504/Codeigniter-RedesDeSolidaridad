@@ -15,13 +15,12 @@ function eliminar(button)
     $('#id_materia').val(ide);   //manda id_materia "id" a ventana modal
 
 }
-//url="/elimina/asignatura"; //kenny
-url13="elimina/asignatura";//sandino
+
     $("#confirmar").click(function() {
         
          $.ajax({
                     type: 'POST',
-                    url: url13, // ruta eliminar materia
+                    url: 'asignatura/eliminar', // ruta eliminar materia
                     data: $('#delete_materia').serialize(), // manda el form donde se encuentra la modal materia
                     success: function(data){ 
                     dat.remove(); //remueve la fila eliminado 

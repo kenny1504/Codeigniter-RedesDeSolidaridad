@@ -7,7 +7,7 @@ $('#eliminar_Grado').modal('show'); // abre ventana modal
 $('#valor_id_grado').val(iden);   //manda valor_id_grado "id" a ventana modal
 }); 
 
-function eliminacion_grado(button)
+function eliminar_grado(button)
 {
     dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
     var ide=$(button).attr("data-id1"); // captura el valor_id_grado "id" de la grado

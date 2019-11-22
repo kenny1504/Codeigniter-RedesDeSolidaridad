@@ -28,7 +28,7 @@ Oficios
                                     <td><?php echo $oficio['Nombre'];?></td>  <!--agrega dato a la columna-->
                                 <td>
                                 <button class="btn btn-success" onclick="editar_Oficio(this);" data-id="<?php echo $oficio['id']; ?>" data-Nombre="<?php echo $oficio['Nombre'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info" onclick='eliminacion_oficio(this);' data-id="<?php echo $oficio['id']; ?>" data-Nombre="<?php echo $oficio['Nombre'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-info" onclick='eliminar_oficio(this);' data-id="<?php echo $oficio['id']; ?>" data-Nombre="<?php echo $oficio['Nombre'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                         

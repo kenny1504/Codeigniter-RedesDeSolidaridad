@@ -19,11 +19,11 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
         if ((data.msg!=true)) { // si el ajax contiene errores agrega un label indicando el error 
           $('.error').removeClass('hidden');
           $("#Nombre_grado-error").addClass('hidden');
-          $('.error').text("Error: El "+ data.Nombre); 
+          $('.error').text("Error: El "+ data.Grado); 
         } else {
-        var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
+        var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Grado+"</td>"
         + "<td>"+"<button class='btn btn-success' data-id="+ data.id +"  onclick='editar_Grado(this);' ><i class=' fa fa-fw fa-pencil'></i></button>"
-        + "<button class='btn btn-info' data-id="+ data.id +" onclick='eliminacion_grado(this);'><i class='fa fa-fw fa-trash '></i></button>"                                   
+        + "<button class='btn btn-info' data-id="+ data.id +" onclick='eliminar_grado(this);'><i class='fa fa-fw fa-trash '></i></button>"                                   
         +"</td>"+"</tr>"; // variable guarda el valor 
        $('#grados').append(datos); // agrega nuevo registro a tabla
         

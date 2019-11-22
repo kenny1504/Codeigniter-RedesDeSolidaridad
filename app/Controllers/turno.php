@@ -38,4 +38,56 @@ class turno extends BaseController
 		}
 		return  json_decode($valor);
 	}
+	public function agregar()
+	{
+		$turnos = new turnos();
+		$nombre=$this->request->getPost('Nombre_turno');   //varible que recive los valores de input Nombre_turno
+		
+		$data = array (
+			'Nombre' => $nombre		
+		);
+		$result = $turnos->insert($data);// pedicion para insertar nuevo turno
+		
+		if($result==true) // si actualiza los datos
+		{
+			$turno = array (
+				'Nombre' => $nombre,
+				'id' => $result, //cuando se hace una insercion la consulta debuelve el id del dato ingresado
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($turno); //retorna el arreglo con los valores ingresados
+		}
+		else
+		{
+			$errors = $turnos->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}
+	
+	}
+	public function actualizar()
+	{
+		$turnos = new turnos();
+		$id=$this->request->getPost('idturno');   //varible que recive los valores de input PASSWORD
+		$nombre=$this->request->getPost('Nombre-Turno');   //varible que recive los valores de input PASSWORD	
+		
+		$data = array (
+			'Nombre' => $nombre		
+		);
+
+		$result = $turnos->update($id,$data);// pedicion para validar el dato
+		if($result==true) // si actualiza los datos
+		{
+			$datos = array (
+				'id'=>$id,
+				'Nombre' => $nombre,
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($datos); //retorna el arreglo con los nuevos valores
+		}
+		else
+		{
+			$errors = $turnos->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}		
+	}
 }
