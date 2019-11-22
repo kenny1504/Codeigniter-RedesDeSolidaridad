@@ -1,19 +1,25 @@
+$('#datepicker').datepicker({ //sirve para mostrar Datepicker
+    autoclose: true
+  })
+
+
 function EsCedula(elTexto) {
     var es = true;
+    var cadena = elTexto.replace(new RegExp('-','g'),""); // elimina guiones de la cadena
     //validar longitud
-    if (elTexto.length != 14) {
+    if (elTexto.length != 16) {
         es = false;
     } else {
         //verificar si tiene el formato correcto
         var RegExPattern = /^\d{13}[A-Z]{1}$/;
-        if (!elTexto.match(RegExPattern)) {
+        if (!cadena.match(RegExPattern)) {
             es = false;
         } else {
             //verificar si contiene una fecha válida
-            var sFecha = elTexto.substring(3, 9);
-            var sDia = elTexto.substring(3, 5);
-            var sMes = elTexto.substring(5, 7);
-            var sAnio = elTexto.substring(7, 9);
+            var sFecha = cadena.substring(3, 9);  
+            var sDia = cadena.substring(3, 5); 
+            var sMes = cadena.substring(5, 7);
+            var sAnio = cadena.substring(7, 9);
             var aa = parseInt(sAnio);
             var mm = parseInt(sMes);
             var dd = parseInt(sDia);
@@ -69,8 +75,22 @@ function EsCedula(elTexto) {
 function ValidarCedula(cadena) {
     if (EsCedula(cadena)) {
         alert('Es n° cedula es correcto!');
+        guardar_usuario();
     } else {
-        alert('¡El n° de cédula no es válido. Deben ser trece dígitos mas una letra al final, los caracteres del 4to al 9no deben representar una fecha válida!');
+        var error="¡El n° de cédula no es válido. Deben ser trece dígitos mas una letra al final, los caracteres del 4to al 9no deben representar una fecha válida!"
+        $('#mensaje').text(error);   //manda el error a la modal
+        $("#Mensaje-error").modal("show"); //abre modal de error
+        $("#Mensaje-error").fadeTo(2900,500).slideUp(450,function(){// cierra la modal despues del tiempo determinado  
+            $("#Mensaje-error").modal("hide"); // cierra modal error
+            } );
     }
     return false;
+}
+
+
+function guardar_usuario()
+{
+
+  
+
 }

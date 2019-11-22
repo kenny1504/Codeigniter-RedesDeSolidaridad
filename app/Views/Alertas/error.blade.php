@@ -5,7 +5,7 @@
               <div class="modal-dialog" >
                         <div class="modal-content" >
                                     <div class="alert alert-danger alert-dismissible " >
-                                 <h4 id="mensaje"><i class="icon fa fa-thumbs-o-down"></i></h4>                                        
+                                 <h5 id="mensaje"><i class="icon fa fa-thumbs-o-down"></i></h5>                                        
                                     </div>
                          </div>
                         <!-- /.modal-content -->
