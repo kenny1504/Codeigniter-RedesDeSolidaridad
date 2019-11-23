@@ -26,6 +26,58 @@ class seccion extends BaseController
 		}
 		
 	}
+	public function agregar()
+	{
+		$secciones = new secciones();
+		$nombre=$this->request->getPost('Nombre_seccion');   //varible que recive los valores de input Nombre_seccion
+		
+		$data = array (
+			'Codigo' => $nombre		
+		);
+		$result = $secciones->insert($data);// pedicion para insertar nuevo seccion
+		
+		if($result==true) // si actualiza los datos
+		{
+			$seccion = array (
+				'Codigo' => $nombre,
+				'id' => $result, //cuando se hace una insercion la consulta debuelve el id del dato ingresado
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($seccion); //retorna el arreglo con los valores ingresados
+		}
+		else
+		{
+			$errors = $secciones->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}
+	
+	}
+	public function actualizar()
+	{
+		$secciones = new secciones();
+		$id=$this->request->getPost('idseccion');   //varible que recive los valores de input PASSWORD
+		$nombre=$this->request->getPost('Nombre-Seccion');   //varible que recive los valores de input PASSWORD	
+		
+		$data = array (
+			'Codigo' => $nombre		
+		);
+
+		$result = $secciones->update($id,$data);// pedicion para validar el dato
+		if($result==true) // si actualiza los datos
+		{
+			$datos = array (
+				'id'=>$id,
+				'Codigo' => $nombre,
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($datos); //retorna el arreglo con los nuevos valores
+		}
+		else
+		{
+			$errors = $secciones->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}		
+	}
 	public function eliminar()
 	{
 		$id=$this->request->getPost('valor_id_seccion');   //varible que recive los valores de input valor_id_seccion

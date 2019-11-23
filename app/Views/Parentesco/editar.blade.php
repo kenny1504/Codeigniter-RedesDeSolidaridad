@@ -13,8 +13,8 @@
                       <br>
                       <label for="Parentesco" class="col-sm-2 control-label requerido">parentesco</label>                
                       <div class="col-sm-10">
-                      <input type="text" class="hidden" id="idparentesco" name="idparentesco" > <!-- captura el valor del id del oficio -->
-                      <input type="text" class="form-control" name="Nombre-Parentesco" id="Nombre-Parentesco"  required autocomplete="off" onkeypress="Ingresar_parent(event)" > <!-- captura el nombre del oficio -->
+                      <input type="text" class="hidden" id="idparentesco" name="idparentesco" > <!-- captura el valor del id del parentesco -->
+                      <input type="text" class="form-control" name="Nombre-Parentesco" id="Nombre-Parentesco"  required autocomplete="off" onkeypress="Ingresar_parent(event)" > <!-- captura el nombre del parentesco -->
                         <p class="error text-red hidden">error: </p> <!-- todo error es mostrado aqui -->
                       </div>
                       <br><br>

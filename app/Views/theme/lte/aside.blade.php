@@ -108,7 +108,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_Grado" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
@@ -121,7 +121,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_Grupo" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
@@ -176,7 +176,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_Seccion" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
@@ -189,7 +189,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_Turno" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">

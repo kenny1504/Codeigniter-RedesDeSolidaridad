@@ -49,7 +49,7 @@
 
                             <!--******** include de Oficios ********-->   
 
-                    <?= $this->include("Oficio/crear.blade.php") ?><!-- Modal crear materia-->     
+                    <?= $this->include("Oficio/crear.blade.php") ?><!-- Modal crear oficio-->     
                     <?= $this->include("Oficio/eliminar.blade.php") ?><!-- Modal eliminar oficio-->    
                     <?= $this->include("Oficio/editar.blade.php") ?><!-- Modal editar oficio-->  
 
@@ -60,19 +60,24 @@
 
                     <!--******** include de Grado ********-->  
                     <?= $this->include("Grado/crear.blade.php") ?><!-- Modal agregar Grado-->
+                    <?= $this->include("Grado/editar.blade.php") ?><!-- Modal editar Grado-->
                     <?= $this->include("Grado/eliminar.blade.php") ?><!-- Modal eliminar Grado-->
                     <?= $this->include("Grado/mostrar_asignaturas.blade.php") ?><!-- Modal mostrar asignaturas de grados-->
 
                     <!--******** include de Grupo ********--> 
+                    <?= $this->include("Grupo/crear.blade.php") ?><!-- Modal crear grupo-->
+                    <?= $this->include("Grupo/editar.blade.php") ?><!-- Modal editar grupo-->
                     <?= $this->include("Grupo/eliminar.blade.php") ?> <!--Modal eliminar Grupo-->
 
                     <!--******** include de Seccion ********-->  
+                    <?= $this->include("Seccion/crear.blade.php") ?><!-- Modal crear seccion-->
+                    <?= $this->include("Seccion/editar.blade.php") ?><!-- Modal editar seccion-->
                     <?= $this->include("Seccion/eliminar.blade.php") ?><!-- Modal eliminar Seccion-->
 
                     <!--******** include de Turno ********-->  
-                    <?= $this->include("Turno/eliminar.blade.php") ?><!-- Modal guardar Turno-->
+                    <?= $this->include("Turno/eliminar.blade.php") ?><!-- Modal eliminar Turno-->
                     <?= $this->include("Turno/editar.blade.php") ?><!-- Modal editar Turno-->
-                    <?= $this->include("Turno/crear.blade.php") ?><!-- Modal eliminar Turno-->
+                    <?= $this->include("Turno/crear.blade.php") ?><!-- Modal crear Turno-->
 
                     <!--******** include de usuario ********-->   
                     <?= $this->include("Usuario/crear.blade.php") ?><!-- Modal crear usuario-->

@@ -118,15 +118,20 @@ $routes->post('/eliminar/turno', 'turno::eliminar');
 
 //Rutas Secciones
 $routes->get('/secciones', 'seccion::index');
+$routes->post('/agregar/seccion', 'seccion::agregar');
+$routes->post('/actualizar/seccion', 'seccion::actualizar');
 $routes->post('/eliminar/seccion', 'seccion::eliminar');
 
 //Rutas Grupos
 $routes->get('/grupos', 'grupo::index');
+$routes->post('/agregar/grupo', 'grupo::agregar');
+$routes->post('/actualizar/grupo', 'grupo::actualizar');
 $routes->post('/eliminar/grupo', 'grupo::eliminar');
 
 //Rutas Grados
 $routes->get('/grado', 'grado::index');
 $routes->post('/agregar/grado', 'grado::agregar');
+$routes->post('/actualizar/grado', 'grado::actualizar');
 $routes->post('/eliminar/grado', 'grado::eliminar');
 
 
