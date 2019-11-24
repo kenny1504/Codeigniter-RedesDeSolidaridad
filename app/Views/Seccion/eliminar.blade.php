@@ -9,7 +9,7 @@
           </div>
          
           <div class="modal-footer">
-            <input type="text" class="hidden" id="valor_id_seccion" name="valor_id_seccion" > <!-- captura el valor del id del oficio -->
+            <input type="text" class="hidden" id="valor_id_seccion" name="valor_id_seccion" > <!-- captura el valor del id de la seccion -->
             <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmar_eliminar_seccion">
               <span  class="icon fa fa-check " ></span>
             </button>

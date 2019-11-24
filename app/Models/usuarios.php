@@ -9,6 +9,7 @@ class usuarios extends Model
         protected $returnType = 'array';
         protected $allowedFields = ['Cedula,ClaveDeUsuario,Nombre,NombreDeUsuario'];
         protected $useTimestamps = false;
+<<<<<<< Updated upstream
 
 
 
@@ -29,4 +30,6 @@ class usuarios extends Model
                  ]
         ];
                
+=======
+>>>>>>> Stashed changes
 }

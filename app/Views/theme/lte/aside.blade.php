@@ -90,7 +90,11 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#" data-toggle="modal" data-target="#modal_Materia" id="m"><i class="fa fa-circle-o text-aqua" ></i> Agregar </a></li>
+<<<<<<< Updated upstream
             <li><a href="#" data-toggle="modal" data-target="#asignar_asignatura" id="asignar-ma"><i class="fa fa-circle-o text-aqua"></i> Asignar</a></li>
+=======
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Asignar</a></li>
+>>>>>>> Stashed changes
             <li><a href="<?php base_url() ?>asignaturas"  method="GET"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
         </li> <!--Asignaturas fin -->
@@ -122,7 +126,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_Grado" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
@@ -135,7 +139,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_Grupo" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
@@ -190,7 +194,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_Seccion" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
@@ -203,7 +207,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                  <li><a href="#" data-toggle="modal" data-target="#modal_Turno" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">

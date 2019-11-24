@@ -12,7 +12,7 @@
                       <br>
                       <label for="Nombre-Oficio" class="col-sm-2 control-label requerido">Nombre</label>                
                       <div class="col-sm-10">
-                      <input type="text" class="hidden" id="idoficio" name="idoficio" > <!-- captura el valor del id de la materia -->
+                      <input type="text" class="hidden" id="idoficio" name="idoficio" > <!-- captura el valor del id del oficio -->
                       <input type="text" class="form-control" name="Nombre-Oficio" id="Nombre-Oficio"  required autocomplete="off" onkeypress="Ingresar_ofi(event)" > <!-- captura el nombre del oficio -->
                         <p class="error text-red hidden">error: </p> <!-- todo error es mostrado aqui -->
                       </div>

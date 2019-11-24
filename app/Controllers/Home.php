@@ -7,6 +7,7 @@ class Home extends BaseController
 {
 	public function index()
 	{
+<<<<<<< Updated upstream
 
 		//Correcion a varible de session NUNCA destruir la varible SESSION solo asignarle valor FALSE a login_in
 
@@ -23,6 +24,10 @@ class Home extends BaseController
 			return view('login.blade.php');
 		}
 		/* return view('login-2.blade.php'); */
+=======
+		$request = \Config\Services::request();
+		return view('login.blade.php');
+>>>>>>> Stashed changes
 	}
 	public function inicio()
 	{

@@ -5,13 +5,13 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
 
 });
 
-$("#todo").click(function() { //ajax para ingresar turno
+$("#turno_guardar").click(function() { //ajax para ingresar turno
 
   if($('input[name=Nombre_turno]').val()!="") // si el input contiene valores entra 
   {
   $.ajax({
     type: 'POST',
-    url: '/agregar/turno', //llamada a la ruta ingresar turno
+    url: 'agregar/turno', //llamada a la ruta ingresar turno
     data: $('#ingresar_turno').serialize(), // manda el form donde se encuentra la modal turno
     dataType: "JSON", // tipo de respuesta del controlador
     success: function(data){ //agregar el nuevo ingreso a la tabla

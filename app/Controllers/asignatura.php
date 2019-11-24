@@ -2,13 +2,17 @@
 
 use CodeIgniter\Controller;
 use App\Models\asignaturas;
+<<<<<<< Updated upstream
 use App\Models\gradoaasignaturas;
 use Tests\Support\Models\ValidErrorsModel;
+=======
+>>>>>>> Stashed changes
 
 class asignatura extends BaseController
 {
 	public function index()
 	{ 
+<<<<<<< Updated upstream
 		// echo "la fecha actual es " . date("d") . " del " . date("m") . " de " . date("Y");
 		$session = \Config\Services::session();    // uso de varibles de session
         $session->start();
@@ -141,6 +145,39 @@ class asignatura extends BaseController
 	 }
 		   
 	}
+=======
+	/*	$session = \Config\Services::session();    // uso de varibles de session
+		$session->start();
+
+		$newdata = array(
+			'Nombre'  => 'kenny',
+			'email'     => 'johndoe@some-site.com',
+			'logged_in' => TRUE
+	);
+	
+	$session->set($newdata);
+
+		$usuario= $_SESSION['Nombre'];
+		var_dump($usuario); */
+		$asignaturas = new asignaturas();
+		$data = [
+            'asignaturas' => $asignaturas->paginate(10), //retorna los datos de la tabla asignaturas con su paginacion
+            'pager' => $asignaturas->pager
+        ];
+		return view('/Materia/index.blade.php',$data);// retorna vista y se envian datos
+	}
+	public function eliminar()
+	{
+	/*	$asignaturas = new asignaturas();
+		$data = [
+            'asignaturas' => $asignaturas->paginate(10), //retorna los datos de la tabla asignaturas con su paginacion
+            'pager' => $asignaturas->pager
+        ];
+		return view('/Materia/index.blade.php',$data);// retorna vista y se envian datos */
+	}
+
+
+>>>>>>> Stashed changes
 
 	//--------------------------------------------------------------------
 

@@ -21,7 +21,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="reset" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
-                  <button type="submit" class="btn btn-outline" id="todo"  >Guardar</button>          
+                  <button type="submit" class="btn btn-outline" id="turno_guardar"  >Guardar</button>          
                 </div>
               </div>
               <!-- /.modal-content -->

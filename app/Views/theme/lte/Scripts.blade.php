@@ -28,15 +28,25 @@
         <script type="text/javascript" src="js/js-redes/Parentesco/editar.js"></script> <!-- script editar parentesco-->
         <!--********************* script  "grado" *************************-->
         <script type="text/javascript" src="js/js-redes/Grado/eliminar.js"></script> <!-- script eliminar Grado-->
-        <script type="text/javascript" src="js/js-redes/Grado/mostrar_materias_asignadas.js"></script> <!-- script mostrar materias de grado-->   
+        <script type="text/javascript" src="js/js-redes/Grado/crear.js"></script> <!-- escript para ingresar datos por ajax-->
+        <script type="text/javascript" src="js/js-redes/Grado/editar.js"></script><!-- script editar Grado-->
+        <script type="text/javascript" src="js/js-redes/Grado/agregar.js"></script> <!-- script para validar Grado-->
+        <script type="text/javascript" src="js/js-redes/Grado/mostrar_materias_asignadas.js"></script> <!-- script mostrar materias de grado--> 
         <!--********************* script  "grupo" *************************-->
-        <script type="text/javascript" src="js/js-redes/Grupo/eliminar.js"></script> <!-- script eliminar Grupo-->  
+        <script type="text/javascript" src="js/js-redes/Grupo/eliminar.js"></script> <!-- script eliminar Grupo-->
+        <script type="text/javascript" src="js/js-redes/Grupo/crear.js"></script> <!-- escript para ingresar datos por ajax-->
+        <script type="text/javascript" src="js/js-redes/Grupo/editar.js"></script><!-- script editar Grupo-->
+        <script type="text/javascript" src="js/js-redes/Grupo/agregar.js"></script> <!-- script para validar Grupo-->      
         <!--********************* script  "seccion" *************************-->
         <script type="text/javascript" src="js/js-redes/Seccion/eliminar.js"></script> <!-- script eliminar Seccion-->
+        <script type="text/javascript" src="js/js-redes/Seccion/crear.js"></script><!-- escript para ingresar datos por ajax-->
+        <script type="text/javascript" src="js/js-redes/Seccion/editar.js"></script><!-- script editar Seccion-->
+        <script type="text/javascript" src="js/js-redes/Seccion/agregar.js"></script> <!-- script para validar Seccion-->  
         <!--********************* script  "turno" *************************-->
         <script type="text/javascript" src="js/js-redes/Turno/eliminar.js"></script> <!-- script eliminar Turno-->
-        <!-- script eliminar Turno-->
-        <script type="text/javascript" src="js/js-redes/Turno/agregar.js"></script> <!-- script eliminar Turno-->
+        <script type="text/javascript" src="js/js-redes/Turno/crear.js"></script> <!-- escript para ingresar datos por ajax-->
+        <script type="text/javascript" src="js/js-redes/Turno/editar.js"></script><!-- script editar Turno-->
+        <script type="text/javascript" src="js/js-redes/Turno/agregar.js"></script> <!-- script para validar Turno-->
         <!--********************* script  "Usuario" *************************-->
         <script type="text/javascript" src="js/js-redes/ValidarCedula.js"></script> <!-- script ingresar usuario-->
         <script type="text/javascript" src="js/jquery.mask.js"></script> <!-- script ingresar usuario-->

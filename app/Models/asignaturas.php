@@ -9,6 +9,7 @@ class asignaturas extends Model
         protected $returnType = 'array';
         protected $allowedFields = ['Nombre'];
         protected $useTimestamps = false;
+<<<<<<< Updated upstream
 
         protected $validationRules = [
                 'Nombre'        => 'required|is_unique[asignaturas.Nombre]'
@@ -23,4 +24,6 @@ class asignaturas extends Model
                
       
 
+=======
+>>>>>>> Stashed changes
 }

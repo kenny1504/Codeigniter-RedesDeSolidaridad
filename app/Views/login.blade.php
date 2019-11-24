@@ -23,7 +23,7 @@
             <label>Usuario</label>
           </div>
           <div class="field-wrapper">
-            <input type="password" name="password" placeholder="password" autocomplete="new-password">
+            <input type="text" name="password" placeholder="password" autocomplete="new-password">
             <label>Contraseña</label>
           </div>
           <div class="field-wrapper">
@@ -32,10 +32,18 @@
         </form>
       </div>
     </div>
+<<<<<<< Updated upstream
     <div class="face face-right">
       <div class="content">
         <h1 style="color:#ff00008a">Credenciales incorrectas</h1>
        <h3  style="color:#ff00008a">El usuario o contraseña que ha ingresado es incorrecto o esta caducado</h3> 
+=======
+    
+    <div class="face face-right">
+      <div class="content">
+        <h1 style="color:red">Credenciales incorrectas</h1>
+       <h3  style="color:red">El usuario o contraseña que ha ingresado es incorrecto o esta caducado</h3> 
+>>>>>>> Stashed changes
         <form onsubmit="event.preventDefault()">
           <h1><i class="fa fa-fw fa-frown-o"></i></h1> 
           <div class="field-wrapper">
@@ -55,6 +63,10 @@
 </div>
 </form>
 <script type="text/javascript" src="login.js"> </script>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 <script type="text/javascript" src="assets/lte/bower_components/jquery/dist/jquery.min.js"> </script>
 </body>
 </html>

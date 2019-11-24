@@ -72,5 +72,30 @@ class grado extends BaseController
 		}
 	
 	}
+	public function actualizar()
+	{
+		$grados = new grados();
+		$id=$this->request->getPost('idgrado');   //varible que recive los valores de input PASSWORD
+		$nombre=$this->request->getPost('Nombre-Grado');   //varible que recive los valores de input PASSWORD	
+		
+		$data = array (
+			'Grado' => $nombre		
+		);
 
+		$result = $grados->update($id,$data);// pedicion para validar el dato
+		if($result==true) // si actualiza los datos
+		{
+			$datos = array (
+				'id'=>$id,
+				'Grado' => $nombre,
+				'msg'=> true	// si el dato es actualizado la variable de retorna TRUE	
+			);
+			return json_encode($datos); //retorna el arreglo con los nuevos valores
+		}
+		else
+		{
+			$errors = $grados->errors(); //recuperar errores de validacion
+			return json_encode( $errors); // retorna los errores
+		}		
+	}
 }

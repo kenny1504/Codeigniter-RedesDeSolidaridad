@@ -20,12 +20,17 @@ function Ingresar(e) { // Metodo para guardar(editar) datos los datos al presion
         $("#editar_confirmar").click(); // llama al evento click "editar_confirmar"
     }
   }
+<<<<<<< Updated upstream
   //url = "/actualizar/asignatura"; //URL Kenny
   url1 ="asignatura/actualizar";//url jose
+=======
+
+>>>>>>> Stashed changes
     $("#editar_confirmar").click(function() {
         $.ajax({
                 
                     type: 'POST',
+<<<<<<< Updated upstream
                     url: url1, // ruta editar materia
                     data: $('#editar-materia').serialize(), // manda el form donde se encuentra la modal materia
                     dataType: "JSON", // tipo de respuesta del controlador
@@ -35,6 +40,21 @@ function Ingresar(e) { // Metodo para guardar(editar) datos los datos al presion
                                 $('.error').text("Error: "+ data.Nombre); 
                           } else {
                                 var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
+=======
+                    url: '/Materia/editar', // ruta editar materia
+                    data: {
+                                _token: $('input[name=_token]').val(),
+                                id:$('input[name=idmateria]').val(),
+                        Nombre:$('input[name=Nombre-Materia]').val()
+                    },
+                    success: function(data){
+                        if ((data.errors)) { // si el ajax contiene errores agrega un label indicando el error 
+                                $('.error').removeClass('hidden');
+                                $('.error').text("Error: El "+ data.errors.Nombre); 
+                          } else {
+
+                                var datos=  "<tr class=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
+>>>>>>> Stashed changes
                                 + "<td>"+"<button class='btn btn-success'  onclick='editar_Materia(this);' data-id="+ data.id +" data-Nombre="+data.Nombre+"><i class=' fa fa-fw fa-pencil'></i></button>"
                                 + "<button class='btn btn-info ' onclick='eliminar(this);' data-id="+ data.id +"><i class='fa fa-fw fa-trash '></i></button>"                                   
                                 +"</td>"+"</tr>";// variable guarda los nuevos valores

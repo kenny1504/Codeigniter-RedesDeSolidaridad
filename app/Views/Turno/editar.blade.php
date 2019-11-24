@@ -13,8 +13,8 @@
                       <br>
                       <label for="Turno" class="col-sm-2 control-label requerido">turno</label>                
                       <div class="col-sm-10">
-                      <input type="text" class="hidden" id="idturno" name="idturno" > <!-- captura el valor del id del oficio -->
-                      <input type="text" class="form-control" name="Nombre-Turno" id="Nombre-Turno"  required autocomplete="off" onkeypress="Ingresar_turn(event)" > <!-- captura el nombre del oficio -->
+                      <input type="text" class="hidden" id="idturno" name="idturno" > <!-- captura el valor del id del turno -->
+                      <input type="text" class="form-control" name="Nombre-Turno" id="Nombre-Turno"  required autocomplete="off" onkeypress="Ingresar_turn(event)" > <!-- captura el nombre del turno -->
                         <p class="error text-red hidden">error: </p> <!-- todo error es mostrado aqui -->
                       </div>
                       <br><br>

@@ -27,6 +27,7 @@ function showThankYou(){
       data: $('#login').serialize(), // pasamos el id del formulario para poder usar campos en el controlador
       success: function(data)
       {
+<<<<<<< Updated upstream
         var usuario=data; // varible que recive lo que retorna el controlador
           if(usuario==1){ // si la variable es 1 entonces el usuario existe
               prism.style.transform = "translateZ(-100px) rotateX( 90deg)"; // muetsra el mensaje de BIENVENIDO
@@ -63,10 +64,23 @@ function login2(){ // Si quiere ingresar con el mismo usuario
           {
             $('#error').removeClass('hidden');
           }
+=======
+        var usuario=data;
+          if(usuario==1){ // si la variable es 1 entonces el usuario existe
+
+            prism.style.transform = "translateZ(-100px) rotateX( 90deg)"; // muetsra el mensaje de BIENVENIDO
+              window.setTimeout("inicio()",2500);  //llama a la vista Inicio
+          }
+      else // si el usuario no existe entonces muestra el mensaje CREDENCIALES NO VALIDAS
+      {
+        showSignup();
+      }
+>>>>>>> Stashed changes
 
       },
       error: function (jqXHR, textStatus, errorThrown) // si el ajax presenta errores entonces muestra en el alert
       {
+<<<<<<< Updated upstream
           alert('Error adding / update data'); // si el ajax contiene errores se muestran aqui
       }
   });
@@ -78,4 +92,14 @@ function login2(){ // Si quiere ingresar con el mismo usuario
 
   }
    
+=======
+          alert('Error adding / update data');
+      }
+  });
+}
+  function inicio(){ //llamado a la vista Inicio
+    window.location.href='/inicio';
+    
+  }
+>>>>>>> Stashed changes
   
