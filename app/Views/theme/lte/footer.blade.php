@@ -1,4 +1,3 @@
-
 <footer class="main-footer text-center " style="  background-color: #075f75">
     <div class="pull-right hidden-xs">
     </div>

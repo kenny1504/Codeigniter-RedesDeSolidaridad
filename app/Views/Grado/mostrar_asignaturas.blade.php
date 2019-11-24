@@ -9,18 +9,14 @@
                       <th colspan="2">Asignaturas</th> 
                   </div>
                   <div class="modal-body "> <!--tabla de materias -->           
-                  <table id="asignaturas_grado" class="table table-bordered table-hover text-black">
-                         
+                  <table id="asignaturas_grado" class="table table-bordered table-hover text-black">                       
                 </table>
                   </div>
                   <div class="modal-footer">
                   <input type="text" class="form-control hidden" name="id-Grado" id="id-Grado"> <!--Input para guardar id de grado-->
                     <button type="reset" class="btn btn-outline" data-dismiss="modal">cerrar</button>         
                   </div>
-                </div>
-                <!-- /.modal-content -->
-              </div>
-              <!-- /.modal-dialog -->
-              
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog --> 
     </div>
 </form>

@@ -75,6 +75,7 @@ function login2(){ // Si quiere ingresar con el mismo usuario
 
   function inicio(){ //llamado a la vista Inicio
     window.location.href='inicio';
-    
+
   }
+   
   

@@ -32,7 +32,6 @@
         </form>
       </div>
     </div>
-    
     <div class="face face-right">
       <div class="content">
         <h1 style="color:#ff00008a">Credenciales incorrectas</h1>
@@ -56,7 +55,6 @@
 </div>
 </form>
 <script type="text/javascript" src="login.js"> </script>
-
 <script type="text/javascript" src="assets/lte/bower_components/jquery/dist/jquery.min.js"> </script>
 </body>
 </html>

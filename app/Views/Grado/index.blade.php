@@ -1,12 +1,9 @@
 <?= $this->extend("theme/lte/layout.blade.php") ?><!--extiendo del layout "pagina inicio" -->
-
 <!--agrega titulo a la pagina-->
 <?=  $this -> section ( 'titulo' )  ?> 
 Grados
 <?=  $this -> endSection () ?> 
-
-<?=  $this -> section ( 'contenido' )  ?>   <!--agrega codigo a la seccion contenido del layout-->
-           
+<?=  $this -> section ( 'contenido' )  ?>   <!--agrega codigo a la seccion contenido del layout-->         
             <div class="box">
             <div class="box-header">
               <h2 class="box-title text-light-blue">Grados</h2>
@@ -22,8 +19,7 @@ Grados
                        </tr>
                     </thead> 
                         <tbody> <!--Cuerpo de la tabla --> 
-                        <?php foreach ($grados as $grado): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->
-						
+                        <?php foreach ($grados as $grado): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->				
                                  <tr id="<?php echo $grado['id']; ?>" >  <!--abre fila-->
                                     <td><?php echo $grado['Grado'];?></td>  <!--agrega dato a la columna-->
                                 <td>
@@ -31,14 +27,12 @@ Grados
                                 <button class="btn btn-success " onclick="editar_Grado(this);" data-id="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
                                 <button class="btn btn-info" onclick='eliminar_grado(this);' data-id1="<?php echo $grado['id']; ?>" data-Nombre="<?php echo $grado['Grado'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                            
                                 </td>
-                                </tr>
-                        
+                                </tr>                        
 						              <?php endforeach; ?>
                         </tbody>                        
               </table>
               <?= $pager->links() ?> <!--Paginacion-->
             </div>
-            <div class="panel box box-primary"></div>
-            <!-- /.box-body -->
+            <div class="panel box box-primary"></div><!-- /.box-body -->
           </div>  
 <?=  $this -> endSection () ?> 

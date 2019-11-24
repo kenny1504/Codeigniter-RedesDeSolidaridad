@@ -20,7 +20,7 @@
             ?>
         <?=  $this -> endSection () ?>
         <?=  $this -> section ( 'rol-hearder' )  ?> 
-            <?php        
+             <?php        
                 $session = \Config\Services::session();    // uso de varibles de session
                 $session->start();
                 echo $_SESSION['Descripcion'];

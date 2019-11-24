@@ -1,10 +1,8 @@
 <?= $this->extend("theme/lte/layout.blade.php") ?><!--extiendo del layout "pagina inicio" -->
-
 <!--agrega titulo a la pagina-->
 <?=  $this -> section ( 'titulo' )  ?> 
 Secciones
 <?=  $this -> endSection () ?> 
-
 <?=  $this -> section ( 'contenido' )  ?>   <!--agrega codigo a la seccion contenido del layout-->
            
             <div class="box">
@@ -37,7 +35,6 @@ Secciones
               </table>
               <?= $pager->links() ?> <!--Paginacion-->
             </div>
-            <div class="panel box box-primary"></div>
-            <!-- /.box-body -->
+            <div class="panel box box-primary"></div> <!-- /.box-body -->
           </div>  
 <?=  $this -> endSection () ?> 

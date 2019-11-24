@@ -30,9 +30,7 @@
                     <button type="reset" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-outline"  data-toggle="modal" data-target="#asignar_materia_confirmar" >Guardar</button>          
                   </div>
-                </div>
-                <!-- /.modal-content -->
-              </div>
-              <!-- /.modal-dialog -->
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
     </div>
 </form>

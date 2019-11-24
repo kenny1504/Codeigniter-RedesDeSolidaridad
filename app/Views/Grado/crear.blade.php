@@ -23,9 +23,7 @@
                     <button type="reset" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-outline" id="grado_guardar"  >Guardar</button>          
                   </div>
-                </div>
-                <!-- /.modal-content -->
-              </div>
-              <!-- /.modal-dialog -->
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
     </div>
 </form>

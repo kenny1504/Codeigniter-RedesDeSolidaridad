@@ -19,7 +19,7 @@ $("#parentesco").click(function() { //ajax para ingresar parentesco
       if ((data.msg!=true)) { // si el ajax contiene errores agrega un label indicando el error 
         $('.error').removeClass('hidden');
         $("#Nombre_parentesco-error").addClass('hidden');
-        $('.error').text("Error: El "+ data.Parentesco); 
+        $('.error').text("Error:"+ data.Parentesco); 
       } else {
       var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Parentesco+"</td>"
       + "<td>"+"<button class='btn btn-success' data-id="+ data.id +"  onclick='editar_Parentesco(this);' ><i class=' fa fa-fw fa-pencil'></i></button>"

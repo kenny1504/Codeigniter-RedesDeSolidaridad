@@ -26,7 +26,7 @@
                             </div>
 
                             <div class="form-group has-feedback">
-                                <select  style="color: blue; width: 100%; padding-top: 2.5%;" name="Grados" id="Grados" >
+                                <select  style="color: blue; width: 100%; padding-top: 2.5%;" >
                                 </select>  
                             </div>
                             <div class="input-group date">
@@ -42,7 +42,7 @@
 
                 <div class="modal-footer">
                     <button type="reset"  class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
-                    <button type="button" onclick="return ValidarCedula(cedula.value);" class="btn btn-outline" id="Materia"  >Guardar</button>          
+                    <button type="button" onclick="return ValidarCedula(cedula.value);" class="btn btn-outline"  >Guardar</button>          
                 </div>
                 <!-- /.modal-content -->
               </div>

@@ -3,8 +3,7 @@
     <a href="<?php base_url() ?>inicio"  class="logo" style="  background-color: #075f75">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>R</b>D<b>S</b></span>
-      <!-- logo for regular state and mobile devices -->
-      
+      <!-- logo for regular state and mobile devices -->    
       <span class="logo-lg">Redes De Solidaridad</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -13,7 +12,6 @@
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Menu Navegacion</span>
       </a>
-
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Notifications: style can be found in dropdown.less -->
@@ -37,7 +35,6 @@
               </li>
             </ul>
           </li>
-        
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -49,7 +46,7 @@
               <li class="user-header">
                 <img src="assets/lte/dist/img/user1-128x128.jpg" class="img-circle" alt="User Image">
                 <p>
-                <?=$this->renderSection('Nombre-hearder2')?> - <?=$this->renderSection('rol-hearder')?>
+                <?=$this->renderSection('Nombre-hearder2')?><div id="rol_u"><?=$this->renderSection('rol-hearder')?></div>
                 </p>
               </li>
               <!-- Menu Footer-->

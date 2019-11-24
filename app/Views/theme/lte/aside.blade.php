@@ -15,7 +15,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
       <li class="header">Menu Navegacion</li>
-        <li class="treeview"> <!--Usuarios inicio -->
+        <li id="menu_usuarios" class="treeview"> <!--Usuarios inicio -->
           <a href="#">
             <i class="fa fa-user"></i> <span>Usuarios</span> 
             <span class="pull-right-container">
@@ -27,7 +27,7 @@
             <li><a href="<?php base_url() ?>usuario" method="GET"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
         </li> <!--Usuarios fin -->   
-        <li class="treeview"> <!--Notas inicio -->
+        <li id="menu_Notas" class="treeview"> <!--Notas inicio -->
           <a href="#">
             <i class="fa fa-file-text"></i> <span> Notas</span>
             <span class="pull-right-container">
@@ -39,7 +39,7 @@
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Asignar Notas</a></li>
           </ul>
         </li> <!--Notas fin -->
-        <li class="treeview"> <!--Matricula inicio -->
+        <li id="menu_Matriculas" class="treeview"> <!--Matricula inicio -->
           <a href="#">
             <i class="fa  fa-mortar-board"></i>
             <span>Matricula</span>
@@ -52,9 +52,23 @@
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
         </li> <!--Matricula fin -->
-        <li class="treeview"> <!--Docentes inicio -->
+        <li id="menu_Estudiantes" class="treeview"> <!--Matricula Estudiantes -->
           <a href="#">
-            <i class="fa fa-users"></i>
+            <i class="fa   fa-user-plus"></i>
+            <span>Estudiantes</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+              <small class="label pull-right bg-green">Catalogo</small>            
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Agregar</a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
+          </ul>
+        </li> <!--Estudiantes fin -->
+        <li id="menu_Docentes" class="treeview"> <!--Docentes Estudiantes-->
+          <a href="#">
+            <i class="fa fa-male"></i>
             <span>Docentes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -65,7 +79,7 @@
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
         </li> <!--Docentes fin -->
-        <li class="treeview"> <!--Asignaturas inicio -->
+        <li id="menu_Asignaturas" class="treeview"> <!--Asignaturas inicio -->
           <a href="#">
             <i class="fa fa-book"></i> <span>Asignaturas</span>
             <span class="pull-right-container">
@@ -80,7 +94,7 @@
             <li><a href="<?php base_url() ?>asignaturas"  method="GET"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>
         </li> <!--Asignaturas fin -->
-        <li class="treeview"> <!--Reportes inicio -->
+        <li id="menu_Reportes" class="treeview"> <!--Reportes inicio -->
           <a href="#">
             <i class="fa   fa-bar-chart"></i> <span> Reportes</span>
             <span class="pull-right-container">
@@ -92,9 +106,9 @@
             <li><a href="#"><i class="fa fa-circle-o text-red"></i> Reporte 2</a></li>
           </ul>
         </li> <!--Reportes fin -->
-        <li class="treeview"> <!--Administra inicio -->
+        <li class="treeview " id="menu_Administra"> <!--Administra inicio -->
           <a href="#">
-            <i class="fa fa-cogs"></i> <span>Administra</span>
+            <i  class="fa fa-cogs"></i> <span>Administra</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
               <small class="label pull-right bg-red"></small>

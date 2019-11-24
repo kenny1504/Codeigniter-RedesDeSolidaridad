@@ -1,12 +1,9 @@
 <?= $this->extend("theme/lte/layout.blade.php") ?><!--extiendo del layout "pagina inicio" -->
-
 <!--agrega titulo a la pagina-->
 <?=  $this -> section ( 'titulo' )  ?> 
 Turnos
 <?=  $this -> endSection () ?> 
-
-<?=  $this -> section ( 'contenido' )  ?>   <!--agrega codigo a la seccion contenido del layout-->
-           
+<?=  $this -> section ( 'contenido' )  ?>   <!--agrega codigo a la seccion contenido del layout-->        
             <div class="box">
             <div class="box-header">
               <h2 class="box-title text-light-blue">Turnos</h2>
@@ -22,16 +19,14 @@ Turnos
                        </tr>
                     </thead> 
                         <tbody> <!--Cuerpo de la tabla --> 
-                        <?php foreach ($turnos as $turno): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->
-						
+                        <?php foreach ($turnos as $turno): ?><!--ciclo que recorre el arreglo retonrnado del controlador-->					
                                  <tr id="<?php echo $turno['id']; ?>" >  <!--abre fila-->
                                     <td><?php echo $turno['Nombre'];?></td>  <!--agrega dato a la columna-->
                                 <td>
                                 <button class="btn btn-success " onclick="editar_turno(this);" data-id="<?php echo $turno['id']; ?>" data-Nombre="<?php echo $turno['Nombre'];?>" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
                                 <button class="btn btn-info" onclick='eliminar_turno(this);' data-id="<?php echo $turno['id']; ?>" data-Nombre="<?php echo $turno['Nombre'];?>" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
-                                </tr>
-                        
+                                </tr>                       
 						              <?php endforeach; ?>
                         </tbody>                        
               </table>

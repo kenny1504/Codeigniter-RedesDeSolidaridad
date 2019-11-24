@@ -1,4 +1,3 @@
-
 <!--form para poder activar la ruta y poder guardar el registro--><!-- -->
 <form id="ingresar_turno"  >
   <div class="modal  modal-info fade"  id="modal_Turno" >

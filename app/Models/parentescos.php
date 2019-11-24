@@ -16,7 +16,7 @@ class parentescos extends Model
 
         protected $validationMessages = [ // mensages personalizados de validacion
                 'Parentesco'        => [
-                        'is_unique' => 'ya existe el Parentesco.'
+                        'is_unique' => 'Ya Existe el Parentesco.'
                 ]
         ];
 }

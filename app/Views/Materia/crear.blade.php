@@ -1,4 +1,3 @@
-
 <!--form para poder activar la ruta y poder guardar el registro--><!-- -->
 <form id="ingresar_materia"  >
     <div class="modal  modal-info fade"  id="modal_Materia" >
@@ -24,10 +23,8 @@
                     <button type="reset" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-outline" id="Materia"  >Guardar</button>          
                   </div>
-                </div>
-                <!-- /.modal-content -->
-              </div>
-              <!-- /.modal-dialog -->
+                </div> <!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
     </div>
 </form>
 
